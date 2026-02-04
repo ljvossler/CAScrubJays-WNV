@@ -11,6 +11,15 @@ mkdir -p ${OUTDIR}/referencelists/
 
 # make reference files
 
+# Generate fasta index
+if [ -f "${REF}.fai" ];
+        then
+            echo ".fai file already exists, moving on!"
+        else
+        samtools faidx ${REF}
+fi
+
+
 # Generate scaffold list
 if [ -f "${OUTDIR}/referencelists/SCAFFOLDS.txt" ];
         then
