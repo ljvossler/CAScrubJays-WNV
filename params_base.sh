@@ -31,4 +31,4 @@ GFF=/xdisk/mcnew/scrubjays_wnv/a_coerulescens_ncbi_ref_genome/data/GCF_041296385
 # define the path for the chromosome conversion file (converts chromosome ascension names to numbers)
 CHR_FILE=${OUTDIR}/referencelists/GCF_041296385.1_chromconversion.txt
 
-source base_setup.sh
+#source base_setup.sh Commenting out since we dont need to run all the time
