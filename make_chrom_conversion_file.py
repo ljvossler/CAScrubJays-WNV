@@ -15,7 +15,8 @@ exclusion_lst = args.exclusions.split(',')
 
 line_lst = []
 for line in input[1:]: # Skipping first header line here
-    mapped_line = f'{line.split()[1]},{line.split()[0]}'
+    split_line = line.split()
+    mapped_line = split_line[1] + ',' + split_line[0]
     if not any(code in mapped_line for code in exclusion_lst):
         line_lst.append(mapped_line)
 
