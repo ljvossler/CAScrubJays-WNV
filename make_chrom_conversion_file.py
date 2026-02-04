@@ -18,7 +18,7 @@ for line in input[1:]: # Skipping first header line here
     split_line = line.split()
     mapped_line = split_line[1] + ',' + split_line[0]
     if not any(code in mapped_line for code in exclusion_lst):
-        line_lst.append(mapped_line)
+        line_lst.append(mapped_line+'\n')
 
 #line_lst = [f'{line[1]},{line[0]}' for line in input[1:]] # Skipping first header line here
 
