@@ -9,7 +9,7 @@ module load vcftools/0.1.16
 module load plink/1.9
 
 source /xdisk/mcnew/scrubjays_wnv/programs/CAScrubJays-WNV/params_base.sh
-source /xdisk/mcnew/scrubjays_wnv/programs/CAScrubJays-WNV/Genomics-Main/A-Preprocessing/preprocessing_setup.sh
+source /xdisk/mcnew/scrubjays_wnv/programs/CAScrubJays-WNV/Genomics-Main/A_Preprocessing/preprocessing_setup.sh
 
 # across all preprocessing
 THREADS=12
