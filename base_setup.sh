@@ -27,12 +27,12 @@ if [ -f "${OUTDIR}/referencelists/SCAFFOLDS.txt" ];
         else
         awk '{print $1}' "${REF}.fai" > "${OUTDIR}/referencelists/SCAFFOLDS.all.txt"
         grep "$CHRLEAD" "${OUTDIR}/referencelists/SCAFFOLDS.all.txt" > "${OUTDIR}/referencelists/SCAFFOLDS.chroms.txt"
-        grep -v "$SEXCHR" "${OUTDIR}/referencelists/SCAFFOLDS.chroms.txt" > "${OUTDIR}/referencelists/SCAFFOLDS.txt"
+        grep -v "$MTCODE" "${OUTDIR}/referencelists/SCAFFOLDS.chroms.txt" > "${OUTDIR}/referencelists/SCAFFOLDS.txt"
 fi
 
 
 # Make a file with chromosome name and length of chromosome
-awk 'BEGIN {OFS = "\t"} {print $1,$2}' ${REF}.fai | grep ${CHRLEAD} | grep -v ${SEXCHR} > ${OUTDIR}/referencelists/autosomes_lengths.txt
+awk 'BEGIN {OFS = "\t"} {print $1,$2}' ${REF}.fai | grep ${CHRLEAD} | grep -v ${MTCODE} > ${OUTDIR}/referencelists/autosomes_lengths.txt
 
 while IFS=',' read -r first second; do
     sed -i "s/$second/$first/g" ${OUTDIR}/referencelists/autosomes_lengths.txt 
