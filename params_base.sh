@@ -25,7 +25,7 @@ FILENAME_LIST="/path/to/list.txt" # list with sample codes associated with each 
 CHRLEAD=NC_0 # characters at the start of a chromosome number (excluding scaffolds)
 MTCODE=NC_051467.1 # code for mitochondrial chromosome. changed this from sex chromosome since sex chromosomes are already excluded in base_setup SCAFFOLD list generation, but the MTs are included
 REF_ACC=GCF_041296385.1 # accession number for reference genome
-REF=/xdisk/mcnew/scrubjays_wnv/a_coerulescens_ref_genome/data/GCF_041296385.1_UR_Acoe_1.0_genomic.fna # path to reference genome
+REF=/xdisk/mcnew/scrubjays_wnv/a_coerulescens_ncbi_ref_genome/data/GCF_041296385.1/GCF_041296385.1_UR_Acoe_1.0_genomic.fna # path to reference genome
 GFF=/xdisk/mcnew/scrubjays_wnv/a_coerulescens_ncbi_ref_genome/data/GCF_041296385.1/genomic.gff # path to gff file
 
 # define the path for the chromosome conversion file (converts chromosome ascension names to numbers)
