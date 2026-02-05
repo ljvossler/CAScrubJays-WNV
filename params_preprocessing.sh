@@ -9,18 +9,18 @@ module load vcftools/0.1.16
 module load plink/1.9
 
 source /xdisk/mcnew/scrubjays_wnv/programs/CAScrubJays-WNV/params_base.sh
-source /xdisk/mcnew/scrubjays_wnv/programs/CAScrubJays-WNV/Genomics-Main/A_Preprocessing/preprocessing_setup.sh
+#source /xdisk/mcnew/scrubjays_wnv/programs/CAScrubJays-WNV/Genomics-Main/A_Preprocessing/preprocessing_setup.sh uncomment since we are now setup
 
 # across all preprocessing
 THREADS=12
 
 # trimming
-FASTAS=/xdisk/mcnew/scrubjays_wnv/raw_fastqs # format must be samplename_
+FASTAS=/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/test_fastqs # format must be samplename_
 TRIMJAR=${PROGDIR}/trimmomatic/trimmomatic-0.40.jar
-LEAD=<SET_VALUE> # value to trim from leading strand, often 20
-TRAIN=<SET_VALUE> # value to trim from trailing strand, often 20
-SLIDE=<SET_VALUE> # threshold and windlow length, often 4:20
-MINREADLEN=<SET_VALUE> # minimum length for a read to be kept, often 90 for 150bp sequencing
+LEAD=20 # value to trim from leading strand, often 20
+TRAIN=20 # value to trim from trailing strand, often 20
+SLIDE=4:20 # threshold and windlow length, often 4:20
+MINREADLEN=90 # minimum length for a read to be kept, often 90 for 150bp sequencing
 
 # clipping
 BAMUTILBAM=/path/to/bamutil/bin/bam/file
