@@ -18,4 +18,4 @@
 INPUTFASTQ="$( sed "${SLURM_ARRAY_TASK_ID}q;d" INPUTFASTQS )"
 OUTFILE="$( echo trimming_${INPUTFASTQ}.out)"
 
-source A_Preprocessing/A0.1_trimming.sh -p params_preprocessing.sh -i ${INPUTFASTQ} > $OUTFILE
+source Genomics-Main/A_Preprocessing/A0.1_trimming.sh -p params_preprocessing.sh -i ${INPUTFASTQ} > $OUTFILE
