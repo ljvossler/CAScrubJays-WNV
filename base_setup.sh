@@ -44,9 +44,9 @@ if [ -f "${CHR_FILE}" ]
         then
             echo "Chromosome conversion table already complete, moving on!"
         else
-            echo "Creating chromosome conversion table from FL-Scrub Jay RefGenome..."
+            echo "Creating chromosome conversion table from RefGenome..."
 
-            micromamba activate ncbi_datasets  # Acivate environment with NCBI toolsets installed
+            micromamba activate ncbi_datasets  # Acivate environment with NCBI toolkit installed
             datasets summary genome accession ${REF_ACC} --report sequence --as-json-lines | dataformat tsv genome-seq --fields refseq-seq-acc,chr-name > ${OUTDIR}/referencelists/chrom_name_mapping.txt
             python ${SCRIPTDIR}/make_chrom_conversion_file.py -i ${OUTDIR}/referencelists/chrom_name_mapping.txt -o ${CHR_FILE} -e ${MTCODE},NW_0
             micromamba deactivate # Deactivate NCBI datasets environment

@@ -23,13 +23,13 @@ SLIDE=4:20 # threshold and windlow length, often 4:20
 MINREADLEN=90 # minimum length for a read to be kept, often 90 for 150bp sequencing
 
 # clipping
-BAMUTILBAM=/path/to/bamutil/bin/bam/file
+BAMUTILBAM=${PROGDIR}/bamUtil-master/bin/bam # Path to bamUtil bam executable
 
 # bam statistics
 
 # snp ID
 ANGSD=~${PROGDIR}/angsd/ # path to directory with angsd executables
-SNPPVAL=<SET_VALUE> # max p-value for snp to be considered significant, often 1e-6
+SNPPVAL=1e-6 # max p-value for snp to be considered significant, often 1e-6
 MINDEPTHIND=<SET_VALUE> # minimum depth per individual required for a site to be kept
 MININD=<SET_VALUE> # minimum number of individuals required for a site to be kept
 MINQ=<SET_VALUE> # minimum quality score required for a site to be kept

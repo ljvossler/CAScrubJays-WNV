@@ -18,7 +18,7 @@ BAMDIR=/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/datafiles/bam_files  #
 PROJHUB=CAScrubJays-WNV
 SCRIPTDIR=${PROGDIR}/${PROJHUB}
 PATH=$PATH:$SCRIPTDIR # this adds the workshop script directory to our path, so that executable scripts in it can be called without using the full path
-ID=scrub_jays
+#ID=scrub_jays
 FILENAME_LIST="/path/to/list.txt" # list with sample codes associated with each file in dataset, one per line
 
 # define aspects of the reference genome
