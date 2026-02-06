@@ -18,7 +18,7 @@ THREADS=12
 FASTAS=/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/test_fastqs # format must be samplename_
 TRIMJAR=${PROGDIR}/trimmomatic/trimmomatic-0.40.jar
 LEAD=20 # value to trim from leading strand, often 20
-TRAIN=20 # value to trim from trailing strand, often 20
+TRAIL=20 # value to trim from trailing strand, often 20
 SLIDE=4:20 # threshold and windlow length, often 4:20
 MINREADLEN=90 # minimum length for a read to be kept, often 90 for 150bp sequencing
 
