@@ -23,7 +23,7 @@ SLIDE=4:20 # threshold and windlow length, often 4:20
 MINREADLEN=90 # minimum length for a read to be kept, often 90 for 150bp sequencing
 
 # clipping
-BAMUTILBAM=${PROGDIR}/bamUtil-master/bin/bam # Path to bamUtil bam executable
+BAMUTILBAM=${PROGDIR}/bamUtil-master/bin/bam # Path to bamUtil bam executable. Ensure that this binary file has executable permissions (chmod +x)
 
 # bam statistics
 
