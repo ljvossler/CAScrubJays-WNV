@@ -14,7 +14,7 @@ module load samtools/1.19.2
 # all
 OUTDIR=/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv # main directory for output files
 PROGDIR=/xdisk/mcnew/scrubjays_wnv/programs  # path to directory for all installed programs
-BAMDIR=/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/datafiles/bam_files  # path to directory with bam files
+BAMDIR=${OUTDIR}/datafiles/indelrealignment/  # path to directory with bam files
 PROJHUB=CAScrubJays-WNV
 SCRIPTDIR=${PROGDIR}/${PROJHUB}
 PATH=$PATH:$SCRIPTDIR # this adds the workshop script directory to our path, so that executable scripts in it can be called without using the full path
