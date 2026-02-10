@@ -35,10 +35,5 @@ echo "\n"
 source Genomics-Main/A_Preprocessing/A0.4_indelrealignment.sh -p params_preprocessing.sh -i ${INPUTFASTQ}
 
 echo "\n"
-echo "|---------------Computing Bam Stats for ${INPUTFASTQ}---------------|"
-echo "\n"
-source Genomics-Main/A_Preprocessing/A0.5_bamstatistics.sh -p params_preprocessing.sh -i ${INPUTFASTQ}
-
-echo "\n"
 echo "|---------------Completed Alignment Pipeline for ${INPUTFASTQ}---------------|"
 echo "\n"
