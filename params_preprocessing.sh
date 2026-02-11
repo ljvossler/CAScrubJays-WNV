@@ -30,11 +30,11 @@ BAMUTILBAM=${PROGDIR}/bamUtil-master/bin/bam # Path to bamUtil bam executable. E
 # snp ID
 ANGSD=~${PROGDIR}/angsd/ # path to directory with angsd executables
 SNPPVAL=1e-6 # max p-value for snp to be considered significant, often 1e-6
-MINDEPTHIND=<SET_VALUE> # minimum depth per individual required for a site to be kept
-MININD=<SET_VALUE> # minimum number of individuals required for a site to be kept
-MINQ=<SET_VALUE> # minimum quality score required for a site to be kept
-MINMAF=<SET_VALUE> # minimum minor allele frequency required for a site to be kept
-MINMAPQ=<SET_VALUE> # minimum mapping quality score required for a site to be kept
+MINDEPTHIND=4 # minimum depth per individual required for a site to be kept
+MININD=7 # minimum number of individuals required for a site to be kept
+MINQ=30 # minimum quality score required for a site to be kept
+MINMAF=0.05 # minimum minor allele frequency required for a site to be kept
+MINMAPQ=30 # minimum mapping quality score required for a site to be kept
 POP=<SET_VALUE> # name of population
 
 
