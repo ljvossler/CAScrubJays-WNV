@@ -28,7 +28,7 @@ BAMUTILBAM=${PROGDIR}/bamUtil-master/bin/bam # Path to bamUtil bam executable. E
 # bam statistics
 
 # snp ID
-ANGSD=~${PROGDIR}/angsd # path to directory with angsd executables
+ANGSD=${PROGDIR}/angsd # path to directory with angsd executables
 SNPPVAL=1e-6 # max p-value for snp to be considered significant, often 1e-6
 MINDEPTHIND=4 # minimum depth per individual required for a site to be kept
 MININD=7 # minimum number of individuals required for a site to be kept
