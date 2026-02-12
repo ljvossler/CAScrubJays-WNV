@@ -2,7 +2,7 @@
 # --------------------
 ### Directives Section
 # --------------------
-#SBATCH --job-name=submit_alignment_pipeline
+#SBATCH --job-name=alignment_pipeline
 #SBATCH --account=mcnew
 #SBATCH --partition=standard
 #SBATCH --nodes=1
