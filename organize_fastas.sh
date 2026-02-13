@@ -22,3 +22,7 @@ for file in os.listdir(ccgp_path):
     clean_fname = f'{split_fname[0]}-{split_fname[1]}_{split_fname[2]}'
     os.rename(os.path.join(ccgp_path, file), os.path.join(FASTA_DIR, clean_fname))
 EOF
+
+
+# create list of samples, assumes fastas are all formated with sample names as first term in an underscore separated string
+ls ${FASTA_DIR} | awk -F "_" '{print $1}' | sort -u > "/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/referencelists/sampleids.txt"
