@@ -16,7 +16,8 @@ if [ -f "${REF}.fai" ];
         then
             echo ".fai file already exists, moving on!"
         else
-        samtools faidx ${REF}
+            # Index reference genome
+            bwa index ${REF}    
 fi
 
 
