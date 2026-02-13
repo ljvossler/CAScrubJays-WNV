@@ -20,6 +20,14 @@ if [ -f "${REF}.fai" ];
             bwa index ${REF}    
 fi
 
+# Check for ref-genome .dict file
+if [ -f "${REF}.dict" ];
+        then
+            echo ".dict file already exists, moving on!"
+        else
+        picard CreateSequenceDictionary REFERENCE=${REF} OUTPUT=${REF}.dict
+fi
+
 
 # Generate scaffold list
 if [ -f "${OUTDIR}/referencelists/SCAFFOLDS.txt" ];
@@ -38,6 +46,9 @@ awk 'BEGIN {OFS = "\t"} {print $1,$2}' ${REF}.fai | grep ${CHRLEAD} | grep -v ${
 while IFS=',' read -r first second; do
     sed -i "s/$second/$first/g" ${OUTDIR}/referencelists/autosomes_lengths.txt 
 done <<< "$CHR_FILE"
+
+# create list of samples, assumes fastas are all formated with sample names as first term in an underscore separated string
+ls ${FASTAS} | awk -F "_" '{print $1}' | sort -u > "${OUTDIR}/referencelists/sampleids.txt"
 
 # Make a comma separated chromosome conversion file without a header where the first column is the name of the chromosome and the second is the name of the associated scaffold in the reference genome:
 
