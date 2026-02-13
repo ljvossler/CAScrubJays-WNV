@@ -15,7 +15,7 @@ source /xdisk/mcnew/scrubjays_wnv/programs/CAScrubJays-WNV/params_base.sh
 THREADS=12
 
 # trimming
-FASTAS=/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/test_fastqs # format must be samplename_
+FASTAS=/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/fastqs_all # format must be samplename_
 TRIMJAR=${PROGDIR}/trimmomatic/trimmomatic-0.40.jar
 LEAD=20 # value to trim from leading strand, often 20
 TRAIL=20 # value to trim from trailing strand, often 20
