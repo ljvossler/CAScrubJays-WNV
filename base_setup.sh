@@ -11,14 +11,24 @@ mkdir -p ${OUTDIR}/referencelists/
 
 # make reference files
 
-# Generate fasta index
+# Generate fasta index using bwa
+if [ -f "${REF}.bwt" ];
+        then
+            echo ".bwt file already exists, moving on!"
+        else
+            # Index reference genome
+            bwa index ${REF}    
+fi
+
+# Generate fasta index using samtools
 if [ -f "${REF}.fai" ];
         then
             echo ".fai file already exists, moving on!"
         else
             # Index reference genome
-            bwa index ${REF}    
+            samtools faidx ${REF}
 fi
+
 
 # Check for ref-genome .dict file
 if [ -f "${REF}.dict" ];
@@ -59,7 +69,7 @@ if [ -f "${CHR_FILE}" ]
             echo "Creating chromosome conversion table from RefGenome..."
 
             micromamba activate ncbi_datasets  # Acivate environment with NCBI toolkit installed
-            datasets summary genome accession ${REF_ACC} --report sequence --as-json-lines | dataformat tsv genome-seq --fields refseq-seq-acc,chr-name > ${OUTDIR}/referencelists/chrom_name_mapping.txt
+            datasets summary genome accession ${REF_ACC} --report sequence --as-json-lines | dataformat tsv genome-seq --fields refseq-seq-acc,chr-name > ${OUTDIR}/referencelists/chrom_name_mapping.txt #Unfortunately I don't think ncbi_datasets toolkit has the ability to outptu as csv, so we'll have to do that outrselves in the python script below.
             python ${SCRIPTDIR}/make_chrom_conversion_file.py -i ${OUTDIR}/referencelists/chrom_name_mapping.txt -o ${CHR_FILE} -e ${MTCODE},NW_0
             micromamba deactivate # Deactivate NCBI datasets environment
 # Alternative: manually create the chromosome conversion file
