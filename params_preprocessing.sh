@@ -35,7 +35,7 @@ MININD=1 # minimum number of individuals required for a site to be kept
 MINQ=30 # minimum quality score required for a site to be kept
 MINMAF=0.05 # minimum minor allele frequency required for a site to be kept
 MINMAPQ=30 # minimum mapping quality score required for a site to be kept
-POP=<SET_VALUE> # name of population
+#POP=<SET_VALUE> # name of population
 
 
 # generate mask
