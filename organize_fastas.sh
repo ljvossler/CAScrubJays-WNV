@@ -22,7 +22,7 @@ sm_path_run2='/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/sm_sequences/S
 for sample in $sm_path_run2/*; 
 do 
 cat $FASTA_DIR/$(basename $sample)_R1_run1.fastq.gz $FASTA_DIR/$(basename $sample)_R1_run2.fastq.gz > $FASTA_DIR/$(basename $sample)_R1.fastq.gz && rm $FASTA_DIR/$(basename $sample)_R1_run1.fastq.gz $FASTA_DIR/$(basename $sample)_R1_run2.fastq.gz
-cat $FASTA_DIR/$(basename $sample)_R2_run1.fastq.gz $FASTA_DIR/$(basename $sample)_R2_run2.fastq.gz > $FASTA_DIR/$(basename $sample)_R2.fastq.gz && rm $FASTA_DIR/$(basename $sample)_R2_run1.fastq.gz $FASTA_DIR/$(basename $sample)_R2_run2.fastq.gz
+cat $FASTA_DIR/$(basename $sample)_R2_run1.fastq.gz $FASTA_DIR/$(basename $sample)_R2_run2.fastq.gz > $FASTA_DIR/$(basename $sample)_R2.fastq.gz && rm $FASTA_DIR/$(basename $sample)_R2_run1.fastq.gz $FASTA_DIR/$(basename $sample)_R2_run2.fastq.gz;
 done
 
 # Standardize the names of CCGP fasta files, and move to fastqs_all directory
