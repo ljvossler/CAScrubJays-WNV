@@ -25,4 +25,4 @@ EOF
 
 
 # create list of samples, assumes fastas are all formated with sample names as first term in an underscore separated string
-ls ${FASTA_DIR} | awk -F "_" '{print $1}' | sort -u > "/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/referencelists/sampleids.txt"
+ls ${FASTA_DIR} | awk -F "_" '{print $1}' | sort -u > "/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/referencelists/test_sampleids.txt"
