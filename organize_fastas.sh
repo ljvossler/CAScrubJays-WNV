@@ -2,7 +2,7 @@
 
 # Concatenate SM Fasta files from all samples across all runs based on Read Number, standardize the names, and place merged fastq in fastqs_all directory
 FASTA_DIR=/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/fastqs_test
-sm_path_run1='/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/SM-8328318_Run1_TS/fastqs'
+sm_path_run1='/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/sm_sequences/SM-8328318_Run1_TS/fastqs'
 for sample in $sm_path_run1/*; 
 do 
 echo $sample
@@ -10,7 +10,7 @@ cat $sample/*_R1_001.fastq.gz > $FASTA_DIR/$(basename $sample)_R1_run1.fastq.gz
 cat $sample/*_R2_001.fastq.gz > $FASTA_DIR/$(basename $sample)_R2_run1.fastq.gz; 
 done
 
-sm_path_run2='/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/SM-8328318_Run2/fastqs'
+sm_path_run2='/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/sm_sequences/SM-8328318_Run2/fastqs'
 for sample in $sm_path_run2/*; 
 do 
 echo $sample
