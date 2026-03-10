@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Concatenate SM Fasta files from all samples based on Read Number, standardize the names, and place merged fastq in fastqs_all directory
-FASTA_DIR=/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/fastqs_all
+FASTA_DIR=/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/merged_fastqs_test
 sm_path='/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/test_fastqs/'
 for sample in $sm_path/*; 
 do 
