@@ -7,6 +7,7 @@ module load parallel
 module load bcftools/1.19
 module load vcftools/0.1.16
 module load plink/1.9
+micromamba activate shapeit4_env
 
 source /xdisk/mcnew/scrubjays_wnv/programs/CAScrubJays-WNV/params_base.sh
 #source /xdisk/mcnew/scrubjays_wnv/programs/CAScrubJays-WNV/Genomics-Main/A_Preprocessing/preprocessing_setup.sh uncomment since we are now setup
