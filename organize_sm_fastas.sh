@@ -10,9 +10,9 @@ for sample in $(ls $sm_old_path1);
 do 
 echo $sample
 
-echo Catted Files (Run 1): $sm_old_path1/$sample/*_R1_001.fastq.gz $sm_old_path2/$sample/*_R1_001.fastq.gz $sm_new_path1/$sample/${sample}_R1.fastq.gz $sm_new_path1/$sample/${sample}_R1.fastq.gz
+echo "Catted Files (Run 1):" $sm_old_path1/$sample/*_R1_001.fastq.gz $sm_old_path2/$sample/*_R1_001.fastq.gz $sm_new_path1/$sample/${sample}_R1.fastq.gz $sm_new_path1/$sample/${sample}_R1.fastq.gz
 cat $sm_old_path1/$sample/*_R1_001.fastq.gz $sm_old_path2/$sample/*_R1_001.fastq.gz $sm_new_path1/$sample/${sample}_R1.fastq.gz $sm_new_path1/$sample/${sample}_R1.fastq.gz > $sm_merged_path/${sample}_R1.fastq.gz
 
-echo Catted Files (Run 2): $sm_old_path1/$sample/*_R2_001.fastq.gz $sm_old_path2/$sample/*_R2_001.fastq.gz $sm_new_path1/$sample/${sample}_R2.fastq.gz $sm_new_path1/$sample/${sample}_R2.fastq.gz
+echo "Catted Files (Run 2):" $sm_old_path1/$sample/*_R2_001.fastq.gz $sm_old_path2/$sample/*_R2_001.fastq.gz $sm_new_path1/$sample/${sample}_R2.fastq.gz $sm_new_path1/$sample/${sample}_R2.fastq.gz
 cat $sm_old_path1/$sample/*_R2_001.fastq.gz $sm_old_path2/$sample/*_R2_001.fastq.gz $sm_new_path1/$sample/${sample}_R2.fastq.gz $sm_new_path1/$sample/${sample}_R2.fastq.gz > $sm_merged_path/${sample}_R2.fastq.gz
 done
