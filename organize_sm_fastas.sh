@@ -6,11 +6,11 @@ sm_new_path1='/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/sm_new/SM_redo
 sm_new_path2='/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/sm_new/SM_redo/Run2'
 sm_merged_path='/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/sm_merged'
 
-for sample in $(ls $sm_old_path/SM-8328318_Run1_TS/fastqs); 
+for sample in $(ls $sm_old_path1); 
 do 
 echo $sample
 
-echo COMMAND: cat $sm_old_path1/$sample/*_R1_001.fastq.gz $sm_old_path2/$sample/*_R1_001.fastq.gz $sm_new_path1/$sample/${sample}_R1.fastq.gz $sm_new_path1/$sample/${sample}_R1.fastq.gz > $sm_merged_path/${sample}_R1.fastq.gz
+echo Catted Files: $sm_old_path1/$sample/*_R1_001.fastq.gz $sm_old_path2/$sample/*_R1_001.fastq.gz $sm_new_path1/$sample/${sample}_R1.fastq.gz $sm_new_path1/$sample/${sample}_R1.fastq.gz
 cat $sm_old_path1/$sample/*_R1_001.fastq.gz $sm_old_path2/$sample/*_R1_001.fastq.gz $sm_new_path1/$sample/${sample}_R1.fastq.gz $sm_new_path1/$sample/${sample}_R1.fastq.gz > $sm_merged_path/${sample}_R1.fastq.gz
 
 echo COMMAND: cat $sm_old_path1/$sample/*_R2_001.fastq.gz $sm_old_path2/$sample/*_R2_001.fastq.gz $sm_new_path1/$sample/${sample}_R2.fastq.gz $sm_new_path1/$sample/${sample}_R2.fastq.gz > $sm_merged_path/${sample}_R2.fastq.gz
