@@ -39,5 +39,5 @@ MINMAPQ=30 # minimum mapping quality score required for a site to be kept
 
 
 # generate mask
-k=<SET_VALUE>
-prefix=<SET_VALUE>
+k=150
+prefix=GCF_041296385.1
