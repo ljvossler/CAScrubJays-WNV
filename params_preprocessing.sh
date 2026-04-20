@@ -14,18 +14,19 @@ source /xdisk/mcnew/scrubjays_wnv/programs/CAScrubJays-WNV/params_base.sh
 # across all preprocessing
 THREADS=12
 
+
 # trimming
-FASTAS=/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/fastqs_sm_merged # format must be samplename_
+FASTAS=/xdisk/mcnew/scrubjays_wnv/aphelocoma_sequence_data/sm_new/merged # format must be samplename_
 TRIMJAR=${PROGDIR}/trimmomatic/trimmomatic-0.40.jar
 LEAD=20 # value to trim from leading strand, often 20
 TRAIL=20 # value to trim from trailing strand, often 20
 SLIDE=4:20 # threshold and windlow length, often 4:20
 MINREADLEN=90 # minimum length for a read to be kept, often 90 for 150bp sequencing
 
+
 # clipping
 BAMUTILBAM=${PROGDIR}/bamUtil-master/bin/bam # Path to bamUtil bam executable. Ensure that this binary file has executable permissions (chmod +x)
 
-# bam statistics
 
 # snp ID
 ANGSD=${PROGDIR}/angsd # path to directory with angsd executables
@@ -35,9 +36,23 @@ MININD=1 # minimum number of individuals required for a site to be kept
 MINQ=30 # minimum quality score required for a site to be kept
 MINMAF=0.05 # minimum minor allele frequency required for a site to be kept
 MINMAPQ=30 # minimum mapping quality score required for a site to be kept
-#POP=<SET_VALUE> # name of population
 
 
 # generate mask
 k=150
 prefix=GCF_041296385.1
+
+
+# Linkage Mapping
+#===============================
+# General Params
+VCF=${OUTDIR}/datafiles/genotype_calls/<SET_VALUE>.vcf
+MUT_RATE=<SET_VALUE>
+POP=<SET_VALUE>
+# SMC++ Params
+POPSET="${POP}:$(cat ${OUTDIR}/referencelists/sampleids.txt | paste -sd ",")"
+OUTFNAME=<SET_VALUE>
+# Pyrho Params
+NUM_HAPS=<SET_VALUE>
+SMCFILE=${OUTDIR}/datafiles/demography/${OUTFNAME}.csv
+#===============================

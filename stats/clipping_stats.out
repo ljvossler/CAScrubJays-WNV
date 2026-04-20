@@ -1,0 +1,1590 @@
+clipping_stats
+alignment_pipeline_10.out: Overlap Statistics:
+Number of overlapping pairs: 24274722
+Average # Reference Bases Overlapped: 110.736
+Variance of Reference Bases overlapped: 779.963
+Number of times orientation causes additional clipping: 3463202
+Number of times the forward strand was clipped: 12166703
+Number of times the reverse strand was clipped: 12108019
+Completed ClipOverlap Successfully.
+alignment_pipeline_11.out: Overlap Statistics:
+Number of overlapping pairs: 16601120
+Average # Reference Bases Overlapped: 105.778
+Variance of Reference Bases overlapped: 737.979
+Number of times orientation causes additional clipping: 2826556
+Number of times the forward strand was clipped: 8327596
+Number of times the reverse strand was clipped: 8273524
+Completed ClipOverlap Successfully.
+alignment_pipeline_12.out: Overlap Statistics:
+Number of overlapping pairs: 24365129
+Average # Reference Bases Overlapped: 107.05
+Variance of Reference Bases overlapped: 834.107
+Number of times orientation causes additional clipping: 3380998
+Number of times the forward strand was clipped: 12205477
+Number of times the reverse strand was clipped: 12159652
+Completed ClipOverlap Successfully.
+alignment_pipeline_13.out: Overlap Statistics:
+Number of overlapping pairs: 6011401
+Average # Reference Bases Overlapped: 103.128
+Variance of Reference Bases overlapped: 726.684
+Number of times orientation causes additional clipping: 1356637
+Number of times the forward strand was clipped: 3018287
+Number of times the reverse strand was clipped: 2993114
+Completed ClipOverlap Successfully.
+alignment_pipeline_14.out: Overlap Statistics:
+Number of overlapping pairs: 3700831
+Average # Reference Bases Overlapped: 106.419
+Variance of Reference Bases overlapped: 674.028
+Number of times orientation causes additional clipping: 873996
+Number of times the forward strand was clipped: 1857099
+Number of times the reverse strand was clipped: 1843732
+Completed ClipOverlap Successfully.
+alignment_pipeline_15.out: Overlap Statistics:
+Number of overlapping pairs: 26938919
+Average # Reference Bases Overlapped: 112.704
+Variance of Reference Bases overlapped: 674.635
+Number of times orientation causes additional clipping: 4606425
+Number of times the forward strand was clipped: 13515812
+Number of times the reverse strand was clipped: 13423107
+Completed ClipOverlap Successfully.
+alignment_pipeline_16.out: Overlap Statistics:
+Number of overlapping pairs: 7543458
+Average # Reference Bases Overlapped: 88.3284
+Variance of Reference Bases overlapped: 655.446
+Number of times orientation causes additional clipping: 1696775
+Number of times the forward strand was clipped: 3800212
+Number of times the reverse strand was clipped: 3743246
+Completed ClipOverlap Successfully.
+alignment_pipeline_17.out: Overlap Statistics:
+Number of overlapping pairs: 25510102
+Average # Reference Bases Overlapped: 110.251
+Variance of Reference Bases overlapped: 763.957
+Number of times orientation causes additional clipping: 3854853
+Number of times the forward strand was clipped: 12786652
+Number of times the reverse strand was clipped: 12723450
+Completed ClipOverlap Successfully.
+alignment_pipeline_18.out: Overlap Statistics:
+Number of overlapping pairs: 28619561
+Average # Reference Bases Overlapped: 103.434
+Variance of Reference Bases overlapped: 1268.05
+Number of times orientation causes additional clipping: 3185065
+Number of times the forward strand was clipped: 14326391
+Number of times the reverse strand was clipped: 14293170
+Completed ClipOverlap Successfully.
+alignment_pipeline_19.out: Overlap Statistics:
+Number of overlapping pairs: 4713549
+Average # Reference Bases Overlapped: 107.014
+Variance of Reference Bases overlapped: 673.497
+Number of times orientation causes additional clipping: 1003041
+Number of times the forward strand was clipped: 2364501
+Number of times the reverse strand was clipped: 2349048
+Completed ClipOverlap Successfully.
+alignment_pipeline_1.out: Overlap Statistics:
+Number of overlapping pairs: 28022094
+Average # Reference Bases Overlapped: 42.486
+Variance of Reference Bases overlapped: 1711.33
+Number of times orientation causes additional clipping: 1641281
+Number of times the forward strand was clipped: 14010877
+Number of times the reverse strand was clipped: 14011217
+Completed ClipOverlap Successfully.
+alignment_pipeline_20.out: Overlap Statistics:
+Number of overlapping pairs: 13015880
+Average # Reference Bases Overlapped: 111.543
+Variance of Reference Bases overlapped: 680.316
+Number of times orientation causes additional clipping: 2379210
+Number of times the forward strand was clipped: 6516409
+Number of times the reverse strand was clipped: 6499471
+Completed ClipOverlap Successfully.
+alignment_pipeline_21.out: Overlap Statistics:
+Number of overlapping pairs: 3554658
+Average # Reference Bases Overlapped: 104.984
+Variance of Reference Bases overlapped: 670.141
+Number of times orientation causes additional clipping: 897210
+Number of times the forward strand was clipped: 1783276
+Number of times the reverse strand was clipped: 1771382
+Completed ClipOverlap Successfully.
+alignment_pipeline_22.out: Overlap Statistics:
+Number of overlapping pairs: 11164577
+Average # Reference Bases Overlapped: 107.697
+Variance of Reference Bases overlapped: 705.915
+Number of times orientation causes additional clipping: 2234309
+Number of times the forward strand was clipped: 5596968
+Number of times the reverse strand was clipped: 5567609
+Completed ClipOverlap Successfully.
+alignment_pipeline_23.out: Overlap Statistics:
+Number of overlapping pairs: 6060815
+Average # Reference Bases Overlapped: 111.5
+Variance of Reference Bases overlapped: 706.86
+Number of times orientation causes additional clipping: 1047896
+Number of times the forward strand was clipped: 3035783
+Number of times the reverse strand was clipped: 3025032
+Completed ClipOverlap Successfully.
+alignment_pipeline_24.out: Overlap Statistics:
+Number of overlapping pairs: 14494607
+Average # Reference Bases Overlapped: 111.267
+Variance of Reference Bases overlapped: 674.297
+Number of times orientation causes additional clipping: 2595535
+Number of times the forward strand was clipped: 7272944
+Number of times the reverse strand was clipped: 7221663
+Completed ClipOverlap Successfully.
+alignment_pipeline_25.out: Overlap Statistics:
+Number of overlapping pairs: 28633484
+Average # Reference Bases Overlapped: 105.352
+Variance of Reference Bases overlapped: 1136.59
+Number of times orientation causes additional clipping: 3275700
+Number of times the forward strand was clipped: 14341050
+Number of times the reverse strand was clipped: 14292434
+Completed ClipOverlap Successfully.
+alignment_pipeline_26.out: Overlap Statistics:
+Number of overlapping pairs: 13143723
+Average # Reference Bases Overlapped: 111.066
+Variance of Reference Bases overlapped: 671.84
+Number of times orientation causes additional clipping: 2434743
+Number of times the forward strand was clipped: 6598977
+Number of times the reverse strand was clipped: 6544746
+Completed ClipOverlap Successfully.
+alignment_pipeline_27.out: Overlap Statistics:
+Number of overlapping pairs: 38392311
+Average # Reference Bases Overlapped: 111.912
+Variance of Reference Bases overlapped: 771.049
+Number of times orientation causes additional clipping: 5787995
+Number of times the forward strand was clipped: 19228048
+Number of times the reverse strand was clipped: 19164263
+Completed ClipOverlap Successfully.
+alignment_pipeline_28.out: Overlap Statistics:
+Number of overlapping pairs: 33004178
+Average # Reference Bases Overlapped: 98.7406
+Variance of Reference Bases overlapped: 1443.31
+Number of times orientation causes additional clipping: 2901273
+Number of times the forward strand was clipped: 16523614
+Number of times the reverse strand was clipped: 16480564
+Completed ClipOverlap Successfully.
+alignment_pipeline_29.out: Overlap Statistics:
+Number of overlapping pairs: 37042852
+Average # Reference Bases Overlapped: 95.1997
+Variance of Reference Bases overlapped: 1567.12
+Number of times orientation causes additional clipping: 2916810
+Number of times the forward strand was clipped: 18546258
+Number of times the reverse strand was clipped: 18496594
+Completed ClipOverlap Successfully.
+alignment_pipeline_2.out: Overlap Statistics:
+Number of overlapping pairs: 42174664
+Average # Reference Bases Overlapped: 26.1449
+Variance of Reference Bases overlapped: 599.205
+Number of times orientation causes additional clipping: 1309339
+Number of times the forward strand was clipped: 21106023
+Number of times the reverse strand was clipped: 21068641
+Completed ClipOverlap Successfully.
+alignment_pipeline_30.out: Overlap Statistics:
+Number of overlapping pairs: 29146939
+Average # Reference Bases Overlapped: 95.7479
+Variance of Reference Bases overlapped: 1539.4
+Number of times orientation causes additional clipping: 2282187
+Number of times the forward strand was clipped: 14587121
+Number of times the reverse strand was clipped: 14559818
+Completed ClipOverlap Successfully.
+alignment_pipeline_31.out: Overlap Statistics:
+Number of overlapping pairs: 20179003
+Average # Reference Bases Overlapped: 97.6396
+Variance of Reference Bases overlapped: 1493.7
+Number of times orientation causes additional clipping: 1662701
+Number of times the forward strand was clipped: 10098137
+Number of times the reverse strand was clipped: 10080866
+Completed ClipOverlap Successfully.
+alignment_pipeline_32.out: Overlap Statistics:
+Number of overlapping pairs: 28522218
+Average # Reference Bases Overlapped: 104.96
+Variance of Reference Bases overlapped: 1179.98
+Number of times orientation causes additional clipping: 3538377
+Number of times the forward strand was clipped: 14282302
+Number of times the reverse strand was clipped: 14239916
+Completed ClipOverlap Successfully.
+alignment_pipeline_33.out: Overlap Statistics:
+Number of overlapping pairs: 31345607
+Average # Reference Bases Overlapped: 109.123
+Variance of Reference Bases overlapped: 1002.88
+Number of times orientation causes additional clipping: 4447659
+Number of times the forward strand was clipped: 15686718
+Number of times the reverse strand was clipped: 15658889
+Completed ClipOverlap Successfully.
+alignment_pipeline_34.out: Overlap Statistics:
+Number of overlapping pairs: 26822184
+Average # Reference Bases Overlapped: 98.8252
+Variance of Reference Bases overlapped: 1454.65
+Number of times orientation causes additional clipping: 2581807
+Number of times the forward strand was clipped: 13436636
+Number of times the reverse strand was clipped: 13385548
+Completed ClipOverlap Successfully.
+alignment_pipeline_35.out: Overlap Statistics:
+Number of overlapping pairs: 54075189
+Average # Reference Bases Overlapped: 103.2
+Variance of Reference Bases overlapped: 1325.69
+Number of times orientation causes additional clipping: 5747774
+Number of times the forward strand was clipped: 27066425
+Number of times the reverse strand was clipped: 27008764
+Completed ClipOverlap Successfully.
+alignment_pipeline_36.out: Overlap Statistics:
+Number of overlapping pairs: 15270927
+Average # Reference Bases Overlapped: 107.947
+Variance of Reference Bases overlapped: 1073.96
+Number of times orientation causes additional clipping: 2036358
+Number of times the forward strand was clipped: 7653312
+Number of times the reverse strand was clipped: 7617615
+Completed ClipOverlap Successfully.
+alignment_pipeline_37.out: Overlap Statistics:
+Number of overlapping pairs: 39271541
+Average # Reference Bases Overlapped: 101.26
+Variance of Reference Bases overlapped: 1350.18
+Number of times orientation causes additional clipping: 4079968
+Number of times the forward strand was clipped: 19678689
+Number of times the reverse strand was clipped: 19592852
+Completed ClipOverlap Successfully.
+alignment_pipeline_38.out: Overlap Statistics:
+Number of overlapping pairs: 41731622
+Average # Reference Bases Overlapped: 102.635
+Variance of Reference Bases overlapped: 1285.35
+Number of times orientation causes additional clipping: 4526964
+Number of times the forward strand was clipped: 20897846
+Number of times the reverse strand was clipped: 20833776
+Completed ClipOverlap Successfully.
+alignment_pipeline_39.out: Overlap Statistics:
+Number of overlapping pairs: 20488201
+Average # Reference Bases Overlapped: 111.031
+Variance of Reference Bases overlapped: 666.132
+Number of times orientation causes additional clipping: 4112644
+Number of times the forward strand was clipped: 10267064
+Number of times the reverse strand was clipped: 10221137
+Completed ClipOverlap Successfully.
+alignment_pipeline_3.out: Overlap Statistics:
+Number of overlapping pairs: 25003352
+Average # Reference Bases Overlapped: 75.1197
+Variance of Reference Bases overlapped: 2508.74
+Number of times orientation causes additional clipping: 4022200
+Number of times the forward strand was clipped: 12639862
+Number of times the reverse strand was clipped: 12363490
+Completed ClipOverlap Successfully.
+alignment_pipeline_40.out: Overlap Statistics:
+Number of overlapping pairs: 50849139
+Average # Reference Bases Overlapped: 107.093
+Variance of Reference Bases overlapped: 1090.53
+Number of times orientation causes additional clipping: 6624886
+Number of times the forward strand was clipped: 25480813
+Number of times the reverse strand was clipped: 25368326
+Completed ClipOverlap Successfully.
+alignment_pipeline_41.out: Overlap Statistics:
+Number of overlapping pairs: 43905750
+Average # Reference Bases Overlapped: 105.561
+Variance of Reference Bases overlapped: 1076.06
+Number of times orientation causes additional clipping: 4970562
+Number of times the forward strand was clipped: 21989378
+Number of times the reverse strand was clipped: 21916372
+Completed ClipOverlap Successfully.
+alignment_pipeline_42.out: Overlap Statistics:
+Number of overlapping pairs: 62562840
+Average # Reference Bases Overlapped: 105.907
+Variance of Reference Bases overlapped: 1074.8
+Number of times orientation causes additional clipping: 7259346
+Number of times the forward strand was clipped: 31311107
+Number of times the reverse strand was clipped: 31251733
+Completed ClipOverlap Successfully.
+alignment_pipeline_43.out: Overlap Statistics:
+Number of overlapping pairs: 51025391
+Average # Reference Bases Overlapped: 105.579
+Variance of Reference Bases overlapped: 1090.27
+Number of times orientation causes additional clipping: 6392504
+Number of times the forward strand was clipped: 25542070
+Number of times the reverse strand was clipped: 25483321
+Completed ClipOverlap Successfully.
+alignment_pipeline_44.out: Overlap Statistics:
+Number of overlapping pairs: 15711301
+Average # Reference Bases Overlapped: 104.529
+Variance of Reference Bases overlapped: 700.994
+Number of times orientation causes additional clipping: 3327771
+Number of times the forward strand was clipped: 7869751
+Number of times the reverse strand was clipped: 7841550
+Completed ClipOverlap Successfully.
+alignment_pipeline_45.out: Overlap Statistics:
+Number of overlapping pairs: 29011368
+Average # Reference Bases Overlapped: 110.268
+Variance of Reference Bases overlapped: 735.736
+Number of times orientation causes additional clipping: 4907695
+Number of times the forward strand was clipped: 14536349
+Number of times the reverse strand was clipped: 14475019
+Completed ClipOverlap Successfully.
+alignment_pipeline_46.out: Overlap Statistics:
+Number of overlapping pairs: 28906875
+Average # Reference Bases Overlapped: 106.951
+Variance of Reference Bases overlapped: 746.069
+Number of times orientation causes additional clipping: 4923257
+Number of times the forward strand was clipped: 14479542
+Number of times the reverse strand was clipped: 14427333
+Completed ClipOverlap Successfully.
+alignment_pipeline_47.out: Overlap Statistics:
+Number of overlapping pairs: 12173736
+Average # Reference Bases Overlapped: 103.981
+Variance of Reference Bases overlapped: 703.128
+Number of times orientation causes additional clipping: 2605846
+Number of times the forward strand was clipped: 6103869
+Number of times the reverse strand was clipped: 6069867
+Completed ClipOverlap Successfully.
+alignment_pipeline_48.out: Overlap Statistics:
+Number of overlapping pairs: 44565273
+Average # Reference Bases Overlapped: 104.196
+Variance of Reference Bases overlapped: 860.251
+Number of times orientation causes additional clipping: 7231954
+Number of times the forward strand was clipped: 22316026
+Number of times the reverse strand was clipped: 22249247
+Completed ClipOverlap Successfully.
+alignment_pipeline_49.out: Overlap Statistics:
+Number of overlapping pairs: 19687431
+Average # Reference Bases Overlapped: 108.224
+Variance of Reference Bases overlapped: 685.927
+Number of times orientation causes additional clipping: 3775833
+Number of times the forward strand was clipped: 9858671
+Number of times the reverse strand was clipped: 9828760
+Completed ClipOverlap Successfully.
+alignment_pipeline_4.out: Overlap Statistics:
+Number of overlapping pairs: 35091474
+Average # Reference Bases Overlapped: 20.7159
+Variance of Reference Bases overlapped: 69.4864
+Number of times orientation causes additional clipping: 809834
+Number of times the forward strand was clipped: 17551856
+Number of times the reverse strand was clipped: 17539618
+Completed ClipOverlap Successfully.
+alignment_pipeline_5.out: Overlap Statistics:
+Number of overlapping pairs: 58031512
+Average # Reference Bases Overlapped: 97.9227
+Variance of Reference Bases overlapped: 1438.81
+Number of times orientation causes additional clipping: 4786042
+Number of times the forward strand was clipped: 29039897
+Number of times the reverse strand was clipped: 28991615
+Completed ClipOverlap Successfully.
+alignment_pipeline_6.out: Overlap Statistics:
+Number of overlapping pairs: 71038257
+Average # Reference Bases Overlapped: 96.5382
+Variance of Reference Bases overlapped: 1471.86
+Number of times orientation causes additional clipping: 6084804
+Number of times the forward strand was clipped: 35584450
+Number of times the reverse strand was clipped: 35453807
+Completed ClipOverlap Successfully.
+alignment_pipeline_7.out: Overlap Statistics:
+Number of overlapping pairs: 12998797
+Average # Reference Bases Overlapped: 107.334
+Variance of Reference Bases overlapped: 731.169
+Number of times orientation causes additional clipping: 2275160
+Number of times the forward strand was clipped: 6514867
+Number of times the reverse strand was clipped: 6483930
+Completed ClipOverlap Successfully.
+alignment_pipeline_8.out: Overlap Statistics:
+Number of overlapping pairs: 11140973
+Average # Reference Bases Overlapped: 107.122
+Variance of Reference Bases overlapped: 707.069
+Number of times orientation causes additional clipping: 2129465
+Number of times the forward strand was clipped: 5586231
+Number of times the reverse strand was clipped: 5554742
+Completed ClipOverlap Successfully.
+alignment_pipeline_9.out: Overlap Statistics:
+Number of overlapping pairs: 7133636
+Average # Reference Bases Overlapped: 105.139
+Variance of Reference Bases overlapped: 720.635
+Number of times orientation causes additional clipping: 1408360
+Number of times the forward strand was clipped: 3579740
+Number of times the reverse strand was clipped: 3553896
+Completed ClipOverlap Successfully.
+clipping.out: alignment_pipeline_10.out: Overlap Statistics:
+Number of overlapping pairs: 24274722
+Average # Reference Bases Overlapped: 110.736
+Variance of Reference Bases overlapped: 779.963
+Number of times orientation causes additional clipping: 3463202
+Number of times the forward strand was clipped: 12166703
+Number of times the reverse strand was clipped: 12108019
+Completed ClipOverlap Successfully.
+alignment_pipeline_11.out: Overlap Statistics:
+Number of overlapping pairs: 16601120
+Average # Reference Bases Overlapped: 105.778
+Variance of Reference Bases overlapped: 737.979
+Number of times orientation causes additional clipping: 2826556
+Number of times the forward strand was clipped: 8327596
+Number of times the reverse strand was clipped: 8273524
+Completed ClipOverlap Successfully.
+alignment_pipeline_12.out: Overlap Statistics:
+Number of overlapping pairs: 24365129
+Average # Reference Bases Overlapped: 107.05
+Variance of Reference Bases overlapped: 834.107
+Number of times orientation causes additional clipping: 3380998
+Number of times the forward strand was clipped: 12205477
+Number of times the reverse strand was clipped: 12159652
+Completed ClipOverlap Successfully.
+alignment_pipeline_13.out: Overlap Statistics:
+Number of overlapping pairs: 6011401
+Average # Reference Bases Overlapped: 103.128
+Variance of Reference Bases overlapped: 726.684
+Number of times orientation causes additional clipping: 1356637
+Number of times the forward strand was clipped: 3018287
+Number of times the reverse strand was clipped: 2993114
+Completed ClipOverlap Successfully.
+alignment_pipeline_14.out: Overlap Statistics:
+Number of overlapping pairs: 3700831
+Average # Reference Bases Overlapped: 106.419
+Variance of Reference Bases overlapped: 674.028
+Number of times orientation causes additional clipping: 873996
+Number of times the forward strand was clipped: 1857099
+Number of times the reverse strand was clipped: 1843732
+Completed ClipOverlap Successfully.
+alignment_pipeline_15.out: Overlap Statistics:
+Number of overlapping pairs: 26938919
+Average # Reference Bases Overlapped: 112.704
+Variance of Reference Bases overlapped: 674.635
+Number of times orientation causes additional clipping: 4606425
+Number of times the forward strand was clipped: 13515812
+Number of times the reverse strand was clipped: 13423107
+Completed ClipOverlap Successfully.
+alignment_pipeline_16.out: Overlap Statistics:
+Number of overlapping pairs: 7543458
+Average # Reference Bases Overlapped: 88.3284
+Variance of Reference Bases overlapped: 655.446
+Number of times orientation causes additional clipping: 1696775
+Number of times the forward strand was clipped: 3800212
+Number of times the reverse strand was clipped: 3743246
+Completed ClipOverlap Successfully.
+alignment_pipeline_17.out: Overlap Statistics:
+Number of overlapping pairs: 25510102
+Average # Reference Bases Overlapped: 110.251
+Variance of Reference Bases overlapped: 763.957
+Number of times orientation causes additional clipping: 3854853
+Number of times the forward strand was clipped: 12786652
+Number of times the reverse strand was clipped: 12723450
+Completed ClipOverlap Successfully.
+alignment_pipeline_18.out: Overlap Statistics:
+Number of overlapping pairs: 28619561
+Average # Reference Bases Overlapped: 103.434
+Variance of Reference Bases overlapped: 1268.05
+Number of times orientation causes additional clipping: 3185065
+Number of times the forward strand was clipped: 14326391
+Number of times the reverse strand was clipped: 14293170
+Completed ClipOverlap Successfully.
+alignment_pipeline_19.out: Overlap Statistics:
+Number of overlapping pairs: 4713549
+Average # Reference Bases Overlapped: 107.014
+Variance of Reference Bases overlapped: 673.497
+Number of times orientation causes additional clipping: 1003041
+Number of times the forward strand was clipped: 2364501
+Number of times the reverse strand was clipped: 2349048
+Completed ClipOverlap Successfully.
+alignment_pipeline_1.out: Overlap Statistics:
+Number of overlapping pairs: 28022094
+Average # Reference Bases Overlapped: 42.486
+Variance of Reference Bases overlapped: 1711.33
+Number of times orientation causes additional clipping: 1641281
+Number of times the forward strand was clipped: 14010877
+Number of times the reverse strand was clipped: 14011217
+Completed ClipOverlap Successfully.
+alignment_pipeline_20.out: Overlap Statistics:
+Number of overlapping pairs: 13015880
+Average # Reference Bases Overlapped: 111.543
+Variance of Reference Bases overlapped: 680.316
+Number of times orientation causes additional clipping: 2379210
+Number of times the forward strand was clipped: 6516409
+Number of times the reverse strand was clipped: 6499471
+Completed ClipOverlap Successfully.
+alignment_pipeline_21.out: Overlap Statistics:
+Number of overlapping pairs: 3554658
+Average # Reference Bases Overlapped: 104.984
+Variance of Reference Bases overlapped: 670.141
+Number of times orientation causes additional clipping: 897210
+Number of times the forward strand was clipped: 1783276
+Number of times the reverse strand was clipped: 1771382
+Completed ClipOverlap Successfully.
+alignment_pipeline_22.out: Overlap Statistics:
+Number of overlapping pairs: 11164577
+Average # Reference Bases Overlapped: 107.697
+Variance of Reference Bases overlapped: 705.915
+Number of times orientation causes additional clipping: 2234309
+Number of times the forward strand was clipped: 5596968
+Number of times the reverse strand was clipped: 5567609
+Completed ClipOverlap Successfully.
+alignment_pipeline_23.out: Overlap Statistics:
+Number of overlapping pairs: 6060815
+Average # Reference Bases Overlapped: 111.5
+Variance of Reference Bases overlapped: 706.86
+Number of times orientation causes additional clipping: 1047896
+Number of times the forward strand was clipped: 3035783
+Number of times the reverse strand was clipped: 3025032
+Completed ClipOverlap Successfully.
+alignment_pipeline_24.out: Overlap Statistics:
+Number of overlapping pairs: 14494607
+Average # Reference Bases Overlapped: 111.267
+Variance of Reference Bases overlapped: 674.297
+Number of times orientation causes additional clipping: 2595535
+Number of times the forward strand was clipped: 7272944
+Number of times the reverse strand was clipped: 7221663
+Completed ClipOverlap Successfully.
+alignment_pipeline_25.out: Overlap Statistics:
+Number of overlapping pairs: 28633484
+Average # Reference Bases Overlapped: 105.352
+Variance of Reference Bases overlapped: 1136.59
+Number of times orientation causes additional clipping: 3275700
+Number of times the forward strand was clipped: 14341050
+Number of times the reverse strand was clipped: 14292434
+Completed ClipOverlap Successfully.
+alignment_pipeline_26.out: Overlap Statistics:
+Number of overlapping pairs: 13143723
+Average # Reference Bases Overlapped: 111.066
+Variance of Reference Bases overlapped: 671.84
+Number of times orientation causes additional clipping: 2434743
+Number of times the forward strand was clipped: 6598977
+Number of times the reverse strand was clipped: 6544746
+Completed ClipOverlap Successfully.
+alignment_pipeline_27.out: Overlap Statistics:
+Number of overlapping pairs: 38392311
+Average # Reference Bases Overlapped: 111.912
+Variance of Reference Bases overlapped: 771.049
+Number of times orientation causes additional clipping: 5787995
+Number of times the forward strand was clipped: 19228048
+Number of times the reverse strand was clipped: 19164263
+Completed ClipOverlap Successfully.
+alignment_pipeline_28.out: Overlap Statistics:
+Number of overlapping pairs: 33004178
+Average # Reference Bases Overlapped: 98.7406
+Variance of Reference Bases overlapped: 1443.31
+Number of times orientation causes additional clipping: 2901273
+Number of times the forward strand was clipped: 16523614
+Number of times the reverse strand was clipped: 16480564
+Completed ClipOverlap Successfully.
+alignment_pipeline_29.out: Overlap Statistics:
+Number of overlapping pairs: 37042852
+Average # Reference Bases Overlapped: 95.1997
+Variance of Reference Bases overlapped: 1567.12
+Number of times orientation causes additional clipping: 2916810
+Number of times the forward strand was clipped: 18546258
+Number of times the reverse strand was clipped: 18496594
+Completed ClipOverlap Successfully.
+alignment_pipeline_2.out: Overlap Statistics:
+Number of overlapping pairs: 42174664
+Average # Reference Bases Overlapped: 26.1449
+Variance of Reference Bases overlapped: 599.205
+Number of times orientation causes additional clipping: 1309339
+Number of times the forward strand was clipped: 21106023
+Number of times the reverse strand was clipped: 21068641
+Completed ClipOverlap Successfully.
+alignment_pipeline_30.out: Overlap Statistics:
+Number of overlapping pairs: 29146939
+Average # Reference Bases Overlapped: 95.7479
+Variance of Reference Bases overlapped: 1539.4
+Number of times orientation causes additional clipping: 2282187
+Number of times the forward strand was clipped: 14587121
+Number of times the reverse strand was clipped: 14559818
+Completed ClipOverlap Successfully.
+alignment_pipeline_31.out: Overlap Statistics:
+Number of overlapping pairs: 20179003
+Average # Reference Bases Overlapped: 97.6396
+Variance of Reference Bases overlapped: 1493.7
+Number of times orientation causes additional clipping: 1662701
+Number of times the forward strand was clipped: 10098137
+Number of times the reverse strand was clipped: 10080866
+Completed ClipOverlap Successfully.
+alignment_pipeline_32.out: Overlap Statistics:
+Number of overlapping pairs: 28522218
+Average # Reference Bases Overlapped: 104.96
+Variance of Reference Bases overlapped: 1179.98
+Number of times orientation causes additional clipping: 3538377
+Number of times the forward strand was clipped: 14282302
+Number of times the reverse strand was clipped: 14239916
+Completed ClipOverlap Successfully.
+alignment_pipeline_33.out: Overlap Statistics:
+Number of overlapping pairs: 31345607
+Average # Reference Bases Overlapped: 109.123
+Variance of Reference Bases overlapped: 1002.88
+Number of times orientation causes additional clipping: 4447659
+Number of times the forward strand was clipped: 15686718
+Number of times the reverse strand was clipped: 15658889
+Completed ClipOverlap Successfully.
+alignment_pipeline_34.out: Overlap Statistics:
+Number of overlapping pairs: 26822184
+Average # Reference Bases Overlapped: 98.8252
+Variance of Reference Bases overlapped: 1454.65
+Number of times orientation causes additional clipping: 2581807
+Number of times the forward strand was clipped: 13436636
+Number of times the reverse strand was clipped: 13385548
+Completed ClipOverlap Successfully.
+alignment_pipeline_35.out: Overlap Statistics:
+Number of overlapping pairs: 54075189
+Average # Reference Bases Overlapped: 103.2
+Variance of Reference Bases overlapped: 1325.69
+Number of times orientation causes additional clipping: 5747774
+Number of times the forward strand was clipped: 27066425
+Number of times the reverse strand was clipped: 27008764
+Completed ClipOverlap Successfully.
+alignment_pipeline_36.out: Overlap Statistics:
+Number of overlapping pairs: 15270927
+Average # Reference Bases Overlapped: 107.947
+Variance of Reference Bases overlapped: 1073.96
+Number of times orientation causes additional clipping: 2036358
+Number of times the forward strand was clipped: 7653312
+Number of times the reverse strand was clipped: 7617615
+Completed ClipOverlap Successfully.
+alignment_pipeline_37.out: Overlap Statistics:
+Number of overlapping pairs: 39271541
+Average # Reference Bases Overlapped: 101.26
+Variance of Reference Bases overlapped: 1350.18
+Number of times orientation causes additional clipping: 4079968
+Number of times the forward strand was clipped: 19678689
+Number of times the reverse strand was clipped: 19592852
+Completed ClipOverlap Successfully.
+alignment_pipeline_38.out: Overlap Statistics:
+Number of overlapping pairs: 41731622
+Average # Reference Bases Overlapped: 102.635
+Variance of Reference Bases overlapped: 1285.35
+Number of times orientation causes additional clipping: 4526964
+Number of times the forward strand was clipped: 20897846
+Number of times the reverse strand was clipped: 20833776
+Completed ClipOverlap Successfully.
+alignment_pipeline_39.out: Overlap Statistics:
+Number of overlapping pairs: 20488201
+Average # Reference Bases Overlapped: 111.031
+Variance of Reference Bases overlapped: 666.132
+Number of times orientation causes additional clipping: 4112644
+Number of times the forward strand was clipped: 10267064
+Number of times the reverse strand was clipped: 10221137
+Completed ClipOverlap Successfully.
+alignment_pipeline_3.out: Overlap Statistics:
+Number of overlapping pairs: 25003352
+Average # Reference Bases Overlapped: 75.1197
+Variance of Reference Bases overlapped: 2508.74
+Number of times orientation causes additional clipping: 4022200
+Number of times the forward strand was clipped: 12639862
+Number of times the reverse strand was clipped: 12363490
+Completed ClipOverlap Successfully.
+alignment_pipeline_40.out: Overlap Statistics:
+Number of overlapping pairs: 50849139
+Average # Reference Bases Overlapped: 107.093
+Variance of Reference Bases overlapped: 1090.53
+Number of times orientation causes additional clipping: 6624886
+Number of times the forward strand was clipped: 25480813
+Number of times the reverse strand was clipped: 25368326
+Completed ClipOverlap Successfully.
+alignment_pipeline_41.out: Overlap Statistics:
+Number of overlapping pairs: 43905750
+Average # Reference Bases Overlapped: 105.561
+Variance of Reference Bases overlapped: 1076.06
+Number of times orientation causes additional clipping: 4970562
+Number of times the forward strand was clipped: 21989378
+Number of times the reverse strand was clipped: 21916372
+Completed ClipOverlap Successfully.
+alignment_pipeline_42.out: Overlap Statistics:
+Number of overlapping pairs: 62562840
+Average # Reference Bases Overlapped: 105.907
+Variance of Reference Bases overlapped: 1074.8
+Number of times orientation causes additional clipping: 7259346
+Number of times the forward strand was clipped: 31311107
+Number of times the reverse strand was clipped: 31251733
+Completed ClipOverlap Successfully.
+alignment_pipeline_43.out: Overlap Statistics:
+Number of overlapping pairs: 51025391
+Average # Reference Bases Overlapped: 105.579
+Variance of Reference Bases overlapped: 1090.27
+Number of times orientation causes additional clipping: 6392504
+Number of times the forward strand was clipped: 25542070
+Number of times the reverse strand was clipped: 25483321
+Completed ClipOverlap Successfully.
+alignment_pipeline_44.out: Overlap Statistics:
+Number of overlapping pairs: 15711301
+Average # Reference Bases Overlapped: 104.529
+Variance of Reference Bases overlapped: 700.994
+Number of times orientation causes additional clipping: 3327771
+Number of times the forward strand was clipped: 7869751
+Number of times the reverse strand was clipped: 7841550
+Completed ClipOverlap Successfully.
+alignment_pipeline_45.out: Overlap Statistics:
+Number of overlapping pairs: 29011368
+Average # Reference Bases Overlapped: 110.268
+Variance of Reference Bases overlapped: 735.736
+Number of times orientation causes additional clipping: 4907695
+Number of times the forward strand was clipped: 14536349
+Number of times the reverse strand was clipped: 14475019
+Completed ClipOverlap Successfully.
+alignment_pipeline_46.out: Overlap Statistics:
+Number of overlapping pairs: 28906875
+Average # Reference Bases Overlapped: 106.951
+Variance of Reference Bases overlapped: 746.069
+Number of times orientation causes additional clipping: 4923257
+Number of times the forward strand was clipped: 14479542
+Number of times the reverse strand was clipped: 14427333
+Completed ClipOverlap Successfully.
+alignment_pipeline_47.out: Overlap Statistics:
+Number of overlapping pairs: 12173736
+Average # Reference Bases Overlapped: 103.981
+Variance of Reference Bases overlapped: 703.128
+Number of times orientation causes additional clipping: 2605846
+Number of times the forward strand was clipped: 6103869
+Number of times the reverse strand was clipped: 6069867
+Completed ClipOverlap Successfully.
+alignment_pipeline_48.out: Overlap Statistics:
+Number of overlapping pairs: 44565273
+Average # Reference Bases Overlapped: 104.196
+Variance of Reference Bases overlapped: 860.251
+Number of times orientation causes additional clipping: 7231954
+Number of times the forward strand was clipped: 22316026
+Number of times the reverse strand was clipped: 22249247
+Completed ClipOverlap Successfully.
+alignment_pipeline_49.out: Overlap Statistics:
+Number of overlapping pairs: 19687431
+Average # Reference Bases Overlapped: 108.224
+Variance of Reference Bases overlapped: 685.927
+Number of times orientation causes additional clipping: 3775833
+Number of times the forward strand was clipped: 9858671
+Number of times the reverse strand was clipped: 9828760
+Completed ClipOverlap Successfully.
+alignment_pipeline_4.out: Overlap Statistics:
+Number of overlapping pairs: 35091474
+Average # Reference Bases Overlapped: 20.7159
+Variance of Reference Bases overlapped: 69.4864
+Number of times orientation causes additional clipping: 809834
+Number of times the forward strand was clipped: 17551856
+Number of times the reverse strand was clipped: 17539618
+Completed ClipOverlap Successfully.
+alignment_pipeline_5.out: Overlap Statistics:
+Number of overlapping pairs: 58031512
+Average # Reference Bases Overlapped: 97.9227
+Variance of Reference Bases overlapped: 1438.81
+Number of times orientation causes additional clipping: 4786042
+Number of times the forward strand was clipped: 29039897
+Number of times the reverse strand was clipped: 28991615
+Completed ClipOverlap Successfully.
+alignment_pipeline_6.out: Overlap Statistics:
+Number of overlapping pairs: 71038257
+Average # Reference Bases Overlapped: 96.5382
+Variance of Reference Bases overlapped: 1471.86
+Number of times orientation causes additional clipping: 6084804
+Number of times the forward strand was clipped: 35584450
+Number of times the reverse strand was clipped: 35453807
+Completed ClipOverlap Successfully.
+alignment_pipeline_7.out: Overlap Statistics:
+Number of overlapping pairs: 12998797
+Average # Reference Bases Overlapped: 107.334
+Variance of Reference Bases overlapped: 731.169
+Number of times orientation causes additional clipping: 2275160
+Number of times the forward strand was clipped: 6514867
+Number of times the reverse strand was clipped: 6483930
+Completed ClipOverlap Successfully.
+alignment_pipeline_8.out: Overlap Statistics:
+Number of overlapping pairs: 11140973
+Average # Reference Bases Overlapped: 107.122
+Variance of Reference Bases overlapped: 707.069
+Number of times orientation causes additional clipping: 2129465
+Number of times the forward strand was clipped: 5586231
+Number of times the reverse strand was clipped: 5554742
+Completed ClipOverlap Successfully.
+alignment_pipeline_9.out: Overlap Statistics:
+Number of overlapping pairs: 7133636
+Average # Reference Bases Overlapped: 105.139
+Variance of Reference Bases overlapped: 720.635
+Number of times orientation causes additional clipping: 1408360
+Number of times the forward strand was clipped: 3579740
+Number of times the reverse strand was clipped: 3553896
+Completed ClipOverlap Successfully.
+clipping_stats.out: 
+new_alignment_pipeline_9.out: 
+search_outs.sh: #!/bin/sh
+
+for file in *;
+do 
+OUT=$(grep "Completed ClipOverlap Successfully." -B 7 $file)
+clipping_stats.out: alignment_pipeline_10.out: Overlap Statistics:
+Number of overlapping pairs: 24274722
+Average # Reference Bases Overlapped: 110.736
+Variance of Reference Bases overlapped: 779.963
+Number of times orientation causes additional clipping: 3463202
+Number of times the forward strand was clipped: 12166703
+Number of times the reverse strand was clipped: 12108019
+Completed ClipOverlap Successfully.
+alignment_pipeline_11.out: Overlap Statistics:
+Number of overlapping pairs: 16601120
+Average # Reference Bases Overlapped: 105.778
+Variance of Reference Bases overlapped: 737.979
+Number of times orientation causes additional clipping: 2826556
+Number of times the forward strand was clipped: 8327596
+Number of times the reverse strand was clipped: 8273524
+Completed ClipOverlap Successfully.
+alignment_pipeline_12.out: Overlap Statistics:
+Number of overlapping pairs: 24365129
+Average # Reference Bases Overlapped: 107.05
+Variance of Reference Bases overlapped: 834.107
+Number of times orientation causes additional clipping: 3380998
+Number of times the forward strand was clipped: 12205477
+Number of times the reverse strand was clipped: 12159652
+Completed ClipOverlap Successfully.
+alignment_pipeline_13.out: Overlap Statistics:
+Number of overlapping pairs: 6011401
+Average # Reference Bases Overlapped: 103.128
+Variance of Reference Bases overlapped: 726.684
+Number of times orientation causes additional clipping: 1356637
+Number of times the forward strand was clipped: 3018287
+Number of times the reverse strand was clipped: 2993114
+Completed ClipOverlap Successfully.
+alignment_pipeline_14.out: Overlap Statistics:
+Number of overlapping pairs: 3700831
+Average # Reference Bases Overlapped: 106.419
+Variance of Reference Bases overlapped: 674.028
+Number of times orientation causes additional clipping: 873996
+Number of times the forward strand was clipped: 1857099
+Number of times the reverse strand was clipped: 1843732
+Completed ClipOverlap Successfully.
+alignment_pipeline_15.out: Overlap Statistics:
+Number of overlapping pairs: 26938919
+Average # Reference Bases Overlapped: 112.704
+Variance of Reference Bases overlapped: 674.635
+Number of times orientation causes additional clipping: 4606425
+Number of times the forward strand was clipped: 13515812
+Number of times the reverse strand was clipped: 13423107
+Completed ClipOverlap Successfully.
+alignment_pipeline_16.out: Overlap Statistics:
+Number of overlapping pairs: 7543458
+Average # Reference Bases Overlapped: 88.3284
+Variance of Reference Bases overlapped: 655.446
+Number of times orientation causes additional clipping: 1696775
+Number of times the forward strand was clipped: 3800212
+Number of times the reverse strand was clipped: 3743246
+Completed ClipOverlap Successfully.
+alignment_pipeline_17.out: Overlap Statistics:
+Number of overlapping pairs: 25510102
+Average # Reference Bases Overlapped: 110.251
+Variance of Reference Bases overlapped: 763.957
+Number of times orientation causes additional clipping: 3854853
+Number of times the forward strand was clipped: 12786652
+Number of times the reverse strand was clipped: 12723450
+Completed ClipOverlap Successfully.
+alignment_pipeline_18.out: Overlap Statistics:
+Number of overlapping pairs: 28619561
+Average # Reference Bases Overlapped: 103.434
+Variance of Reference Bases overlapped: 1268.05
+Number of times orientation causes additional clipping: 3185065
+Number of times the forward strand was clipped: 14326391
+Number of times the reverse strand was clipped: 14293170
+Completed ClipOverlap Successfully.
+alignment_pipeline_19.out: Overlap Statistics:
+Number of overlapping pairs: 4713549
+Average # Reference Bases Overlapped: 107.014
+Variance of Reference Bases overlapped: 673.497
+Number of times orientation causes additional clipping: 1003041
+Number of times the forward strand was clipped: 2364501
+Number of times the reverse strand was clipped: 2349048
+Completed ClipOverlap Successfully.
+alignment_pipeline_1.out: Overlap Statistics:
+Number of overlapping pairs: 28022094
+Average # Reference Bases Overlapped: 42.486
+Variance of Reference Bases overlapped: 1711.33
+Number of times orientation causes additional clipping: 1641281
+Number of times the forward strand was clipped: 14010877
+Number of times the reverse strand was clipped: 14011217
+Completed ClipOverlap Successfully.
+alignment_pipeline_20.out: Overlap Statistics:
+Number of overlapping pairs: 13015880
+Average # Reference Bases Overlapped: 111.543
+Variance of Reference Bases overlapped: 680.316
+Number of times orientation causes additional clipping: 2379210
+Number of times the forward strand was clipped: 6516409
+Number of times the reverse strand was clipped: 6499471
+Completed ClipOverlap Successfully.
+alignment_pipeline_21.out: Overlap Statistics:
+Number of overlapping pairs: 3554658
+Average # Reference Bases Overlapped: 104.984
+Variance of Reference Bases overlapped: 670.141
+Number of times orientation causes additional clipping: 897210
+Number of times the forward strand was clipped: 1783276
+Number of times the reverse strand was clipped: 1771382
+Completed ClipOverlap Successfully.
+alignment_pipeline_22.out: Overlap Statistics:
+Number of overlapping pairs: 11164577
+Average # Reference Bases Overlapped: 107.697
+Variance of Reference Bases overlapped: 705.915
+Number of times orientation causes additional clipping: 2234309
+Number of times the forward strand was clipped: 5596968
+Number of times the reverse strand was clipped: 5567609
+Completed ClipOverlap Successfully.
+alignment_pipeline_23.out: Overlap Statistics:
+Number of overlapping pairs: 6060815
+Average # Reference Bases Overlapped: 111.5
+Variance of Reference Bases overlapped: 706.86
+Number of times orientation causes additional clipping: 1047896
+Number of times the forward strand was clipped: 3035783
+Number of times the reverse strand was clipped: 3025032
+Completed ClipOverlap Successfully.
+alignment_pipeline_24.out: Overlap Statistics:
+Number of overlapping pairs: 14494607
+Average # Reference Bases Overlapped: 111.267
+Variance of Reference Bases overlapped: 674.297
+Number of times orientation causes additional clipping: 2595535
+Number of times the forward strand was clipped: 7272944
+Number of times the reverse strand was clipped: 7221663
+Completed ClipOverlap Successfully.
+alignment_pipeline_25.out: Overlap Statistics:
+Number of overlapping pairs: 28633484
+Average # Reference Bases Overlapped: 105.352
+Variance of Reference Bases overlapped: 1136.59
+Number of times orientation causes additional clipping: 3275700
+Number of times the forward strand was clipped: 14341050
+Number of times the reverse strand was clipped: 14292434
+Completed ClipOverlap Successfully.
+alignment_pipeline_26.out: Overlap Statistics:
+Number of overlapping pairs: 13143723
+Average # Reference Bases Overlapped: 111.066
+Variance of Reference Bases overlapped: 671.84
+Number of times orientation causes additional clipping: 2434743
+Number of times the forward strand was clipped: 6598977
+Number of times the reverse strand was clipped: 6544746
+Completed ClipOverlap Successfully.
+alignment_pipeline_27.out: Overlap Statistics:
+Number of overlapping pairs: 38392311
+Average # Reference Bases Overlapped: 111.912
+Variance of Reference Bases overlapped: 771.049
+Number of times orientation causes additional clipping: 5787995
+Number of times the forward strand was clipped: 19228048
+Number of times the reverse strand was clipped: 19164263
+Completed ClipOverlap Successfully.
+alignment_pipeline_28.out: Overlap Statistics:
+Number of overlapping pairs: 33004178
+Average # Reference Bases Overlapped: 98.7406
+Variance of Reference Bases overlapped: 1443.31
+Number of times orientation causes additional clipping: 2901273
+Number of times the forward strand was clipped: 16523614
+Number of times the reverse strand was clipped: 16480564
+Completed ClipOverlap Successfully.
+alignment_pipeline_29.out: Overlap Statistics:
+Number of overlapping pairs: 37042852
+Average # Reference Bases Overlapped: 95.1997
+Variance of Reference Bases overlapped: 1567.12
+Number of times orientation causes additional clipping: 2916810
+Number of times the forward strand was clipped: 18546258
+Number of times the reverse strand was clipped: 18496594
+Completed ClipOverlap Successfully.
+alignment_pipeline_2.out: Overlap Statistics:
+Number of overlapping pairs: 42174664
+Average # Reference Bases Overlapped: 26.1449
+Variance of Reference Bases overlapped: 599.205
+Number of times orientation causes additional clipping: 1309339
+Number of times the forward strand was clipped: 21106023
+Number of times the reverse strand was clipped: 21068641
+Completed ClipOverlap Successfully.
+alignment_pipeline_30.out: Overlap Statistics:
+Number of overlapping pairs: 29146939
+Average # Reference Bases Overlapped: 95.7479
+Variance of Reference Bases overlapped: 1539.4
+Number of times orientation causes additional clipping: 2282187
+Number of times the forward strand was clipped: 14587121
+Number of times the reverse strand was clipped: 14559818
+Completed ClipOverlap Successfully.
+alignment_pipeline_31.out: Overlap Statistics:
+Number of overlapping pairs: 20179003
+Average # Reference Bases Overlapped: 97.6396
+Variance of Reference Bases overlapped: 1493.7
+Number of times orientation causes additional clipping: 1662701
+Number of times the forward strand was clipped: 10098137
+Number of times the reverse strand was clipped: 10080866
+Completed ClipOverlap Successfully.
+alignment_pipeline_32.out: Overlap Statistics:
+Number of overlapping pairs: 28522218
+Average # Reference Bases Overlapped: 104.96
+Variance of Reference Bases overlapped: 1179.98
+Number of times orientation causes additional clipping: 3538377
+Number of times the forward strand was clipped: 14282302
+Number of times the reverse strand was clipped: 14239916
+Completed ClipOverlap Successfully.
+alignment_pipeline_33.out: Overlap Statistics:
+Number of overlapping pairs: 31345607
+Average # Reference Bases Overlapped: 109.123
+Variance of Reference Bases overlapped: 1002.88
+Number of times orientation causes additional clipping: 4447659
+Number of times the forward strand was clipped: 15686718
+Number of times the reverse strand was clipped: 15658889
+Completed ClipOverlap Successfully.
+alignment_pipeline_34.out: Overlap Statistics:
+Number of overlapping pairs: 26822184
+Average # Reference Bases Overlapped: 98.8252
+Variance of Reference Bases overlapped: 1454.65
+Number of times orientation causes additional clipping: 2581807
+Number of times the forward strand was clipped: 13436636
+Number of times the reverse strand was clipped: 13385548
+Completed ClipOverlap Successfully.
+alignment_pipeline_35.out: Overlap Statistics:
+Number of overlapping pairs: 54075189
+Average # Reference Bases Overlapped: 103.2
+Variance of Reference Bases overlapped: 1325.69
+Number of times orientation causes additional clipping: 5747774
+Number of times the forward strand was clipped: 27066425
+Number of times the reverse strand was clipped: 27008764
+Completed ClipOverlap Successfully.
+alignment_pipeline_36.out: Overlap Statistics:
+Number of overlapping pairs: 15270927
+Average # Reference Bases Overlapped: 107.947
+Variance of Reference Bases overlapped: 1073.96
+Number of times orientation causes additional clipping: 2036358
+Number of times the forward strand was clipped: 7653312
+Number of times the reverse strand was clipped: 7617615
+Completed ClipOverlap Successfully.
+alignment_pipeline_37.out: Overlap Statistics:
+Number of overlapping pairs: 39271541
+Average # Reference Bases Overlapped: 101.26
+Variance of Reference Bases overlapped: 1350.18
+Number of times orientation causes additional clipping: 4079968
+Number of times the forward strand was clipped: 19678689
+Number of times the reverse strand was clipped: 19592852
+Completed ClipOverlap Successfully.
+alignment_pipeline_38.out: Overlap Statistics:
+Number of overlapping pairs: 41731622
+Average # Reference Bases Overlapped: 102.635
+Variance of Reference Bases overlapped: 1285.35
+Number of times orientation causes additional clipping: 4526964
+Number of times the forward strand was clipped: 20897846
+Number of times the reverse strand was clipped: 20833776
+Completed ClipOverlap Successfully.
+alignment_pipeline_39.out: Overlap Statistics:
+Number of overlapping pairs: 20488201
+Average # Reference Bases Overlapped: 111.031
+Variance of Reference Bases overlapped: 666.132
+Number of times orientation causes additional clipping: 4112644
+Number of times the forward strand was clipped: 10267064
+Number of times the reverse strand was clipped: 10221137
+Completed ClipOverlap Successfully.
+alignment_pipeline_3.out: Overlap Statistics:
+Number of overlapping pairs: 25003352
+Average # Reference Bases Overlapped: 75.1197
+Variance of Reference Bases overlapped: 2508.74
+Number of times orientation causes additional clipping: 4022200
+Number of times the forward strand was clipped: 12639862
+Number of times the reverse strand was clipped: 12363490
+Completed ClipOverlap Successfully.
+alignment_pipeline_40.out: Overlap Statistics:
+Number of overlapping pairs: 50849139
+Average # Reference Bases Overlapped: 107.093
+Variance of Reference Bases overlapped: 1090.53
+Number of times orientation causes additional clipping: 6624886
+Number of times the forward strand was clipped: 25480813
+Number of times the reverse strand was clipped: 25368326
+Completed ClipOverlap Successfully.
+alignment_pipeline_41.out: Overlap Statistics:
+Number of overlapping pairs: 43905750
+Average # Reference Bases Overlapped: 105.561
+Variance of Reference Bases overlapped: 1076.06
+Number of times orientation causes additional clipping: 4970562
+Number of times the forward strand was clipped: 21989378
+Number of times the reverse strand was clipped: 21916372
+Completed ClipOverlap Successfully.
+alignment_pipeline_42.out: Overlap Statistics:
+Number of overlapping pairs: 62562840
+Average # Reference Bases Overlapped: 105.907
+Variance of Reference Bases overlapped: 1074.8
+Number of times orientation causes additional clipping: 7259346
+Number of times the forward strand was clipped: 31311107
+Number of times the reverse strand was clipped: 31251733
+Completed ClipOverlap Successfully.
+alignment_pipeline_43.out: Overlap Statistics:
+Number of overlapping pairs: 51025391
+Average # Reference Bases Overlapped: 105.579
+Variance of Reference Bases overlapped: 1090.27
+Number of times orientation causes additional clipping: 6392504
+Number of times the forward strand was clipped: 25542070
+Number of times the reverse strand was clipped: 25483321
+Completed ClipOverlap Successfully.
+alignment_pipeline_44.out: Overlap Statistics:
+Number of overlapping pairs: 15711301
+Average # Reference Bases Overlapped: 104.529
+Variance of Reference Bases overlapped: 700.994
+Number of times orientation causes additional clipping: 3327771
+Number of times the forward strand was clipped: 7869751
+Number of times the reverse strand was clipped: 7841550
+Completed ClipOverlap Successfully.
+alignment_pipeline_45.out: Overlap Statistics:
+Number of overlapping pairs: 29011368
+Average # Reference Bases Overlapped: 110.268
+Variance of Reference Bases overlapped: 735.736
+Number of times orientation causes additional clipping: 4907695
+Number of times the forward strand was clipped: 14536349
+Number of times the reverse strand was clipped: 14475019
+Completed ClipOverlap Successfully.
+alignment_pipeline_46.out: Overlap Statistics:
+Number of overlapping pairs: 28906875
+Average # Reference Bases Overlapped: 106.951
+Variance of Reference Bases overlapped: 746.069
+Number of times orientation causes additional clipping: 4923257
+Number of times the forward strand was clipped: 14479542
+Number of times the reverse strand was clipped: 14427333
+Completed ClipOverlap Successfully.
+alignment_pipeline_47.out: Overlap Statistics:
+Number of overlapping pairs: 12173736
+Average # Reference Bases Overlapped: 103.981
+Variance of Reference Bases overlapped: 703.128
+Number of times orientation causes additional clipping: 2605846
+Number of times the forward strand was clipped: 6103869
+Number of times the reverse strand was clipped: 6069867
+Completed ClipOverlap Successfully.
+alignment_pipeline_48.out: Overlap Statistics:
+Number of overlapping pairs: 44565273
+Average # Reference Bases Overlapped: 104.196
+Variance of Reference Bases overlapped: 860.251
+Number of times orientation causes additional clipping: 7231954
+Number of times the forward strand was clipped: 22316026
+Number of times the reverse strand was clipped: 22249247
+Completed ClipOverlap Successfully.
+alignment_pipeline_49.out: Overlap Statistics:
+Number of overlapping pairs: 19687431
+Average # Reference Bases Overlapped: 108.224
+Variance of Reference Bases overlapped: 685.927
+Number of times orientation causes additional clipping: 3775833
+Number of times the forward strand was clipped: 9858671
+Number of times the reverse strand was clipped: 9828760
+Completed ClipOverlap Successfully.
+alignment_pipeline_4.out: Overlap Statistics:
+Number of overlapping pairs: 35091474
+Average # Reference Bases Overlapped: 20.7159
+Variance of Reference Bases overlapped: 69.4864
+Number of times orientation causes additional clipping: 809834
+Number of times the forward strand was clipped: 17551856
+Number of times the reverse strand was clipped: 17539618
+Completed ClipOverlap Successfully.
+alignment_pipeline_5.out: Overlap Statistics:
+Number of overlapping pairs: 58031512
+Average # Reference Bases Overlapped: 97.9227
+Variance of Reference Bases overlapped: 1438.81
+Number of times orientation causes additional clipping: 4786042
+Number of times the forward strand was clipped: 29039897
+Number of times the reverse strand was clipped: 28991615
+Completed ClipOverlap Successfully.
+alignment_pipeline_6.out: Overlap Statistics:
+Number of overlapping pairs: 71038257
+Average # Reference Bases Overlapped: 96.5382
+Variance of Reference Bases overlapped: 1471.86
+Number of times orientation causes additional clipping: 6084804
+Number of times the forward strand was clipped: 35584450
+Number of times the reverse strand was clipped: 35453807
+Completed ClipOverlap Successfully.
+alignment_pipeline_7.out: Overlap Statistics:
+Number of overlapping pairs: 12998797
+Average # Reference Bases Overlapped: 107.334
+Variance of Reference Bases overlapped: 731.169
+Number of times orientation causes additional clipping: 2275160
+Number of times the forward strand was clipped: 6514867
+Number of times the reverse strand was clipped: 6483930
+Completed ClipOverlap Successfully.
+alignment_pipeline_8.out: Overlap Statistics:
+Number of overlapping pairs: 11140973
+Average # Reference Bases Overlapped: 107.122
+Variance of Reference Bases overlapped: 707.069
+Number of times orientation causes additional clipping: 2129465
+Number of times the forward strand was clipped: 5586231
+Number of times the reverse strand was clipped: 5554742
+Completed ClipOverlap Successfully.
+alignment_pipeline_9.out: Overlap Statistics:
+Number of overlapping pairs: 7133636
+Average # Reference Bases Overlapped: 105.139
+Variance of Reference Bases overlapped: 720.635
+Number of times orientation causes additional clipping: 1408360
+Number of times the forward strand was clipped: 3579740
+Number of times the reverse strand was clipped: 3553896
+Completed ClipOverlap Successfully.
+clipping.out: alignment_pipeline_10.out: Overlap Statistics:
+Number of overlapping pairs: 24274722
+Average # Reference Bases Overlapped: 110.736
+Variance of Reference Bases overlapped: 779.963
+Number of times orientation causes additional clipping: 3463202
+Number of times the forward strand was clipped: 12166703
+Number of times the reverse strand was clipped: 12108019
+Completed ClipOverlap Successfully.
+alignment_pipeline_11.out: Overlap Statistics:
+Number of overlapping pairs: 16601120
+Average # Reference Bases Overlapped: 105.778
+Variance of Reference Bases overlapped: 737.979
+Number of times orientation causes additional clipping: 2826556
+Number of times the forward strand was clipped: 8327596
+Number of times the reverse strand was clipped: 8273524
+Completed ClipOverlap Successfully.
+alignment_pipeline_12.out: Overlap Statistics:
+Number of overlapping pairs: 24365129
+Average # Reference Bases Overlapped: 107.05
+Variance of Reference Bases overlapped: 834.107
+Number of times orientation causes additional clipping: 3380998
+Number of times the forward strand was clipped: 12205477
+Number of times the reverse strand was clipped: 12159652
+Completed ClipOverlap Successfully.
+alignment_pipeline_13.out: Overlap Statistics:
+Number of overlapping pairs: 6011401
+Average # Reference Bases Overlapped: 103.128
+Variance of Reference Bases overlapped: 726.684
+Number of times orientation causes additional clipping: 1356637
+Number of times the forward strand was clipped: 3018287
+Number of times the reverse strand was clipped: 2993114
+Completed ClipOverlap Successfully.
+alignment_pipeline_14.out: Overlap Statistics:
+Number of overlapping pairs: 3700831
+Average # Reference Bases Overlapped: 106.419
+Variance of Reference Bases overlapped: 674.028
+Number of times orientation causes additional clipping: 873996
+Number of times the forward strand was clipped: 1857099
+Number of times the reverse strand was clipped: 1843732
+Completed ClipOverlap Successfully.
+alignment_pipeline_15.out: Overlap Statistics:
+Number of overlapping pairs: 26938919
+Average # Reference Bases Overlapped: 112.704
+Variance of Reference Bases overlapped: 674.635
+Number of times orientation causes additional clipping: 4606425
+Number of times the forward strand was clipped: 13515812
+Number of times the reverse strand was clipped: 13423107
+Completed ClipOverlap Successfully.
+alignment_pipeline_16.out: Overlap Statistics:
+Number of overlapping pairs: 7543458
+Average # Reference Bases Overlapped: 88.3284
+Variance of Reference Bases overlapped: 655.446
+Number of times orientation causes additional clipping: 1696775
+Number of times the forward strand was clipped: 3800212
+Number of times the reverse strand was clipped: 3743246
+Completed ClipOverlap Successfully.
+alignment_pipeline_17.out: Overlap Statistics:
+Number of overlapping pairs: 25510102
+Average # Reference Bases Overlapped: 110.251
+Variance of Reference Bases overlapped: 763.957
+Number of times orientation causes additional clipping: 3854853
+Number of times the forward strand was clipped: 12786652
+Number of times the reverse strand was clipped: 12723450
+Completed ClipOverlap Successfully.
+alignment_pipeline_18.out: Overlap Statistics:
+Number of overlapping pairs: 28619561
+Average # Reference Bases Overlapped: 103.434
+Variance of Reference Bases overlapped: 1268.05
+Number of times orientation causes additional clipping: 3185065
+Number of times the forward strand was clipped: 14326391
+Number of times the reverse strand was clipped: 14293170
+Completed ClipOverlap Successfully.
+alignment_pipeline_19.out: Overlap Statistics:
+Number of overlapping pairs: 4713549
+Average # Reference Bases Overlapped: 107.014
+Variance of Reference Bases overlapped: 673.497
+Number of times orientation causes additional clipping: 1003041
+Number of times the forward strand was clipped: 2364501
+Number of times the reverse strand was clipped: 2349048
+Completed ClipOverlap Successfully.
+alignment_pipeline_1.out: Overlap Statistics:
+Number of overlapping pairs: 28022094
+Average # Reference Bases Overlapped: 42.486
+Variance of Reference Bases overlapped: 1711.33
+Number of times orientation causes additional clipping: 1641281
+Number of times the forward strand was clipped: 14010877
+Number of times the reverse strand was clipped: 14011217
+Completed ClipOverlap Successfully.
+alignment_pipeline_20.out: Overlap Statistics:
+Number of overlapping pairs: 13015880
+Average # Reference Bases Overlapped: 111.543
+Variance of Reference Bases overlapped: 680.316
+Number of times orientation causes additional clipping: 2379210
+Number of times the forward strand was clipped: 6516409
+Number of times the reverse strand was clipped: 6499471
+Completed ClipOverlap Successfully.
+alignment_pipeline_21.out: Overlap Statistics:
+Number of overlapping pairs: 3554658
+Average # Reference Bases Overlapped: 104.984
+Variance of Reference Bases overlapped: 670.141
+Number of times orientation causes additional clipping: 897210
+Number of times the forward strand was clipped: 1783276
+Number of times the reverse strand was clipped: 1771382
+Completed ClipOverlap Successfully.
+alignment_pipeline_22.out: Overlap Statistics:
+Number of overlapping pairs: 11164577
+Average # Reference Bases Overlapped: 107.697
+Variance of Reference Bases overlapped: 705.915
+Number of times orientation causes additional clipping: 2234309
+Number of times the forward strand was clipped: 5596968
+Number of times the reverse strand was clipped: 5567609
+Completed ClipOverlap Successfully.
+alignment_pipeline_23.out: Overlap Statistics:
+Number of overlapping pairs: 6060815
+Average # Reference Bases Overlapped: 111.5
+Variance of Reference Bases overlapped: 706.86
+Number of times orientation causes additional clipping: 1047896
+Number of times the forward strand was clipped: 3035783
+Number of times the reverse strand was clipped: 3025032
+Completed ClipOverlap Successfully.
+alignment_pipeline_24.out: Overlap Statistics:
+Number of overlapping pairs: 14494607
+Average # Reference Bases Overlapped: 111.267
+Variance of Reference Bases overlapped: 674.297
+Number of times orientation causes additional clipping: 2595535
+Number of times the forward strand was clipped: 7272944
+Number of times the reverse strand was clipped: 7221663
+Completed ClipOverlap Successfully.
+alignment_pipeline_25.out: Overlap Statistics:
+Number of overlapping pairs: 28633484
+Average # Reference Bases Overlapped: 105.352
+Variance of Reference Bases overlapped: 1136.59
+Number of times orientation causes additional clipping: 3275700
+Number of times the forward strand was clipped: 14341050
+Number of times the reverse strand was clipped: 14292434
+Completed ClipOverlap Successfully.
+alignment_pipeline_26.out: Overlap Statistics:
+Number of overlapping pairs: 13143723
+Average # Reference Bases Overlapped: 111.066
+Variance of Reference Bases overlapped: 671.84
+Number of times orientation causes additional clipping: 2434743
+Number of times the forward strand was clipped: 6598977
+Number of times the reverse strand was clipped: 6544746
+Completed ClipOverlap Successfully.
+alignment_pipeline_27.out: Overlap Statistics:
+Number of overlapping pairs: 38392311
+Average # Reference Bases Overlapped: 111.912
+Variance of Reference Bases overlapped: 771.049
+Number of times orientation causes additional clipping: 5787995
+Number of times the forward strand was clipped: 19228048
+Number of times the reverse strand was clipped: 19164263
+Completed ClipOverlap Successfully.
+alignment_pipeline_28.out: Overlap Statistics:
+Number of overlapping pairs: 33004178
+Average # Reference Bases Overlapped: 98.7406
+Variance of Reference Bases overlapped: 1443.31
+Number of times orientation causes additional clipping: 2901273
+Number of times the forward strand was clipped: 16523614
+Number of times the reverse strand was clipped: 16480564
+Completed ClipOverlap Successfully.
+alignment_pipeline_29.out: Overlap Statistics:
+Number of overlapping pairs: 37042852
+Average # Reference Bases Overlapped: 95.1997
+Variance of Reference Bases overlapped: 1567.12
+Number of times orientation causes additional clipping: 2916810
+Number of times the forward strand was clipped: 18546258
+Number of times the reverse strand was clipped: 18496594
+Completed ClipOverlap Successfully.
+alignment_pipeline_2.out: Overlap Statistics:
+Number of overlapping pairs: 42174664
+Average # Reference Bases Overlapped: 26.1449
+Variance of Reference Bases overlapped: 599.205
+Number of times orientation causes additional clipping: 1309339
+Number of times the forward strand was clipped: 21106023
+Number of times the reverse strand was clipped: 21068641
+Completed ClipOverlap Successfully.
+alignment_pipeline_30.out: Overlap Statistics:
+Number of overlapping pairs: 29146939
+Average # Reference Bases Overlapped: 95.7479
+Variance of Reference Bases overlapped: 1539.4
+Number of times orientation causes additional clipping: 2282187
+Number of times the forward strand was clipped: 14587121
+Number of times the reverse strand was clipped: 14559818
+Completed ClipOverlap Successfully.
+alignment_pipeline_31.out: Overlap Statistics:
+Number of overlapping pairs: 20179003
+Average # Reference Bases Overlapped: 97.6396
+Variance of Reference Bases overlapped: 1493.7
+Number of times orientation causes additional clipping: 1662701
+Number of times the forward strand was clipped: 10098137
+Number of times the reverse strand was clipped: 10080866
+Completed ClipOverlap Successfully.
+alignment_pipeline_32.out: Overlap Statistics:
+Number of overlapping pairs: 28522218
+Average # Reference Bases Overlapped: 104.96
+Variance of Reference Bases overlapped: 1179.98
+Number of times orientation causes additional clipping: 3538377
+Number of times the forward strand was clipped: 14282302
+Number of times the reverse strand was clipped: 14239916
+Completed ClipOverlap Successfully.
+alignment_pipeline_33.out: Overlap Statistics:
+Number of overlapping pairs: 31345607
+Average # Reference Bases Overlapped: 109.123
+Variance of Reference Bases overlapped: 1002.88
+Number of times orientation causes additional clipping: 4447659
+Number of times the forward strand was clipped: 15686718
+Number of times the reverse strand was clipped: 15658889
+Completed ClipOverlap Successfully.
+alignment_pipeline_34.out: Overlap Statistics:
+Number of overlapping pairs: 26822184
+Average # Reference Bases Overlapped: 98.8252
+Variance of Reference Bases overlapped: 1454.65
+Number of times orientation causes additional clipping: 2581807
+Number of times the forward strand was clipped: 13436636
+Number of times the reverse strand was clipped: 13385548
+Completed ClipOverlap Successfully.
+alignment_pipeline_35.out: Overlap Statistics:
+Number of overlapping pairs: 54075189
+Average # Reference Bases Overlapped: 103.2
+Variance of Reference Bases overlapped: 1325.69
+Number of times orientation causes additional clipping: 5747774
+Number of times the forward strand was clipped: 27066425
+Number of times the reverse strand was clipped: 27008764
+Completed ClipOverlap Successfully.
+alignment_pipeline_36.out: Overlap Statistics:
+Number of overlapping pairs: 15270927
+Average # Reference Bases Overlapped: 107.947
+Variance of Reference Bases overlapped: 1073.96
+Number of times orientation causes additional clipping: 2036358
+Number of times the forward strand was clipped: 7653312
+Number of times the reverse strand was clipped: 7617615
+Completed ClipOverlap Successfully.
+alignment_pipeline_37.out: Overlap Statistics:
+Number of overlapping pairs: 39271541
+Average # Reference Bases Overlapped: 101.26
+Variance of Reference Bases overlapped: 1350.18
+Number of times orientation causes additional clipping: 4079968
+Number of times the forward strand was clipped: 19678689
+Number of times the reverse strand was clipped: 19592852
+Completed ClipOverlap Successfully.
+alignment_pipeline_38.out: Overlap Statistics:
+Number of overlapping pairs: 41731622
+Average # Reference Bases Overlapped: 102.635
+Variance of Reference Bases overlapped: 1285.35
+Number of times orientation causes additional clipping: 4526964
+Number of times the forward strand was clipped: 20897846
+Number of times the reverse strand was clipped: 20833776
+Completed ClipOverlap Successfully.
+alignment_pipeline_39.out: Overlap Statistics:
+Number of overlapping pairs: 20488201
+Average # Reference Bases Overlapped: 111.031
+Variance of Reference Bases overlapped: 666.132
+Number of times orientation causes additional clipping: 4112644
+Number of times the forward strand was clipped: 10267064
+Number of times the reverse strand was clipped: 10221137
+Completed ClipOverlap Successfully.
+alignment_pipeline_3.out: Overlap Statistics:
+Number of overlapping pairs: 25003352
+Average # Reference Bases Overlapped: 75.1197
+Variance of Reference Bases overlapped: 2508.74
+Number of times orientation causes additional clipping: 4022200
+Number of times the forward strand was clipped: 12639862
+Number of times the reverse strand was clipped: 12363490
+Completed ClipOverlap Successfully.
+alignment_pipeline_40.out: Overlap Statistics:
+Number of overlapping pairs: 50849139
+Average # Reference Bases Overlapped: 107.093
+Variance of Reference Bases overlapped: 1090.53
+Number of times orientation causes additional clipping: 6624886
+Number of times the forward strand was clipped: 25480813
+Number of times the reverse strand was clipped: 25368326
+Completed ClipOverlap Successfully.
+alignment_pipeline_41.out: Overlap Statistics:
+Number of overlapping pairs: 43905750
+Average # Reference Bases Overlapped: 105.561
+Variance of Reference Bases overlapped: 1076.06
+Number of times orientation causes additional clipping: 4970562
+Number of times the forward strand was clipped: 21989378
+Number of times the reverse strand was clipped: 21916372
+Completed ClipOverlap Successfully.
+alignment_pipeline_42.out: Overlap Statistics:
+Number of overlapping pairs: 62562840
+Average # Reference Bases Overlapped: 105.907
+Variance of Reference Bases overlapped: 1074.8
+Number of times orientation causes additional clipping: 7259346
+Number of times the forward strand was clipped: 31311107
+Number of times the reverse strand was clipped: 31251733
+Completed ClipOverlap Successfully.
+alignment_pipeline_43.out: Overlap Statistics:
+Number of overlapping pairs: 51025391
+Average # Reference Bases Overlapped: 105.579
+Variance of Reference Bases overlapped: 1090.27
+Number of times orientation causes additional clipping: 6392504
+Number of times the forward strand was clipped: 25542070
+Number of times the reverse strand was clipped: 25483321
+Completed ClipOverlap Successfully.
+alignment_pipeline_44.out: Overlap Statistics:
+Number of overlapping pairs: 15711301
+Average # Reference Bases Overlapped: 104.529
+Variance of Reference Bases overlapped: 700.994
+Number of times orientation causes additional clipping: 3327771
+Number of times the forward strand was clipped: 7869751
+Number of times the reverse strand was clipped: 7841550
+Completed ClipOverlap Successfully.
+alignment_pipeline_45.out: Overlap Statistics:
+Number of overlapping pairs: 29011368
+Average # Reference Bases Overlapped: 110.268
+Variance of Reference Bases overlapped: 735.736
+Number of times orientation causes additional clipping: 4907695
+Number of times the forward strand was clipped: 14536349
+Number of times the reverse strand was clipped: 14475019
+Completed ClipOverlap Successfully.
+alignment_pipeline_46.out: Overlap Statistics:
+Number of overlapping pairs: 28906875
+Average # Reference Bases Overlapped: 106.951
+Variance of Reference Bases overlapped: 746.069
+Number of times orientation causes additional clipping: 4923257
+Number of times the forward strand was clipped: 14479542
+Number of times the reverse strand was clipped: 14427333
+Completed ClipOverlap Successfully.
+alignment_pipeline_47.out: Overlap Statistics:
+Number of overlapping pairs: 12173736
+Average # Reference Bases Overlapped: 103.981
+Variance of Reference Bases overlapped: 703.128
+Number of times orientation causes additional clipping: 2605846
+Number of times the forward strand was clipped: 6103869
+Number of times the reverse strand was clipped: 6069867
+Completed ClipOverlap Successfully.
+alignment_pipeline_48.out: Overlap Statistics:
+Number of overlapping pairs: 44565273
+Average # Reference Bases Overlapped: 104.196
+Variance of Reference Bases overlapped: 860.251
+Number of times orientation causes additional clipping: 7231954
+Number of times the forward strand was clipped: 22316026
+Number of times the reverse strand was clipped: 22249247
+Completed ClipOverlap Successfully.
+alignment_pipeline_49.out: Overlap Statistics:
+Number of overlapping pairs: 19687431
+Average # Reference Bases Overlapped: 108.224
+Variance of Reference Bases overlapped: 685.927
+Number of times orientation causes additional clipping: 3775833
+Number of times the forward strand was clipped: 9858671
+Number of times the reverse strand was clipped: 9828760
+Completed ClipOverlap Successfully.
+alignment_pipeline_4.out: Overlap Statistics:
+Number of overlapping pairs: 35091474
+Average # Reference Bases Overlapped: 20.7159
+Variance of Reference Bases overlapped: 69.4864
+Number of times orientation causes additional clipping: 809834
+Number of times the forward strand was clipped: 17551856
+Number of times the reverse strand was clipped: 17539618
+Completed ClipOverlap Successfully.
+alignment_pipeline_5.out: Overlap Statistics:
+Number of overlapping pairs: 58031512
+Average # Reference Bases Overlapped: 97.9227
+Variance of Reference Bases overlapped: 1438.81
+Number of times orientation causes additional clipping: 4786042
+Number of times the forward strand was clipped: 29039897
+Number of times the reverse strand was clipped: 28991615
+Completed ClipOverlap Successfully.
+alignment_pipeline_6.out: Overlap Statistics:
+Number of overlapping pairs: 71038257
+Average # Reference Bases Overlapped: 96.5382
+Variance of Reference Bases overlapped: 1471.86
+Number of times orientation causes additional clipping: 6084804
+Number of times the forward strand was clipped: 35584450
+Number of times the reverse strand was clipped: 35453807
+Completed ClipOverlap Successfully.
+alignment_pipeline_7.out: Overlap Statistics:
+Number of overlapping pairs: 12998797
+Average # Reference Bases Overlapped: 107.334
+Variance of Reference Bases overlapped: 731.169
+Number of times orientation causes additional clipping: 2275160
+Number of times the forward strand was clipped: 6514867
+Number of times the reverse strand was clipped: 6483930
+Completed ClipOverlap Successfully.
+alignment_pipeline_8.out: Overlap Statistics:
+Number of overlapping pairs: 11140973
+Average # Reference Bases Overlapped: 107.122
+Variance of Reference Bases overlapped: 707.069
+Number of times orientation causes additional clipping: 2129465
+Number of times the forward strand was clipped: 5586231
+Number of times the reverse strand was clipped: 5554742
+Completed ClipOverlap Successfully.
+alignment_pipeline_9.out: Overlap Statistics:
+Number of overlapping pairs: 7133636
+Average # Reference Bases Overlapped: 105.139
+Variance of Reference Bases overlapped: 720.635
+Number of times orientation causes additional clipping: 1408360
+Number of times the forward strand was clipped: 3579740
+Number of times the reverse strand was clipped: 3553896
+Completed ClipOverlap Successfully.
+clipping_stats.out: 
+new_alignment_pipeline_9.out: 
+search_outs.sh: #!/bin/sh
+
+for file in *;
+do 
+OUT=$(grep "Completed ClipOverlap Successfully." -B 7 $file)
+new_alignment_pipeline_9.out: 
+search_outs.sh: #!/bin/sh
+
+for file in *;
+do 
+OUT=$(grep "Completed ClipOverlap Successfully." -B 7 $file)
+trim.py: 
