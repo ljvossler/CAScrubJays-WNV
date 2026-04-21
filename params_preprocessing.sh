@@ -54,5 +54,6 @@ POPSAMPLES="$(cat ${OUTDIR}/referencelists/ccgp_jays_subset_sampleids.txt | past
 OUTFNAME=${POP}
 # Pyrho Params
 NUM_HAPS=16
+N=20
 SMCFILE=${OUTDIR}/datafiles/demography/${OUTFNAME}.csv
 #===============================
