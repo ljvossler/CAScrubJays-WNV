@@ -46,7 +46,7 @@ prefix=GCF_041296385.1
 # Linkage Mapping
 #===============================
 # General Params
-VCF=${OUTDIR}/datafiles/genotype_calls/ccgp_jays_subset_plinkfiltered.vcf.gz
+VCFDIR=${OUTDIR}/datafiles/split_vcf
 MUT_RATE=1.15e-8 # Obtained from FSJ mutation rate frmo a phd thesis. Revisit this later to see if find more reliable estimate, just using this for testing. Thesis here: https://www.proquest.com/docview/3248399734?pq-origsite=gscholar&fromopenview=true&sourcetype=Dissertations%20&%20Theses
 POP=ccgp_jays_subset
 # SMC++ Params
