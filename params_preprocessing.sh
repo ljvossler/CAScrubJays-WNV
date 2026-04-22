@@ -54,7 +54,7 @@ VCF=${OUTDIR}/datafiles/genotype_calls/ccgp_jays_pre_qualitysort.vcf.gz
 POPSAMPLES="$(cat ${OUTDIR}/referencelists/ccgp_jays_pre_sampleids.txt | paste -sd ",")"
 OUTFNAME=${POP}
 # Pyrho Params
-NUM_HAPS=16
-N=20
+NUM_HAPS=40
+N=50
 SMCFILE=${OUTDIR}/datafiles/demography/${OUTFNAME}.csv
 #===============================
