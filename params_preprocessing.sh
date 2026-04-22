@@ -48,10 +48,10 @@ prefix=GCF_041296385.1
 # General Params
 VCFDIR=${OUTDIR}/datafiles/split_vcf
 MUT_RATE=1.15e-8 # Obtained from FSJ mutation rate frmo a phd thesis. Revisit this later to see if find more reliable estimate, just using this for testing. Thesis here: https://www.proquest.com/docview/3248399734?pq-origsite=gscholar&fromopenview=true&sourcetype=Dissertations%20&%20Theses
-POP=ccgp_jays_subset
+POP=ccgp_jays_pre
 # SMC++ Params
 VCF=${OUTDIR}/datafiles/genotype_calls/ccgp_jays_pre_qualitysort.vcf
-POPSAMPLES="$(cat ${OUTDIR}/referencelists/ccgp_jays_subset_sampleids.txt | paste -sd ",")"
+POPSAMPLES="$(cat ${OUTDIR}/referencelists/ccgp_jays_pre_sampleids.txt | paste -sd ",")"
 OUTFNAME=${POP}
 # Pyrho Params
 NUM_HAPS=16
