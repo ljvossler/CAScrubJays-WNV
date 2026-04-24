@@ -37,6 +37,9 @@ MINQ=30 # minimum quality score required for a site to be kept
 MINMAF=0.05 # minimum minor allele frequency required for a site to be kept
 MINMAPQ=30 # minimum mapping quality score required for a site to be kept
 
+# filter variants
+MINDEPTH=4
+MAXDEPTH=25
 
 # generate mask
 k=150
@@ -47,7 +50,7 @@ prefix=GCF_041296385.1
 #===============================
 # General Params
 VCFDIR=${OUTDIR}/datafiles/split_vcf
-MUT_RATE=1.15e-8 # Obtained from FSJ mutation rate frmo a phd thesis. Revisit this later to see if find more reliable estimate, just using this for testing. Thesis here: https://www.proquest.com/docview/3248399734?pq-origsite=gscholar&fromopenview=true&sourcetype=Dissertations%20&%20Theses
+MUT_RATE=1.15e-8 # Obtained from FSJ mutation rate from a phd thesis. Revisit this later to see if find more reliable estimate, just using this for testing. Thesis here: https://www.proquest.com/docview/3248399734?pq-origsite=gscholar&fromopenview=true&sourcetype=Dissertations%20&%20Theses
 POP=ccgp_jays_subset
 # SMC++ Params
 VCF=${OUTDIR}/datafiles/genotype_calls/ccgp_jays_pre_qualitysort.vcf.gz

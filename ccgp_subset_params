@@ -1,0 +1,47 @@
+# Population Parameters (To ideally be used across all analyses)
+
+# General Params (be used across all pipelines)
+#==================================
+source params_base.sh
+POPNAME=ccgp_subset
+NUMIND=8
+THREADS=30 # Likely should be adjusted for some analyses
+REC_MAP=${OUTDIR}/datafiles/linkage_map/${POPNAME}_all.rmap
+
+
+# B_Phylogenetics
+#==================================
+
+# MSMC input generation
+k=150
+prefix=GCF_041296385.1
+METHOD=samtools  # or another variant calling method
+INDFILE=${OUTDIR}/referencelists/ccgp_subset_IND.txt
+# MSMC Analysis
+POP_OR_IND=$POPNAME # Defaulting to file-wide population name here
+DATE=`date +%m%d%y`
+RUN_NAME=msmc_${POP_OR_IND}_${DATE}
+P_PAR=1*2+1*3+8*1+1*2+1*2
+sex_chr=LG9
+nchr=`wc -l ${OUTDIR}/referencelists/SCAFFOLDS.txt | cut -f1 -d' '`
+NUM_OPT=20
+INDEX=0,1,2,3,6,7,8,9,10,11,16,17
+
+# GONE Input Generation
+VCFFILE=${OUTDIR}/datafiles/rephased_vcf/placeholder.vcf.gz
+SCAFFOLD_LIST=${OUTDIR}/referencelists/SCAFFOLDS_subset.txt # Will likely need to subset the scaffold list since GONE only accept larger chromosomes
+MAX_MISSING=1
+MAF=0.01
+# GONE Analysis
+INDIR=${OUTDIR}/datafiles/gone2_inputs/${POPNAME}
+RECOMB_RATE="NONE" # Set to NONE to use a fine-scale recombination map
+GENO_DTYPE=3
+EXTRA_FLAGS= #Leave empty if none needed
+
+# C_SelectionAnalysis
+#==================================
+
+# Flexsweep Analysis
+NUM_HAPS=$(echo "$NUM_IND * 2" | bc) # Number of haploids.
+NUM_SIMULATIONS=10000 # Default 10000
+DEMES=${OUTDIR}/datafiles/demography/${POPNAME}.yaml

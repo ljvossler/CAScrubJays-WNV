@@ -10,6 +10,7 @@ module load samtools/1.19.2
 module load gsl
 module load hdf5
 module load htslib
+module load micromamba
 
 
 
