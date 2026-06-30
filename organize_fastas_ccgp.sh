@@ -1,4 +1,3 @@
-
 #!/bin/sh
 # Standardize the names of CCGP fasta files, and move to fastqs_all directory
 python3 <<'EOF'
