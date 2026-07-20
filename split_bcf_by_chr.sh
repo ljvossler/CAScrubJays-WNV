@@ -5,17 +5,12 @@
 source params_base.sh
 
 SCAFFOLD_LIST=${OUTDIR}/referencelists/SCAFFOLDS.txt
-VCF=${OUTDIR}/datafiles/genotype_calls/alljays_phased.vcf.gz
 BCF=${OUTDIR}/datafiles/genotype_calls/alljays_phased.bcf
 OUTPREFIX=alljays_phased
 
 
-echo VCF FILE PATH: $VCF
 echo BCF FILE PATH: $BCF
 echo SCAFFOLD SUBSET: $SCAFFOLD_LIST
-
-bcftools view -O b $BCF -o $BCF
-bcftools index $BCF
 
 
 # Split a BCF file by chromosome
