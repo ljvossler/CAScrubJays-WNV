@@ -43,7 +43,7 @@ END {
 
 
 # Clean up
-rm "$FST_SORTED" "$TAJIMA_SORTED" 
+#rm "$FST_SORTED" "$TAJIMA_SORTED" 
 
 wc -l combined_stats.tsv
 grep -v 'NA' combined_stats.tsv | wc -l
