@@ -1,4 +1,4 @@
-source params_base.sh
+source ../params_base.sh
 
 OUTPREFIX=ccgp_jays
 
