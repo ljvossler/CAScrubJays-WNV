@@ -2,7 +2,7 @@ source ../params_base.sh
 
 OUTPREFIX=ccgp_jays
 
-FST="${OUTDIR}/analyses/fst/ccgp_jays_pre_ccgp_jays_post/500000/ccgp_jays_pre_ccgp_jays_post.500000.fst.chrom.txt" # This should be the fst file within numerical chromosome labels (matching tajima output)
+FST="${OUTDIR}/analyses/fst/ccgp_jays_pre_ccgp_jays_post/500000/ccgp_jays_pre_ccgp_jays_post.500000.fst.autosomes"
 TAJIMA="${OUTDIR}/analyses/tajima/ccgp_diff.txt"
 
 
@@ -43,13 +43,13 @@ END {
 
 
 # Clean up
-#rm "$FST_SORTED" "$TAJIMA_SORTED" 
+rm "$FST_SORTED" "$TAJIMA_SORTED" 
 
 wc -l combined_stats.tsv
 grep -v 'NA' combined_stats.tsv | wc -l
 
 
-<<'EOF'
+
 echo "Generating composite stat from ${OUTDIR}/analyses/fst_tajima_combined_stats.tsv..."
 Rscript "generate_composite_stat.r" \
     "${OUTDIR}" "${OUTDIR}/analyses/fst_tajima_combined_stats.tsv" "${OUTPREFIX}"
@@ -73,12 +73,7 @@ NR==1 {
 
 
 
-source ~/programs/DarwinFinches/param_files/cra_params_fst.sh
-
-
 echo "Plotting composite stat..."
 Rscript "plot_composite_stat.r" \
     "${OUTDIR}" "${OUTDIR}/analyses/fst_tajima_combined_stats.tsv" "${OUTPREFIX}"
 
-cat("Script completed successfully!\n")
-EOF
