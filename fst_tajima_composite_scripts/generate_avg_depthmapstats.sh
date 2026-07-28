@@ -63,16 +63,14 @@ if [ -f "${OUT_MASK}" ]
 fi 
 
 
-# Some Additional Input File Processing Examples
+# Set some key variables
 POP1=pop1
 POP2=pop2
 POPS=${POP1}_${POP2}
 WIN=50000
-WINDIR="${OUTDIR}/datafiles/bamstats/windowed_bamfiles"
 
 
 # Making BED files for computing stat averages over windows
-
 
 # First using some python to generate windowed FST file containing just autosomes (With chromosomes labeled by ID, not number)
 AUTOSOME_LIST=${OUTDIR}/referencelists/SCAFFOLDS.txt
@@ -96,12 +94,12 @@ outprefix = os.path.split(fst_file)[1]
 fst_autosomes.to_csv(os.path.join(outdir, f'{outprefix}.autosomes'), sep='\t')
 EOF
 # Make FST windowed bam file file from windowed analysis
-awk 'BEGIN {OFS="\t"} {print $2, ($3-25000), $3+2500}' ${OUTDIR}/fst/${POPS}/${WIN}/${POPS}.${WIN}.fst.chrom.autosomes > ${WINDIR}/${WIN}win.fst.bam
+awk 'BEGIN {OFS="\t"} {print $2, ($3-25000), $3+2500}' ${OUTDIR}/fst/${POPS}/${WIN}/${POPS}.${WIN}.fst.chrom.autosomes > ${OUTDIR}/datafiles/bamstats/windowed_bamfiles/${WIN}win.fst.bam
 
 
 
 # Now use one of your populations to generate a windowed bam file from both your pre/post populations for Tajima/Theta
-awk 'BEGIN { OFS="\t" } NR>1 {print $2, ($3-25000), ($3+25000)}' ${OUTDIR}/analyses/thetas/${POP1}/${WIN}/${POP1}.theta.thetasWindow.pestPG > "${WINDIR}/${WIN}win.thetas.bam.numchrom"
+awk 'BEGIN { OFS="\t" } NR>1 {print $2, ($3-25000), ($3+25000)}' ${OUTDIR}/analyses/thetas/${POP1}/${WIN}/${POP1}.theta.thetasWindow.pestPG > "${OUTDIR}/datafiles/bamstats/windowed_bamfiles/${WIN}win.thetas.bam.numchrom"
 awk -v chr_file="$CHR_FILE" '
 BEGIN {
     FS = OFS = "\t"
@@ -114,18 +112,24 @@ BEGIN {
     if ($1 in map) $1 = map[$1]
     print
 }
-' "${WINDIR}/${WIN}win.thetas.bam.numchrom" | grep "NC_" | grep -v ${SEXCHR} > "${WINDIR}/${WIN}win.thetas.bam" 
+' "${OUTDIR}/datafiles/bamstats/windowed_bamfiles/${WIN}win.thetas.bam.numchrom" | grep "NC_" | grep -v ${MTCODE} > "${OUTDIR}/datafiles/bamstats/windowed_bamfiles/${WIN}win.thetas.bam" 
 
 
-# You can now run statavg_over_bedwindows.sh. You should do so in slurm jobs
+# You can now run statavg_over_bedwindows.sh for both depth and mapability. You should do so in slurm jobs
 DEPTH_FILE="${OUTDIR}/datafiles/bamstats/chrom_avg_depthstats.txt"
+
 WIN_FST_FILE="${WINDIR}/${WIN}win.fst.bam"
 WIN_THETA_FILE="${WINDIR}/${WIN}win.thetas.bam"
+
 AVGDEPTH_FST="${OUTDIR}/datafiles/bamstats/depthstats/avgdepth_windowed/${WIN}win.fst.depth.csv"
 AVGDEPTH_THETA="${OUTDIR}/datafiles/bamstats/depthstats/avgdepth_windowed/${WIN}win.thetas.depth.csv"
 
+AVGMAP_FST="${OUTDIR}/datafiles/bamstats/depthstats/avgmap_windowed/${WIN}win.fst.map.csv"
+AVGMAP_THETA="${OUTDIR}/datafiles/bamstats/depthstats/avgmap_windowed/${WIN}win.thetas.map.csv"
+
 # Run for FST example
 source ${SCRIPTDIR}/Genomics-Main/general_scripts/statavg_over_bedwindows.sh -d ${DEPTH_FILE} -w ${WIN_FILE_FST} -a ${AVGDEPTH_FST} -t 94
-
+source ${SCRIPTDIR}/Genomics-Main/general_scripts/statavg_over_bedwindows.sh -d ${DEPTH_FILE} -w ${WIN_FILE_FST} -a ${AVGMAP_FST} -t 94
 # Run for Tajima example
 source ${SCRIPTDIR}/Genomics-Main/general_scripts/statavg_over_bedwindows.sh -d ${DEPTH_FILE} -w ${WIN_FILE_THETA} -a ${AVGDEPTH_THETA} -t 94
+source ${SCRIPTDIR}/Genomics-Main/general_scripts/statavg_over_bedwindows.sh -d ${DEPTH_FILE} -w ${WIN_FILE_THETA} -a ${AVGMAP_THETA} -t 94

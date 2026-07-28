@@ -10,11 +10,14 @@ for (pkg in required_packages) {
   library(pkg, character.only = TRUE)
 }
 
-outdir <- "/xdisk/mcnew/finches/dannyjackson/finches/analyses/composite_statistic/cra"
-color1 <- "#4EAFAF"
-color2 <- "#082B64"
-cutoff <- "0.001"  # Convert to numeric
-input <- "cra.composite_score.additive.with_chrnum.tsv"
+cat("Parsing command-line arguments...\n")
+args <- commandArgs(trailingOnly = TRUE)
+input <- args[1]
+outdir <- dirname(input)
+color1 <- args[2]
+color2 <- args[3]
+cutoff <- as.numeric(args[4])
+
 metric <- "composite_score"
 
 
@@ -62,5 +65,5 @@ ggplot(plot_data, aes(x = BPcum, y = !!sym(metric))) +
     panel.grid.minor.x = element_blank()
   )
 
-ggsave(filename = paste0(input, ".sigline.png"), 
+ggsave(filename = file.path(outdir, input, ".sigline.png"), 
        width = 20, height = 5, units = "in")
