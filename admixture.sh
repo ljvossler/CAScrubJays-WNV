@@ -43,7 +43,13 @@ if [ -d "${OUTDIR}/analyses/admixture/" ];
 fi
 
 # First convert VCF to PLINK .bed format
-plink --vcf ${VCF} --make-bed --out ${OUTDIR}/analyses/admixture/${OUTPREFIX}
+if [ -f "${OUTDIR}/analyses/admixture/${OUTPREFIX}.bed" ];
+        then
+            echo "PLINK .bed converted file for ${VCF} already exists, moving on!"
+        else
+            echo "Converting ${VCF} to PLINK .bed file"
+            plink --vcf ${VCF} --make-bed --out ${OUTDIR}/analyses/admixture/${OUTPREFIX}
+fi
 
 cd ${OUTDIR}/analyses/admixture/ # change dir since admixture apparently always outputs to working directory
 for k in $(seq ${NUM_K})
