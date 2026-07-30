@@ -12,7 +12,7 @@ Required argument:
 fi
 
 # Parse command-line arguments
-while getopts ":p:v:o:k" option; do
+while getopts ":p:v:o:k:" option; do
     case "${option}" in
         p) PARAMS=${OPTARG};;
         v) VCF=${OPTARG} ;;
