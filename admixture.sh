@@ -42,14 +42,14 @@ if [ -d "${OUTDIR}/analyses/admixture/" ];
             mkdir -p "${OUTDIR}/analyses/admixture/"
 fi
 
-# First convert VCF to PLINK .bed format
+# First convert VCF to PLINK .bed format and convert chromids to ints
 if [ -f "${OUTDIR}/analyses/admixture/${OUTPREFIX}.bed" ];
         then
             echo "PLINK .bed converted file for ${VCF} already exists, moving on!"
         else
             echo "Converting ${VCF} to PLINK .bed file"
             plink --vcf ${VCF} --make-bed --allow-extra-chr --out ${OUTDIR}/analyses/admixture/${OUTPREFIX}
-            plink --bfile ${OUTDIR}/analyses/admixture/${OUTPREFIX}.bed \
+            plink --bfile ${OUTDIR}/analyses/admixture/${OUTPREFIX} \
                 --allow-extra-chr --update-chr ${OUTDIR}/referencelists/chroms_to_ints.txt \
                 --make-bed --out ${OUTDIR}/analyses/admixture/${OUTPREFIX}_numeric.bed
 fi
