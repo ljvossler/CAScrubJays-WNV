@@ -59,7 +59,7 @@ echo ${NUM_K}
 for k in $(seq ${NUM_K})
 do 
     echo "Running admixture for K value: $k"
-    admixture --cv ${OUTDIR}/analyses/admixture/${OUTPREFIX}.bed ${k} | tee admixlog_${OUTPREFIX}_${k}.out
+    admixture --cv ${OUTDIR}/analyses/admixture/${OUTPREFIX}_numeric.bed ${k} | tee admixlog_${OUTPREFIX}_${k}.out
     echo "Done running admixture for K $k"
 done
 
