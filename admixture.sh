@@ -48,7 +48,7 @@ if [ -f "${OUTDIR}/analyses/admixture/${OUTPREFIX}.bed" ];
             echo "PLINK .bed converted file for ${VCF} already exists, moving on!"
         else
             echo "Converting ${VCF} to PLINK .bed file"
-            bcftools annotate --rename-chrs ${OUTDIR}/referencelists/chroms_to_int.txt ${VCF} -ou | \
+            bcftools annotate --rename-chrs ${OUTDIR}/referencelists/chroms_to_ints.txt ${VCF} -ou | \
             plink --vcf /dev/stdin \
                     --allow-extra-chr \
                     --make-bed \
