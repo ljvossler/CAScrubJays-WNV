@@ -52,6 +52,7 @@ if [ -f "${OUTDIR}/analyses/admixture/${OUTPREFIX}.bed" ];
 fi
 
 cd ${OUTDIR}/analyses/admixture/ # change dir since admixture apparently always outputs to working directory
+echo ${NUM_K}
 for k in $(seq ${NUM_K})
 do 
     echo "Running admixture for K value: $k"
