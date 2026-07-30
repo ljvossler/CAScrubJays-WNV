@@ -48,12 +48,14 @@ if [ -f "${OUTDIR}/analyses/admixture/${OUTPREFIX}.bed" ];
             echo "PLINK .bed converted file for ${VCF} already exists, moving on!"
         else
             echo "Converting ${VCF} to PLINK .bed file"
-            bcftools annotate --rename-chrs ${OUTDIR}/referencelists/chroms_to_ints.txt ${VCF} -ou | \
-            plink --vcf /dev/stdin \
+            bcftools annotate --rename-chrs ${OUTDIR}/referencelists/chroms_to_ints.txt ${VCF} -Oz -o ${OUTDIR}/analyses/admixture/temp_renamed_vcf.gz
+            plink --vcf ${OUTDIR}/analyses/admixture/temp_renamed_vcf.gz \
                     --allow-extra-chr \
                     --make-bed \
                     --out ${OUTDIR}/analyses/admixture/${OUTPREFIX}.bed
 fi
+
+rm ${OUTDIR}/analyses/admixture/temp_renamed_vcf.gz
 
 cd ${OUTDIR}/analyses/admixture/ # change dir since admixture apparently always outputs to working directory
 echo ${NUM_K}
