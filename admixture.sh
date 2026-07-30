@@ -49,6 +49,9 @@ if [ -f "${OUTDIR}/analyses/admixture/${OUTPREFIX}.bed" ];
         else
             echo "Converting ${VCF} to PLINK .bed file"
             plink --vcf ${VCF} --make-bed --allow-extra-chr --out ${OUTDIR}/analyses/admixture/${OUTPREFIX}
+            plink --bfile ${OUTDIR}/analyses/admixture/${OUTPREFIX}.bed \
+                --allow-extra-chr --update-chr ${OUTDIR}/referencelists/chroms_to_ints.txt \
+                --make-bed --out ${OUTDIR}/analyses/admixture/${OUTPREFIX}_numeric.bed
 fi
 
 cd ${OUTDIR}/analyses/admixture/ # change dir since admixture apparently always outputs to working directory
