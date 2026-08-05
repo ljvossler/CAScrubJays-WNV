@@ -12,8 +12,6 @@ Required argument:
     exit 1
 fi
 
-NUM_K=5
-
 # Parse command-line arguments
 while getopts ":p:v:o:" option; do
     case "${option}" in
@@ -51,7 +49,7 @@ plink --vcf ${VCF} --double-id --allow-extra-chr \
 
 # Conduct PCA
 plink --vcf ${VCF} --double-id --allow-extra-chr --set-missing-var-ids @:# \
-    --extract "${OUTDIR}/analyses/PCA/${OUTPREFIX}".prune.in \
+    --extract "${OUTDIR}/analyses/PCA/${OUTPREFIX}.prune.in" \
     --make-bed --pca --out "${OUTDIR}/analyses/PCA/${OUTPREFIX}"
 
 # Plot PCA

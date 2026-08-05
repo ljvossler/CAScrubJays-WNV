@@ -64,8 +64,8 @@ fi
 
 
 # Set some key variables
-POP1=pop1
-POP2=pop2
+POP1=alljays_pre
+POP2=alljays_post
 POPS=${POP1}_${POP2}
 WIN=50000
 
@@ -94,7 +94,7 @@ outprefix = os.path.split(fst_file)[1]
 fst_autosomes.to_csv(os.path.join(outdir, f'{outprefix}.autosomes'), sep='\t')
 EOF
 # Make FST windowed bam file file from windowed analysis
-awk 'BEGIN {OFS="\t"} {print $2, ($3-25000), $3+2500}' ${OUTDIR}/fst/${POPS}/${WIN}/${POPS}.${WIN}.fst.chrom.autosomes > ${OUTDIR}/datafiles/bamstats/windowed_bamfiles/${WIN}win.fst.bam
+awk 'BEGIN {OFS="\t"} {print $2, ($3-25000), $3+2500}' ${OUTDIR}/analyses/fst/${POPS}/${WIN}/${POPS}.${WIN}.fst.chrom.autosomes > ${OUTDIR}/datafiles/bamstats/windowed_bamfiles/${WIN}win.fst.bam
 
 
 
@@ -118,8 +118,8 @@ BEGIN {
 # You can now run statavg_over_bedwindows.sh for both depth and mapability. You should do so in slurm jobs
 DEPTH_FILE="${OUTDIR}/datafiles/bamstats/chrom_avg_depthstats.txt"
 
-WIN_FST_FILE="${WINDIR}/${WIN}win.fst.bam"
-WIN_THETA_FILE="${WINDIR}/${WIN}win.thetas.bam"
+WIN_FST_FILE="${OUTDIR}/datafiles/bamstats/windowed_bamfiles/${WIN}win.fst.bam"
+WIN_THETA_FILE="${OUTDIR}/datafiles/bamstats/windowed_bamfiles/${WIN}win.thetas.bam"
 
 AVGDEPTH_FST="${OUTDIR}/datafiles/bamstats/depthstats/avgdepth_windowed/${WIN}win.fst.depth.csv"
 AVGDEPTH_THETA="${OUTDIR}/datafiles/bamstats/depthstats/avgdepth_windowed/${WIN}win.thetas.depth.csv"
