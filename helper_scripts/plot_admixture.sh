@@ -1,8 +1,8 @@
 #!/bin/bash
 
 OUTPREFIX=alljays
-NUM_K=10
-POPS=cascrubjays
+NUM_K=5
+POPS=californica,obscura
 
 source ../params_preprocessing.sh
 
