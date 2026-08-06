@@ -37,13 +37,14 @@ mkdir ${BAMDIR}/old
 for sample in $(cat ${OUTDIR}/referencelists/alljays_sampleids.txt);
 do
     # Save old files to safe location
-    mv ${BAMDIR}/${sample}.realigned.bam mv ${BAMDIR}/old/${sample}.realigned.bam.old
-    mv ${BAMDIR}/${sample}.realigned.bai mv ${BAMDIR}/old/${sample}.realigned.bai.old
+    mv ${BAMDIR}/${sample}.realigned.bam ${BAMDIR}/old/${sample}.realigned.bam.old
+    mv ${BAMDIR}/${sample}.realigned.bai ${BAMDIR}/old/${sample}.realigned.bai.old
     old_id=$(echo $(samtools samples ${BAMDIR}/old/${sample}.realigned.bam.old) | awk '{print $1}') # Extract old id. Requires samtools v1.19 on HPC
     # Generate reheadered bams
     samtools view -H ${BAMDIR}/old/${sample}.realigned.bam.old | sed "s/SM:${old_id}/SM:${sample}/g" | samtools reheader - ${BAMDIR}/old/${sample}.realigned.bam.old > ${BAMDIR}/${sample}.realigned.bam
-    samtools index ${BAMDIR}/${sample}.realigned.bam
     samtools samples ${BAMDIR}/${sample}.realigned.bam
+
+done
 
 # NOTES:
 # All CRAM files regenerated from reheadered bams
