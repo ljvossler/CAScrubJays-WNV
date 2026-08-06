@@ -23,11 +23,11 @@ BAMLIST=${OUTDIR}/referencelists/alljays.bamlist.txt
 
 echo "Parallel variant calling on macrochromosomes..."
 cat ${CHROMS} | parallel --jobs "$CONCURRENT_JOBS" "
-    bcftools mpileup -f ${REF} -r {} -b ${BAMLIST} -OU -a FORMAT/AD,DP,INFO/AD,SP | \
+    bcftools mpileup -f ${REF} -r {} -b ${BAMLIST} -Ou -a FORMAT/AD,DP,INFO/AD,SP | \
     bcftools call -mv -Oz -V indels -o ${OUTDIR}/datafiles/genotype_calls/${RUNNAME}_snps_multiallelic_{}.vcf.gz"
 
 echo "Calling vars for unplaced scaffolds group..."
-bcftools mpileup -f ${REF} -R ${SCAFFOLDS} -b ${BAMLIST} -OU -a FORMAT/AD,DP,INFO/AD,SP | \
+bcftools mpileup -f ${REF} -R ${SCAFFOLDS} -b ${BAMLIST} -Ou -a FORMAT/AD,DP,INFO/AD,SP | \
 bcftools call -mv -Oz -V indels -o ${OUTDIR}/datafiles/genotype_calls/${RUNNAME}_snps_multiallelic_scaffolds.vcf.gz
 
 
