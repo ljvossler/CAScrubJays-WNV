@@ -51,6 +51,3 @@ plink --vcf ${VCF} --double-id --allow-extra-chr \
 plink --vcf ${VCF} --double-id --allow-extra-chr --set-missing-var-ids @:# \
     --extract "${OUTDIR}/analyses/PCA/${OUTPREFIX}.prune.in" \
     --make-bed --pca --out "${OUTDIR}/analyses/PCA/${OUTPREFIX}"
-
-# Plot PCA
-Rscript ${SCRIPTDIR}/helper_scripts/plot_PCA.r --eigenvec ${OUTPREFIX}.eigenvec --eigenval ${OUTPREFIX}.eigenval
