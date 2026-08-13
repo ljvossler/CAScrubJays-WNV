@@ -19,18 +19,98 @@ eigenval <- scan(opt$eigenval)
 
 # sort out the pca data
 # remove nuisance column
-pca <- pca[,-1]3
+pca <- pca[,-1]
 # set colnames
 names(pca)[1] <- "ind"
 names(pca)[2:ncol(pca)] <- paste0("PC", 1:(ncol(pca)-1))
 num_pca_cols <- ncol(pca)-1
 
+ordered_region_list <- c('South',
+                         'Oregon',
+                         'Central',
+                         'Central',
+                         'Central',
+                         'Central',
+                         'North',
+                         'North',
+                         'North',
+                         'North',
+                         'South',
+                         'Central',
+                         'North',
+                         'South',
+                         'North',
+                         'Central',
+                         'North',
+                         'North',
+                         'North',
+                         'North',
+                         'South',
+                         'South',
+                         'North',
+                         'North',
+                         'Central',
+                         'North',
+                         'Central',
+                         'Central',
+                         'Central',
+                         'Central',
+                         'North',
+                         'North',
+                         'North',
+                         'North',
+                         'Central',
+                         'North',
+                         'South',
+                         'North',
+                         'South',
+                         'North',
+                         'North',
+                         'Central',
+                         'Central',
+                         'Mexico',
+                         'North',
+                         'Central',
+                         'North',
+                         'South',
+                         'South',
+                         'North',
+                         'North',
+                         'North',
+                         'Washington',
+                         'North',
+                         'North',
+                         'Central',
+                         'Oregon',
+                         'North',
+                         'Washington',
+                         'North',
+                         'North',
+                         'Central',
+                         'North',
+                         'North',
+                         'North',
+                         'North',
+                         'North',
+                         'Central',
+                         'North',
+                         'North',
+                         'North',
+                         'North',
+                         'North',
+                         'Oregon',
+                         'Central',
+                         'Oregon',
+                         'North',
+                         'North',
+                         'Washington',
+                         'South')
 
 # sort out the individual species and pops
 # spp
-spp <- rep("ca_scrubjays", length(pca$ind))
+spp <- rep("californica", length(pca$ind))
 # location
-loc <- rep("CA", length(pca$ind))
+loc <- ordered_region_list
 # combine - if you want to plot each in different colours
 spp_loc <- paste0(spp, "_", loc)
 
@@ -50,7 +130,7 @@ a + ylab("Percentage variance explained") + theme_light()
 cumsum(pve$pve)
 
 # plot pca
-b <- ggplot(pca, aes(PC1, PC2, col = spp, shape = loc)) + geom_point(size = 3)
+b <- ggplot(pca, aes(PC1, PC2, col = pre_post, shape = loc)) + geom_point(size = 3)
 b <- b + scale_colour_manual(values = c("red", "blue"))
 b <- b + coord_equal() + theme_light()
 b + xlab(paste0("PC1 (", signif(pve$pve[1], 3), "%)")) + ylab(paste0("PC2 (", signif(pve$pve[2], 3), "%)"))

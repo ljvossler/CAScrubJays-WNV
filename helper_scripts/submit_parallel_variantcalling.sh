@@ -30,6 +30,9 @@ echo "Calling vars for unplaced scaffolds group..."
 bcftools mpileup -f ${REF} -R ${SCAFFOLDS} -b ${BAMLIST} -Ou -a FORMAT/AD,DP,INFO/AD,SP | \
 bcftools call -mv -Oz -V indels -o ${OUTDIR}/datafiles/genotype_calls/${RUNNAME}_snps_multiallelic_scaffolds.vcf.gz
 
+bcftools concat -f ${OUTDIR}/datafiles/genotype_calls/splitvcf_ordered_list.txt -Oz -o ${OUTDIR}/datafiles/genotype_calls/alljays_snps_multiallelic_merged.vcf.gz
+bcftools index ${OUTDIR}/datafiles/genotype_calls/alljays_snps_multiallelic_merged.vcf.gz
+
 
 # 7. Safe Concatenation and Normalization
 # Reads chunks in exact .fai order to preserve structural integrity of the VCF index
