@@ -11,14 +11,14 @@ module load gsl
 module load hdf5
 module load htslib
 module load micromamba
-
+module load fastp
 
 
 # Define variables
 # all
 OUTDIR=/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv # main directory for output files
 PROGDIR=/xdisk/mcnew/scrubjays_wnv/programs  # path to directory for all installed programs
-BAMDIR=${OUTDIR}/datafiles/indelrealignment/ccgp  # path to directory with bam files
+BAMDIR=${OUTDIR}/datafiles/indelrealignment  # path to directory with bam files
 PROJHUB=CAScrubJays-WNV
 SCRIPTDIR=${PROGDIR}/${PROJHUB}
 PATH=$PATH:$SCRIPTDIR # this adds the workshop script directory to our path, so that executable scripts in it can be called without using the full path
@@ -28,7 +28,7 @@ FILENAME_LIST="/path/to/list.txt" # list with sample codes associated with each 
 # define aspects of the reference genome
 CHRLEAD=NC_0 # characters at the start of a chromosome number (excluding scaffolds)
 SCAF_LEAD=NW_0 # characters at the start of a scaffold name
-MTCODE=NC_051467.1 # code for mitochondrial chromosome. changed this from sex chromosome since sex chromosomes are already excluded in base_setup SCAFFOLD list generation, but the MTs are included
+MTCODE=NC_051467.1 # code for mitochondrial chromosome. changed this from sex chromosome since sex chromosomes are already excluded in base_setup SCAFFOLD list generation, but the MTs are i>
 REF_ACC=GCF_041296385.1 # accession number for reference genome
 REF=/xdisk/mcnew/scrubjays_wnv/a_coerulescens_ncbi_ref_genome/data/GCF_041296385.1/GCF_041296385.1_UR_Acoe_1.0_genomic.fna # path to reference genome
 GFF=/xdisk/mcnew/scrubjays_wnv/a_coerulescens_ncbi_ref_genome/data/GCF_041296385.1/genomic.gff # path to gff file
