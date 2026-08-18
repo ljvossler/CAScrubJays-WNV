@@ -60,6 +60,11 @@ echo DEPTH: $DEPTH_FILE
 echo WIN: $WIN_FILE
 echo OUTPUT: $AVG_OUTPUT_FILE
 echo THREADS: $THREADS
+echo PARAMS: $PARAMS
+
+if [[ -z "${DEPTH_FILE:-}" || -z "${WIN_FILE:-}" || -z "${AVG_OUTPUT_FILE:-}" || -z "${THREADS:-}" || -z "${PARAMS:-}" ]]; then
+    usage
+fi
 
 source ${PARAMS}
 
