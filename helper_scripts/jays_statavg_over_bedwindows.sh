@@ -69,6 +69,7 @@ fi
 source ${PARAMS}
 
 # Create a temporary working directory (will be removed on exit)
+echo "Making temp directory..."
 TEMP_DIR=$(mktemp -d)
 trap "rm -rf $TEMP_DIR" EXIT
 
