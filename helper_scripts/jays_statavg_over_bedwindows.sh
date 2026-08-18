@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# avg_depth_over_windows.sh
+# avg_depth_over_windows.sh (*****Same script as in GEN-MAIN, just with grepping out MTCODE rather than SEXCHR at the end********)
 #
 # This script computes the average depth across specified genome windows.
 # It takes as input:
@@ -25,6 +25,8 @@
 
 
 module load parallel
+
+set -euo pipefail
 
 
 # Parse command-line arguments
@@ -157,6 +159,6 @@ echo "Done processing. Output written to ${AVG_OUTPUT_FILE}"
 echo "Filtering to just chromosomes and autoomes"
 
 grep "${CHRLEAD}" "${AVG_OUTPUT_FILE}" > "${AVG_OUTPUT_FILE}.chromosomes"
-grep -v "${MTCODE}" "${AVG_OUTPUT_FILE}.chromosomes" > "${AVG_OUTPUT_FILE}.autosomes"
+grep -v "${SEXCHR}" "${AVG_OUTPUT_FILE}.chromosomes" > "${AVG_OUTPUT_FILE}.autosomes"
 
 echo "Done. Script complete."
