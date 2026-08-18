@@ -54,15 +54,16 @@ while getopts "d:w:a:t:p:" opt; do
     esac
 done
 
+echo DEPTH: $DEPTH_FILE
+echo WIN: $WIN_FILE
+echo OUTPUT: $AVG_OUTPUT_FILE
+echo THREADS: $THREADS
+
 if [[ -z "${DEPTH_FILE:-}" || -z "${WIN_FILE:-}" || -z "${AVG_OUTPUT_FILE:-}" || -z "${THREADS:-}" || -z "${PARAMS:-}" ]]; then
     usage
 fi
 
 source ${PARAMS}
-echo DEPTH: $DEPTH_FILE
-echo WIN: $WIN_FILE
-echo OUTPUT: $AVG_OUTPUT_FILE
-echo THREADS: $THREADS
 
 # Create a temporary working directory (will be removed on exit)
 TEMP_DIR=$(mktemp -d)
