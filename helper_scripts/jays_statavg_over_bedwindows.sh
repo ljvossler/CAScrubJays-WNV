@@ -61,10 +61,6 @@ echo WIN: $WIN_FILE
 echo OUTPUT: $AVG_OUTPUT_FILE
 echo THREADS: $THREADS
 
-if [[ -z "${DEPTH_FILE:-}" || -z "${WIN_FILE:-}" || -z "${AVG_OUTPUT_FILE:-}" || -z "${THREADS:-}" || -z "${PARAMS:-}" ]]; then
-    usage
-fi
-
 source ${PARAMS}
 
 # Create a temporary working directory (will be removed on exit)
@@ -159,6 +155,6 @@ echo "Done processing. Output written to ${AVG_OUTPUT_FILE}"
 echo "Filtering to just chromosomes and autoomes"
 
 grep "${CHRLEAD}" "${AVG_OUTPUT_FILE}" > "${AVG_OUTPUT_FILE}.chromosomes"
-grep -v "${SEXCHR}" "${AVG_OUTPUT_FILE}.chromosomes" > "${AVG_OUTPUT_FILE}.autosomes"
+grep -v "${MTCODE}" "${AVG_OUTPUT_FILE}.chromosomes" > "${AVG_OUTPUT_FILE}.autosomes"
 
 echo "Done. Script complete."
