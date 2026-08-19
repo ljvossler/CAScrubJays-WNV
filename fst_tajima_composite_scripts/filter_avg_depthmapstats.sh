@@ -2,11 +2,11 @@
 
 # An outline of how to filter FST and Tajima outputs by depth and mapability. To be referenced after generate_avg_depthstats.sh.
 
-POP1=pop1
-POP2=pop2
+POP1=alljays_pre
+POP2=alljays_post
 WIN=50000
 
-species=( "jays" )
+species=( "alljays" )
 pops=( "${POP1}" "${POP2}" )
 
 source params_base.sh
@@ -26,8 +26,8 @@ filter_outputs() {
 #=================================================================
 # FST
 #========
-AVGDEPTH_FST="${OUTDIR}/datafiles/bamstats/depthstats/avgdepth_windowed/${WIN}win.fst.depth.csv"
-OUTPUT_DEPTH_FST="${OUTDIR}/datafiles/bamstats/depthstats/avgdepth_windowed/${WIN}win.fst.depth.filtered.bam"
+AVGDEPTH_FST="${OUTDIR}/datafiles/bamstats/avgdepth_windowed/${WIN}win.fst.depth.csv"
+OUTPUT_DEPTH_FST="${OUTDIR}/datafiles/bamstats/windowed_bamfiles/${WIN}win.fst.depth.filtered.bam"
 
 filter_outputs "${OUTPUT_DEPTH_FST}" "${AVGDEPTH_FST}" 
 
@@ -35,7 +35,7 @@ filter_outputs "${OUTPUT_DEPTH_FST}" "${AVGDEPTH_FST}"
 BAMFILE="${OUTPUT_DEPTH_FST}"
 awk '{print $1, ($2+25000)}' "${BAMFILE}" > "${BAMFILE}.midpos"
 
-for sp in ${species}; do
+for sp in "${species[@]}"; do
     FSTFILE="${OUTDIR}/analyses/fst/${sp}_pre_${sp}_post/${WIN}/${sp}_pre_${sp}_post.${WIN}.fst"
     OUTFILE="${OUTDIR}/analyses/fst/${sp}_pre_${sp}_post/${WIN}/${sp}_pre_${sp}_post.${WIN}.fst.depthfiltered"
     grep "${CHRLEAD}" ${FSTFILE} | grep -v "${MTCODE}" > "${FSTFILE}.autosomes"
@@ -55,22 +55,22 @@ for sp in ${species}; do
             print
         }
     }
-    ' "$BAMFILE" "$FSTFILE" > "$OUTFILE"
+    ' "$BAMFILE.midpos" "$FSTFILE" > "$OUTFILE"
 done
 
 
 # Tajima
 #========
-AVGDEPTH_THETA="${OUTDIR}/datafiles/bamstats/depthstats/avgdepth_windowed/${WIN}win.thetas.depth.csv"
-OUTPUT_DEPTH_THETA="${OUTDIR}/datafiles/bamstats/depthstats/avgdepth_windowed/${WIN}win.thetas.depth.filtered.bam"
-BAMFILE="${OUTDIR}/datafiles/bamstats/depthstats/avgdepth_windowed/${WIN}win.thetas.depth.filtered.bam.midpos"
+AVGDEPTH_THETA="${OUTDIR}/datafiles/bamstats/avgdepth_windowed/${WIN}win.thetas.depth.csv"
+OUTPUT_DEPTH_THETA="${OUTDIR}/datafiles/bamstats/windowed_bamfiles/${WIN}win.thetas.depth.filtered.bam"
+BAMFILE="${OUTDIR}/datafiles/bamstats/avgdepth_windowed/${WIN}win.thetas.depth.filtered.bam.midpos"
 
 filter_outputs "${OUTPUT_DEPTH_THETA}" "${AVGDEPTH_THETA}" 
 
 awk '{print $1, ($2+25000)}' "${OUTPUT_DEPTH_THETA}" > "${BAMFILE}"
 
 # Filter thetas file
-for pop in $pops; do
+for pop in "${pops[@]}"; do
   
     OUTFILE="${OUTDIR}/analyses/thetas/${pop}/${WIN}/${pop}.theta.thetasWindow.pestPG.depthfiltered"
 
@@ -121,17 +121,17 @@ done
 # FST
 #========
 AVGMAP_FST="${OUTDIR}/datafiles/bamstats/avgmap_windowed/${WIN}win.fst.map.csv"
-OUTPUT_MAP_FST="${OUTDIR}/datafiles/bamstats/avgmap_windowed/${WIN}win.fst.map.filtered.bam"
+OUTPUT_MAP_FST="${OUTDIR}/datafiles/bamstats/windowed_bamfiles/${WIN}win.fst.map.filtered.bam"
 
 filter_outputs "${OUTPUT_MAP_FST}" "${AVGMAP_FST}"
 
 # Filter FST files
-BAMFILE="${OUTPUT_FILE}"
+BAMFILE="${OUTPUT_MAP_FST}"
 awk '{print $1, ($2+25000)}' "${BAMFILE}" > "${BAMFILE}.midpos"
 
-for sp in ${species}; do
-    FSTFILE="${OUTDIR}/analyses/fst/${sp}pre_${sp}post/${WIN}/${sp}pre_${sp}post.${WIN}.fst.depthfiltered"
-    OUTFILE="${OUTDIR}/analyses/fst/${sp}pre_${sp}post/${WIN}/${sp}pre_${sp}post.${WIN}.fst.depthmapfiltered"
+for sp in "${species[@]}"; do
+    FSTFILE="${OUTDIR}/analyses/fst/${sp}_pre_${sp}_post/${WIN}/${sp}_pre_${sp}_post.${WIN}.fst.depthfiltered"
+    OUTFILE="${OUTDIR}/analyses/fst/${sp}_pre_${sp}_post/${WIN}/${sp}_pre_${sp}_post.${WIN}.fst.depthmapfiltered"
     grep "${CHRLEAD}" ${FSTFILE} | grep -v "${MTCODE}" > "${FSTFILE}.autosomes"
 
     awk '
@@ -149,7 +149,7 @@ for sp in ${species}; do
             print
         }
     }
-    ' "$BAMFILE" "$FSTFILE" > "$OUTFILE"
+    ' "$BAMFILE.midpos" "$FSTFILE" > "$OUTFILE"
     
 done
 
@@ -157,7 +157,7 @@ done
 # Tajima
 #========
 AVGMAP_THETA="${OUTDIR}/datafiles/bamstats/avgmap_windowed/${WIN}win.thetas.map.csv"
-OUTPUT_MAP_THETA="${OUTDIR}/datafiles/bamstats/avgmap_windowed/${WIN}win.thetas.map.filtered.bam"
+OUTPUT_MAP_THETA="${OUTDIR}/datafiles/bamstats/windowed_bamfiles/${WIN}win.thetas.map.filtered.bam"
 BAMFILE="${OUTDIR}/datafiles/bamstats/avgmap_windowed/${WIN}win.thetas.map.filtered.bam.midpos"
 
 filter_outputs "${OUTPUT_MAP_THETA}" "${AVGMAP_THETA}"
@@ -167,7 +167,7 @@ awk '{print $1, ($2+25000)}' "${OUTPUT_MAP_THETA}" > "${BAMFILE}"
 
 # Filter thetas file
 
-for pop in $pops; do
+for pop in "${pops[@]}"; do
     THETAFILE="${OUTDIR}/analyses/thetas/${pop}/${WIN}/${pop}.theta.thetasWindow.pestPG.depthfiltered"
 
     OUTFILE="${OUTDIR}/analyses/thetas/${pop}/${WIN}/${pop}.theta.thetasWindow.pestPG.depthmapfiltered"
@@ -190,3 +190,22 @@ for pop in $pops; do
     ' "$BAMFILE" "$THETAFILE" > "$OUTFILE"
 
 done
+
+
+
+# Manhattan Plotting
+#==========================
+
+# FST
+for sp in "${species[@]}"; do 
+    input="${OUTDIR}/analyses/fst/${sp}_pre_${sp}_post/${WIN}/${sp}_pre_${sp}_post.${WIN}.fst.depthmapfiltered"
+    echo -e "region\tchromo\tposition\tNsites\tfst" | cat - ${input} > ${input}.headered
+    source ${SCRIPTDIR}/Genomics-Main/C_SelectionAnalysis/fst/fst.filteredfiles.sh -p params_fst.sh -f ${input}.headered
+done
+
+
+
+
+
+# Violin Plotting
+#==========================

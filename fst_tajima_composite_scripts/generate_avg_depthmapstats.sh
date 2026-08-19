@@ -15,7 +15,7 @@ if [ -f "${RAW_DEPTH}" ]
     else
         echo "Raw Depth file not found, generating..."
         BAMLIST=${OUTDIR}/referencelists/alljays.bamlist.txt
-        samtools depth -f ${BAMLIST} >> ${AVG_DEPTH}
+        samtools depth -f ${BAMLIST} >> ${RAW_DEPTH}
 fi
 
 
@@ -31,7 +31,6 @@ if [ -f "${AVG_DEPTH}" ]
         print $1, $2, avg;
         }' ${RAW_DEPTH}  > ${AVG_DEPTH}
 fi 
-
 
 # Generate Mapability Averages
 FASTA_MASK="${OUTDIR}/datafiles/snpable/${REF_ACC}_revised_mask.150.50.fa"
@@ -77,10 +76,10 @@ AUTOSOME_LIST=${OUTDIR}/referencelists/SCAFFOLDS.txt
 FST_FILE=${OUTDIR}/analyses/fst/${POPS}/${WIN}/${POPS}.${WIN}.fst.chrom
 python3 - "$AUTOSOME_LIST" "$FST_FILE" << 'EOF'
 import pandas as pd
-import os
+import os, sys
 
 autosomes = sys.argv[1]
-fst_file = int(sys.argv[2])
+fst_file = sys.argv[2]
 
 with open(autosomes, 'r') as f:
     autosomes = [s.strip() for s in f.readlines()]
@@ -91,14 +90,14 @@ fst_autosomes = fst_df[fst_df[1].isin(autosomes)]
 outdir = os.path.split(fst_file)[0]
 outprefix = os.path.split(fst_file)[1]
 
-fst_autosomes.to_csv(os.path.join(outdir, f'{outprefix}.autosomes'), sep='\t')
+fst_autosomes.to_csv(os.path.join(outdir, f'{outprefix}.autosomes'), sep='\t', index=None, header=None)
 EOF
-# Make FST windowed bam file file from windowed analysis
+# Make a file containing windows for FST
 awk 'BEGIN {OFS="\t"} {print $2, ($3-25000), $3+2500}' ${OUTDIR}/analyses/fst/${POPS}/${WIN}/${POPS}.${WIN}.fst.chrom.autosomes > ${OUTDIR}/datafiles/bamstats/windowed_bamfiles/${WIN}win.fst.bam
 
 
 
-# Now use one of your populations to generate a windowed bam file from both your pre/post populations for Tajima/Theta
+# Now use one of your populations to make a file containing windows from both your pre/post populations for Tajima/Theta
 awk 'BEGIN { OFS="\t" } NR>1 {print $2, ($3-25000), ($3+25000)}' ${OUTDIR}/analyses/thetas/${POP1}/${WIN}/${POP1}.theta.thetasWindow.pestPG > "${OUTDIR}/datafiles/bamstats/windowed_bamfiles/${WIN}win.thetas.bam.numchrom"
 awk -v chr_file="$CHR_FILE" '
 BEGIN {
@@ -121,15 +120,17 @@ DEPTH_FILE="${OUTDIR}/datafiles/bamstats/chrom_avg_depthstats.txt"
 WIN_FST_FILE="${OUTDIR}/datafiles/bamstats/windowed_bamfiles/${WIN}win.fst.bam"
 WIN_THETA_FILE="${OUTDIR}/datafiles/bamstats/windowed_bamfiles/${WIN}win.thetas.bam"
 
-AVGDEPTH_FST="${OUTDIR}/datafiles/bamstats/depthstats/avgdepth_windowed/${WIN}win.fst.depth.csv"
-AVGDEPTH_THETA="${OUTDIR}/datafiles/bamstats/depthstats/avgdepth_windowed/${WIN}win.thetas.depth.csv"
+AVGDEPTH_FST="${OUTDIR}/datafiles/bamstats/avgdepth_windowed/${WIN}win.fst.depth.csv"
+AVGDEPTH_THETA="${OUTDIR}/datafiles/bamstats/avgdepth_windowed/${WIN}win.thetas.depth.csv"
 
-AVGMAP_FST="${OUTDIR}/datafiles/bamstats/depthstats/avgmap_windowed/${WIN}win.fst.map.csv"
-AVGMAP_THETA="${OUTDIR}/datafiles/bamstats/depthstats/avgmap_windowed/${WIN}win.thetas.map.csv"
+AVGMAP_FST="${OUTDIR}/datafiles/bamstats/avgmap_windowed/${WIN}win.fst.map.csv"
+AVGMAP_THETA="${OUTDIR}/datafiles/bamstats/avgmap_windowed/${WIN}win.thetas.map.csv"
+
+chmod +x ${SCRIPTDIR}/Genomics-Main/general_scripts/statavg_over_bedwindows.sh
 
 # Run for FST example
-source ${SCRIPTDIR}/Genomics-Main/general_scripts/statavg_over_bedwindows.sh -d ${DEPTH_FILE} -w ${WIN_FILE_FST} -a ${AVGDEPTH_FST} -t 94
-source ${SCRIPTDIR}/Genomics-Main/general_scripts/statavg_over_bedwindows.sh -d ${DEPTH_FILE} -w ${WIN_FILE_FST} -a ${AVGMAP_FST} -t 94
+${SCRIPTDIR}/Genomics-Main/general_scripts/statavg_over_bedwindows.sh -d "${DEPTH_FILE}" -w "${WIN_FST_FILE}" -a "${AVGDEPTH_FST}" -t 94 -p params_base.sh
+${SCRIPTDIR}/Genomics-Main/general_scripts/statavg_over_bedwindows.sh -d "${DEPTH_FILE}" -w "${WIN_FST_FILE}" -a "${AVGMAP_FST}" -t 94 -p params_base.sh
 # Run for Tajima example
-source ${SCRIPTDIR}/Genomics-Main/general_scripts/statavg_over_bedwindows.sh -d ${DEPTH_FILE} -w ${WIN_FILE_THETA} -a ${AVGDEPTH_THETA} -t 94
-source ${SCRIPTDIR}/Genomics-Main/general_scripts/statavg_over_bedwindows.sh -d ${DEPTH_FILE} -w ${WIN_FILE_THETA} -a ${AVGMAP_THETA} -t 94
+${SCRIPTDIR}/Genomics-Main/general_scripts/statavg_over_bedwindows.sh -d "${DEPTH_FILE}" -w "${WIN_THETA_FILE}" -a "${AVGDEPTH_THETA}" -t 94 -p params_base.sh
+${SCRIPTDIR}/Genomics-Main/general_scripts/statavg_over_bedwindows.sh -d "${DEPTH_FILE}" -w "${WIN_THETA_FILE}" -a "${AVGMAP_THETA}" -t 94 -p params_base.sh
