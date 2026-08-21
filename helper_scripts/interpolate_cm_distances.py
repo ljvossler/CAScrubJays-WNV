@@ -8,7 +8,7 @@ args = parser.parse_args()
 
 raw_plink_map = f'/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/datafiles/recombination_map/alljays_plink_{args.scaffold}.map'
 final_plink_map = f'/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/datafiles/recombination_map/alljays_plink_{args.scaffold}_cm.map'
-ref_linkage_map = '/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/referencelists/ref_linkage_map.txt'
+ref_linkage_map = f'/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/referencelists/ref_linkage_map_{args.scaffold}.txt'
 
 print('reading map data')
 plink_map = pd.read_csv(raw_plink_map, sep='\t', header=None, names=['chrom_id', 'var_id', 'cm', 'bp'], dtype={"chrom_id": str, "var_id": str, "cm": np.float64, "bp": np.int64})
