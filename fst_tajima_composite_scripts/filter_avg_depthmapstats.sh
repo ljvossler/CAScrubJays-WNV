@@ -204,7 +204,32 @@ for sp in "${species[@]}"; do
 done
 
 
+# Tajima
+CUTOFF=0.01
+COLOR1="#4EAFAF"
+COLOR2="#FF817E"
+preinput="${OUTDIR}/analyses/thetas/${POP1}/${WIN}/${POP1}.theta.thetasWindow.pestPG.depthmapfiltered"
+postinput="${OUTDIR}/analyses/thetas/${POP2}/${WIN}/${POP2}.theta.thetasWindow.pestPG.depthmapfiltered"
+filtered_diff_file="${OUTDIR}/analyses/tajima/${species[0]}_tajimadiff.depthmapfiltered.txt"
+(echo -e "chromo\tposition\tTajima"; awk 'BEGIN {OFS="\t"} NR==FNR && FNR>1 {data[$2,$3] = $9; next} FNR>1 && ($2,$3) in data {print $2, $3, $9 - data[$2,$3]}' ${preinput} ${postinput}) >> $filtered_diff_file
+cp ${filtered_diff_file} "${filtered_diff_file}.numchrom" 
+# Replace chromosome names if conversion file is provided
+if [ -n "$CHR_FILE" ]; then
+    echo "Replacing chromosome names based on conversion file..."
+    while IFS=',' read -r first second; do
+        sed -i "s/$second/$first/g" "${filtered_diff_file}.numchrom" 
+    done < "$CHR_FILE"
+fi
+# z transform windowed data
+Rscript "${SCRIPTDIR}/Genomics-Main/general_scripts/ztransform_windows.filteredfiles.r" \
+"${OUTDIR}" "${CUTOFF}" "${filtered_diff_file}.numchrom" 
+Z_OUT="${filtered_diff_file}.numchrom.Ztransformed.csv"
+# Run R script for plotting
+echo "Generating Manhattan plot from ${Z_OUT}..."
+Rscript "${SCRIPTDIR}/Genomics-Main/general_scripts/manhattanplot.filteredfiles.tajimadiff.r" \
+    "${OUTDIR}" "${COLOR1}" "${COLOR2}" "${CUTOFF}" "${Z_OUT}" "Tajima" 
 
+echo "Script completed successfully!"
 
 
 # Violin Plotting

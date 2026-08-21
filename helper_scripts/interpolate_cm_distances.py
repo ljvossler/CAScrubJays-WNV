@@ -1,18 +1,22 @@
+# Interpolates CM distances in chromosome-split PLINK .map files using a user-provided reference map
+
 import pandas as pd
 import numpy as np
 import argparse
+import os
 
 parser=argparse.ArgumentParser()
-parser.add_argument("-s", "--scaffold", type=str, help='scaffold id')
+parser.add_argument("-p", "--plinkmap", type=str, help='path to chromosome plink .map file (Standard PLINK format)')
+parser.add_argument("-r", "--refmap", type=str, help='path to reference recombination map. Should have 3 tab-delimited columns [chrom_id, bp_location, cm_distance]. Can be a full genome map or chromosome-split')
 args = parser.parse_args()
 
-raw_plink_map = f'/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/datafiles/recombination_map/alljays_plink_{args.scaffold}.map'
-final_plink_map = f'/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/datafiles/recombination_map/alljays_plink_{args.scaffold}_cm.map'
-ref_linkage_map = f'/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/datafiles/recombination_map/chr_split_refmaps/ref_linkage_map_{args.scaffold}.txt'
+outdir, fname = os.path.split(args.plinkmap)
+fprefix = os.path.splitext(fname)[0]
+final_plink_map = os.path.join(outdir, f'{fprefix}_cm.map')
 
 print('reading map data')
-plink_map = pd.read_csv(raw_plink_map, sep='\t', header=None, names=['chrom_id', 'var_id', 'cm', 'bp'], dtype={"chrom_id": str, "var_id": str, "cm": np.float64, "bp": np.int64})
-ref_map = pd.read_csv(ref_linkage_map, sep='\t', header=None, names=['chrom_id', 'bp', 'cm'], dtype={"chrom_id": str, "bp": np.int64, "cm": np.float64})
+plink_map = pd.read_csv(args.plinkmap, sep='\t', header=None, names=['chrom_id', 'var_id', 'cm', 'bp'], dtype={"chrom_id": str, "var_id": str, "cm": np.float64, "bp": np.int64})
+ref_map = pd.read_csv(args.refmap, sep='\t', header=None, names=['chrom_id', 'bp', 'cm'], dtype={"chrom_id": str, "bp": np.int64, "cm": np.float64})
 ref_chrom_map = ref_map[ref_map["chrom_id"] == args.scaffold].sort_values(by="bp")
 
 print('interpolating cms')
