@@ -6,8 +6,9 @@ import argparse
 import os
 
 parser=argparse.ArgumentParser()
-parser.add_argument("-p", "--plinkmap", type=str, help='path to chromosome plink .map file (Standard PLINK format)')
-parser.add_argument("-r", "--refmap", type=str, help='path to reference recombination map. Should have 3 tab-delimited columns [chrom_id, bp_location, cm_distance]. Can be a full genome map or chromosome-split')
+parser.add_argument("-p", "--plinkmap", type=str, help='path to single-chromosome plink .map file (Standard PLINK format). Do not pass a FULL genome-wide map (high resource cost)')
+parser.add_argument("-r", "--refmap", type=str, help='path to reference recombination map. Should have 3 tab-delimited columns [chrom_id, bp_location, cm_distance]. Usually can be a full genome map or chromosome-split')
+parser.add_argument("-s", "--scaffold", type=str, help='scaffold id to work on')
 args = parser.parse_args()
 
 outdir, fname = os.path.split(args.plinkmap)
