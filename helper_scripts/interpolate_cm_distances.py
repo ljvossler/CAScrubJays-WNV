@@ -10,7 +10,7 @@ raw_plink_map = f'/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/datafiles/r
 final_plink_map = f'/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/datafiles/recombination_map/alljays_plink_{args.scaffold}.map'
 ref_linkage_map = '/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/referencelists/ref_linkage_map.txt'
 
-plink_map = pd.read_csv(raw_plink_map, header=None, names=['chrom_id', 'var_id', 'cm', 'bp'], dtype={"chrom_id": str, "var_id": str, "cm": np.float64, "bp": np.int64})
+plink_map = pd.read_csv(raw_plink_map, sep='\t', header=None, names=['chrom_id', 'var_id', 'cm', 'bp'], dtype={"chrom_id": str, "var_id": str, "cm": np.float64, "bp": np.int64})
 ref_map = pd.read_csv(ref_linkage_map, sep='\t', header=None, names=['chrom_id', 'bp', 'cm'], dtype={"chrom_id": str, "bp": np.int64, "cm": np.float64})
 ref_chrom_map = ref_map[ref_map["chrom_id"] == args.scaffold].sort_values(by="bp")
 
