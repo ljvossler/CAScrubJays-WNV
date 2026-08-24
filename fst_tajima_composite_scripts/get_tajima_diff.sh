@@ -15,6 +15,6 @@ echo "Calculating differences"
 # Replace num_id with chrom_id
 echo "Replacing chromosome names based on conversion file..."
 while IFS=',' read -r first second; do
-    echo "Replacing $second with $first..."
-    sed "s/$second/$first/g" "${TAJIMADIR}/${OUTPREFIX}.txt" >> "${TAJIMADIR}/${OUTPREFIX}.chrom.txt" 
+    echo "Replacing $first with $second..."
+    sed "s/$first/$second/g" "${TAJIMADIR}/${OUTPREFIX}.txt" >> "${TAJIMADIR}/${OUTPREFIX}.chrom.txt" 
 done < "$CHR_FILE"
