@@ -16,6 +16,6 @@ echo "Calculating differences"
 echo "Replacing chromosome names based on conversion file..."
 while IFS=',' read -r first second; do
     echo "Replacing $first with $second..."
-    cat "${TAJIMADIR}/${OUTPREFIX}.txt" | awk -v first=$first -v second=$second 'BEGIN { if ($1 == "first") {$1 = "second"}; print }' >> "${TAJIMADIR}/${OUTPREFIX}.chrom.txt"
+    cat "${TAJIMADIR}/${OUTPREFIX}.txt" | awk -v first=$first -v second=$second 'BEGIN { if ($1 == "first") {$1 = "second"}; print $1 $2 $3 }' >> "${TAJIMADIR}/${OUTPREFIX}.chrom.txt"
     #sed "s/$first/$second/g" "${TAJIMADIR}/${OUTPREFIX}.txt" >> "${TAJIMADIR}/${OUTPREFIX}.chrom.txt" 
 done < "$CHR_FILE"
