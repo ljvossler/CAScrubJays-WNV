@@ -17,5 +17,6 @@ echo "Replacing chromosome names based on conversion file..."
 while IFS=',' read -r first second; do
     echo "Replacing $first with $second..."
     #sed "s/$first/$second/g" "${TAJIMADIR}/${OUTPREFIX}.txt" >> "${TAJIMADIR}/${OUTPREFIX}.chrom.txt" 
-    cat "${TAJIMADIR}/${OUTPREFIX}.txt" | awk -v var1="$first" -v var2="$second" '{ if ($1 == var1) {$1 = var2}; print $1, $2, $3 }' >> "${TAJIMADIR}/${OUTPREFIX}.chrom.txt"
+    cat "${TAJIMADIR}/${OUTPREFIX}.txt" | awk -v var1="$first" -v var2="$second" '{ if ($1 == var1) {$1 = var2}; print $1, $2, $3 }' >> "${TAJIMADIR}/${OUTPREFIX}_${second}.chrom.txt"
 done < "$CHR_FILE"
+cat $(ls ${TAJIMADIR}/*.chrom.txt) > "${TAJIMADIR}/${OUTPREFIX}.chrom.txt"
