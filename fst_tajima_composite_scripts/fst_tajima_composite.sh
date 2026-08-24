@@ -1,15 +1,15 @@
 #!/bin/sh
 
 if [ $# -lt 1 ]; then
-    echo "Usage: $0 -p <parameter_file> -f <fst_file> -t <tajima_file> -o <output_directory_path>
+    echo "Usage: $0 -p <parameter_file> -f <fst_file> -t <tajimadiff_file> -o <output_directory_path>
 
 This script computes the composite statistic for FST/Tajima D
 
 Required argument:
   -p  Path to the parameter file (e.g., params_base.sh in the GitHub repository).
-  -f  FST file.
-  -t  Tajima Diff file.
-  -o  Output Directory Path for composite stat files"
+  -f  Path to FST file.
+  -t  Path to Tajima Diff file.
+  -o  Output directory path for composite stat files"
     exit 1
 fi
 
@@ -85,6 +85,7 @@ END {
 rm "$FST_SORTED" "$TAJIMA_SORTED" 
 wc -l ${STAT_DIR}/combined_stats.tsv
 grep -v 'NA' ${STAT_DIR}/combined_stats.tsv | wc -l
+sed -i '2d' ${STAT_DIR}/combined_stats.tsv # Remove weird extra header
 
 
 # Combine FST and Tajima
