@@ -31,8 +31,7 @@ data[[metric]] <- as.numeric(data[[metric]])
 
 # Prepare data for plotting
 cat("Preparing data for plotting...\n")
-chr_levels <- strsplit(chr_nums, "\n")
-data$chromo <- factor(data$chromo, levels = chr_levels)
+data$chromo <- factor(data$chromo, levels = c(1, "1A", 2:4, "4A", 5:34, "Z"))
 
 plot_data <- data %>%
   group_by(chromo) %>%
