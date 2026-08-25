@@ -17,8 +17,8 @@ fi
 while getopts p:f:t:o: option; do
     case "${option}" in
         p) PARAMS=${OPTARG};;
-		f) FST_FILE=${OPTARG};;
-        t) TAJIMA_FILE=${OPTARG};;
+		f) FST=${OPTARG};;
+        t) TAJIMA=${OPTARG};;
         o) OUTNAME=${OPTARG};;
         *) echo "Invalid option: -${OPTARG}" >&2; exit 1;;
     esac
