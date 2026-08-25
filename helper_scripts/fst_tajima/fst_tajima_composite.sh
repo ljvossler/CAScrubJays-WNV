@@ -49,7 +49,7 @@ fi
 
 # Prep Files
 #=========================================
-
+echo "Getting combined stats..."
 # Temporary sorted files
 FST_SORTED="${STAT_DIR}/fst.sorted.tmp"
 TAJIMA_SORTED="${STAT_DIR}/tajima.sorted.tmp"
@@ -92,10 +92,12 @@ sed -i '2d' ${STAT_DIR}/${OUTNAME}_combined_stats.tsv # Remove weird extra heade
 
 # Combine FST and Tajima
 #=========================================
+echo "Generating composite stat..."
 Rscript "${SCRIPTDIR}/helper_scripts/fst_tajima/generate_composite_stat.r" "${STAT_DIR}/${OUTNAME}_combined_stats.tsv" ${OUTNAME}
 
 # Manhattan Plotting
 #=========================================
+echo "Generating plot..."
 echo -e 'chromo\tchrom_std\tposition\tcomposite_score\thighest_composite' > ${STAT_DIR}/${OUTNAME}.composite_score.additive.with_chrnum.tsv
 awk -F'\t' 'BEGIN {
     FS=OFS="\t"
@@ -120,6 +122,7 @@ Rscript "${SCRIPTDIR}/helper_scripts/fst_tajima/plot_composite_stat.r" \
 
 # Window Filtering and Gene List
 #=========================================
+echo "Window filtering (top 0.1%)"
 # top 0.1 %
 awk 'BEGIN { FS=OFS="\t" }
 NR==1 { print "chromo", "position"; next }
@@ -136,6 +139,7 @@ grep 'ID\=gene' ${GENEFILE} | awk '{OFS = "\t"} {split($9, arr, ";"); print(arr[
 grep 'ID\=gene' ${GENEFILE} | awk '{OFS = "\t"} {split($9, arr, ";"); print($1, $4, $5, arr[1])}' | sed 's/ID\=gene\-//g' | sort -uk4 > ${GENEMAPS}
 
 # top 1%
+echo "Window filtering (top 1%)"
 awk 'BEGIN { FS=OFS="\t" }
 NR==1 { print "chromo", "position"; next } { print $1, $2-25000, $2+25000 }' ${STAT_DIR}/${OUTNAME}.composite_score.additive.1perc.tsv | tail -n +2 > ${STAT_DIR}/${OUTNAME}.composite_score.additive.1perc.bed
 
@@ -150,3 +154,4 @@ grep 'ID\=gene' ${GENEFILE} | awk '{OFS = "\t"} {split($9, arr, ";"); print(arr[
 grep 'ID\=gene' ${GENEFILE} | awk '{OFS = "\t"} {split($9, arr, ";"); print($1, $4, $5, arr[1])}' | sed 's/ID\=gene\-//g' | sort -uk4 > ${GENEMAPS}
 
 
+echo "Done"
