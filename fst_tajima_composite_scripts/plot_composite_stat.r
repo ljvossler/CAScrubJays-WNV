@@ -13,7 +13,6 @@ for (pkg in required_packages) {
 cat("Parsing command-line arguments...\n")
 args <- commandArgs(trailingOnly = TRUE)
 input <- args[1]
-outdir <- dirname(input)
 color1 <- args[2]
 color2 <- args[3]
 cutoff <- as.numeric(args[4])
@@ -65,5 +64,5 @@ ggplot(plot_data, aes(x = BPcum, y = !!sym(metric))) +
     panel.grid.minor.x = element_blank()
   )
 
-ggsave(filename = file.path(outdir, input, ".sigline.png"), 
+ggsave(filename = paste0(input, ".sigline.png"), 
        width = 20, height = 5, units = "in")

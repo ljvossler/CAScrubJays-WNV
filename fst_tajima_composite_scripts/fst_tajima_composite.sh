@@ -108,7 +108,7 @@ NR==1 {
 }
 {
     print map[$1], $0
-}' "${STAT_DIR}/composite_score.additive.tsv" | tail -n +2 | awk '{print $1, $2, $3, $10, $11}' | tr ' ' '\t'  >> ${STAT_DIR}/composite_score.additive.with_chrnum.tsv
+}' "${STAT_DIR}/composite_score.additive.tsv" | tail -n +2 | awk '{print $1, $2, $3, $9, $10}' | tr ' ' '\t'  >> ${STAT_DIR}/composite_score.additive.with_chrnum.tsv
 
 Rscript "${SCRIPTDIR}/Genomics-Main/general_scripts/plot_composite_stat.r" \
     "${STAT_DIR}/composite_score.additive.with_chrnum.tsv" "#4EAFAF" "#082B64" "0.001"
