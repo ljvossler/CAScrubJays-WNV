@@ -85,14 +85,14 @@ END {
 
 # Clean up
 rm "$FST_SORTED" "$TAJIMA_SORTED" 
-wc -l ${STAT_DIR}/combined_stats.tsv
+wc -l ${STAT_DIR}/${OUTNAME}_combined_stats.tsv
 grep -v 'NA' ${STAT_DIR}/${OUTNAME}_combined_stats.tsv | wc -l
 sed -i '2d' ${STAT_DIR}/${OUTNAME}_combined_stats.tsv # Remove weird extra header
 
 
 # Combine FST and Tajima
 #=========================================
-Rscript "${SCRIPTDIR}/helper_scripts/generate_composite_stat.r" "${STAT_DIR}/${OUTNAME}_combined_stats.tsv"
+Rscript "${SCRIPTDIR}/helper_scripts/fst_tajima/generate_composite_stat.r" "${STAT_DIR}/${OUTNAME}_combined_stats.tsv"
 
 # Manhattan Plotting
 #=========================================
@@ -114,7 +114,7 @@ NR==1 {
 
 CHR_NUMS=$(awk -F"," '{print $1}' ${CHR_FILE})
 
-Rscript "${SCRIPTDIR}/helper_scripts/plot_composite_stat.r" \
+Rscript "${SCRIPTDIR}/helper_scripts/fst_tajima/plot_composite_stat.r" \
     "${STAT_DIR}/${OUTNAME}.composite_score.additive.with_chrnum.tsv" "#4EAFAF" "#082B64" "0.001" "${CHR_NUMS}"
 
 
