@@ -137,7 +137,7 @@ grep 'ID\=gene' ${GENEFILE} | awk '{OFS = "\t"} {split($9, arr, ";"); print($1, 
 
 # top 1%
 awk 'BEGIN { FS=OFS="\t" }
-NR==1 { print "chromo", "position"; next } { print $1, $2-25000, $2+25000 }' cra.composite_score.additive.1perc.tsv | tail -n +2 > cra.composite_score.additive.1perc.bed
+NR==1 { print "chromo", "position"; next } { print $1, $2-25000, $2+25000 }' ${STAT_DIR}/${OUTNAME}.composite_score.additive.1perc.tsv | tail -n +2 > ${STAT_DIR}/${OUTNAME}.composite_score.additive.1perc.bed
 
 BEDFILE="${STAT_DIR}/${OUTNAME}.composite_score.additive.1perc.bed"
 GENEFILE="${STAT_DIR}/${OUTNAME}.composite_score.additive.1perc.genelist.txt"
