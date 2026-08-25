@@ -33,7 +33,7 @@ data[[metric]] <- as.numeric(data[[metric]])
 cat("Preparing data for plotting...\n")
 
 chr_ids <- read.csv(chrfile, header = FALSE)
-data$chromo <- factor(data$chromo, levels = chr_ids$V1)
+data$chromo <- factor(data$chromo, levels = c(1, "1A", 2:4, "4A", 5:34))
 
 plot_data <- data %>%
   group_by(chromo) %>%
