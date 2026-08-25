@@ -16,7 +16,7 @@ input <- args[1]
 color1 <- args[2]
 color2 <- args[3]
 cutoff <- as.numeric(args[4])
-chr_nums <- args[5]
+chrfile <- args[5]
 
 metric <- "composite_score"
 
@@ -31,8 +31,9 @@ data[[metric]] <- as.numeric(data[[metric]])
 
 # Prepare data for plotting
 cat("Preparing data for plotting...\n")
-chr_levels <- strsplit(chr_nums, "\n")
-data$chromo <- factor(data$chromo, levels = chr_levels)
+
+chr_ids <- read.csv(chrfile, header = FALSE)
+data$chromo <- factor(data$chromo, levels = chr_ids$V1)
 
 plot_data <- data %>%
   group_by(chromo) %>%
