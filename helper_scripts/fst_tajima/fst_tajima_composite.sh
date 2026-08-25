@@ -92,7 +92,7 @@ sed -i '2d' ${STAT_DIR}/${OUTNAME}_combined_stats.tsv # Remove weird extra heade
 
 # Combine FST and Tajima
 #=========================================
-Rscript "${SCRIPTDIR}/helper_scripts/fst_tajima/generate_composite_stat.r" "${STAT_DIR}/${OUTNAME}_combined_stats.tsv"
+Rscript "${SCRIPTDIR}/helper_scripts/fst_tajima/generate_composite_stat.r" "${STAT_DIR}/${OUTNAME}_combined_stats.tsv" ${OUTNAME}
 
 # Manhattan Plotting
 #=========================================
