@@ -123,8 +123,7 @@ Rscript "${SCRIPTDIR}/helper_scripts/fst_tajima/plot_composite_stat.r" \
 echo "Window filtering (top 0.1%)"
 # top 0.1 %
 awk 'BEGIN { FS=OFS="\t" }
-NR==1 { print "chromo", "position"; next }
-$9 == "TRUE" { print $1, $2-25000, $2+25000 }' ${STAT_DIR}/${OUTNAME}.composite_score.additive.tsv | tail -n +2 > ${STAT_DIR}/${OUTNAME}.composite_score.additive.0.1perc.bed
+NR==1 { print "chromo", "position"; next } { print $1, $2-25000, $2+25000 }' ${STAT_DIR}/${OUTNAME}.composite_score.additive.0.1perc.tsv | tail -n +2 > ${STAT_DIR}/${OUTNAME}.composite_score.additive.0.1perc.bed
 
 BEDFILE="${STAT_DIR}/${OUTNAME}.composite_score.additive.0.1perc.bed"
 GENEFILE="${STAT_DIR}/${OUTNAME}.composite_score.additive.0.1perc.genelist.txt"
