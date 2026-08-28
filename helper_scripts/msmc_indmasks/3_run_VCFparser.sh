@@ -36,7 +36,7 @@ echo "Current script: 3_run_VCFparser.sh"
 
 SCAFFOLD_FILE="${OUTDIR}/referencelists/SCAFFOLDS.txt"
 
-while read -r s; do
+for s in $(cat "${OUTDIR}/referencelists/SCAFFOLDS.txt"); do
     echo "Processing scaffold: ${s}"
 
     # Define output file paths
@@ -48,5 +48,6 @@ while read -r s; do
 
     echo "Completed scaffold ${s}."
 
+done
 
-done < "${SCAFFOLD_FILE}" 
+echo "done with ${IND}"
