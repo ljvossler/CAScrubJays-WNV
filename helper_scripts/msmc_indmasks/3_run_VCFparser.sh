@@ -1,0 +1,51 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 -p <parameter_file> -i <ind_id> -v <ind_vcf_file>
+
+This script runs vcfAllSiteParser.py from msmc-tools to generate mask/vcf file pairs
+
+Required argument:
+  -p  Path to the parameter file (e.g., params_preprocessing.sh in the GitHub repository).
+  -i  Individual ID to work on
+  -v  Sample-level VCF file"
+    exit 1
+fi
+
+# Parse command-line arguments
+while getopts p:i:v: option; do
+    case "${option}" in
+        p) PARAMS=${OPTARG};;
+        i) IND=${OPTARG};;
+        v) IND_VCF=${OPTARG};;
+        *) echo "Invalid option: -${OPTARG}" >&2; exit 1;;
+    esac
+done
+
+if [ -z "${PARAMS}" ]; then
+    echo "Error: No parameter file provided." >&2
+    exit 1
+fi
+
+# Load parameters
+source "${PARAMS}"
+
+printf "\n\n\n\n"
+date
+echo "Current script: 3_run_VCFparser.sh"
+
+SCAFFOLD_FILE="${OUTDIR}/referencelists/SCAFFOLDS.txt"
+
+while read -r s; do
+    echo "Processing scaffold: ${s}"
+
+    # Define output file paths
+    MASK_OUT="${OUTDIR}/datafiles/mask/ind_mask.${IND}.${s}.bed.gz"
+    VCF_OUT="${OUTDIR}/datafiles/vcf/${IND}.${s}.vcf"
+
+    cat ${IND_VCF} | python3 ${PROGDIR}/msmc-tools/vcfAllSiteParser.py ${s} ${MASK_OUT} > ${VCF_OUT}
+
+    echo "Completed scaffold ${s}."
+
+
+done < "${SCAFFOLD_FILE}" 
