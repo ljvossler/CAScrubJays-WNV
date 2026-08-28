@@ -40,7 +40,7 @@ while read -r s; do
     echo "Processing scaffold: ${s}"
 
     # Define output file paths
-    MASK_OUT="${OUTDIR}/datafiles/msmc/mask/ind/ind_mask.${IND}.${s}.bed.gz"
+    MASK_OUT="${OUTDIR}/datafiles/msmc/mask/ind/${IND}.${s}.bed.gz"
     VCF_OUT="${OUTDIR}/datafiles/msmc/vcf/${IND}.${s}.vcf"
 
     cat ${IND_VCF} | python3 ${PROGDIR}/msmc-tools/vcfAllSiteParser.py ${s} ${MASK_OUT} > ${VCF_OUT}
