@@ -43,7 +43,8 @@ while read -r s; do
     MASK_OUT="${OUTDIR}/datafiles/msmc/mask/ind/${IND}.${s}.bed.gz"
     VCF_OUT="${OUTDIR}/datafiles/msmc/vcf/${IND}.${s}.vcf"
 
-    cat ${IND_VCF} | python3 ${PROGDIR}/msmc-tools/vcfAllSiteParser.py ${s} ${MASK_OUT} > ${VCF_OUT}
+    # Using edited vcfparser script (required some syntax and parsing updates)
+    cat ${IND_VCF} | python3 ${PROGDIR}/msmc-tools/vcfAllSiteParser.custom.py ${s} ${MASK_OUT} > ${VCF_OUT}
 
     echo "Completed scaffold ${s}."
 
