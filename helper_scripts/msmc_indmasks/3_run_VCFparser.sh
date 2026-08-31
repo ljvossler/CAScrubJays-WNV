@@ -44,7 +44,7 @@ for s in $(cat "${OUTDIR}/referencelists/SCAFFOLDS.txt"); do
     MASK_OUT="${OUTDIR}/datafiles/msmc/mask/ind/${IND}.${s}.bed.gz"
     VCF_OUT="${OUTDIR}/datafiles/msmc/vcf/${IND}.${s}.vcf.gz"
 
-    bcftools view -r ${s} -s ${IND} ${VAR_FILE} | python ${PROGDIR}/msmc-tools/vcfAllSiteParser.py ${s} ${MASK_OUT} | bcftools view -Oz -o ${VCF_OUT}
+    bcftools view -r ${s} -s ${IND} ${VAR_FILE} | python2 ${PROGDIR}/msmc-tools/vcfAllSiteParser.py ${s} ${MASK_OUT} | bcftools view -Oz -o ${VCF_OUT}
 
     echo "Completed scaffold ${s}."
 
