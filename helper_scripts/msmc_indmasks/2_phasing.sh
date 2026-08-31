@@ -51,10 +51,6 @@ echo "VCF_IN: $VCF_IN"
 echo "VCF_OUT: $VCF_OUT"
 echo "MAP: $MAP"
 
-source ~/.bashrc
-module load micromamba
-micromamba activate beagle_env
-
 echo "running beagle"
 
 beagle -Xmx20g gt=${VCF_IN} out=${VCF_OUT} map=${MAP} nthreads=4
@@ -79,4 +75,4 @@ echo "rephasing bcf"
 
 ${SCRIPTDIR}/Genomics-Main/A_Preprocessing/A2.7_rephasing.sh -p ${PARAMS} -c ${CHR} -b ${TAGGED_BCF} -m 0.01 -o "${OUTDIR}/datafiles/genotype_calls/allsites/rephased"
 
-echo "DONE: Remember to create sample-level uncompressed VCFs with these rephased BCFs prior to running vcfallsiteparser.py. Can merge chr-BCFs then split into sample-VCFs" 
+echo "DONE" 
