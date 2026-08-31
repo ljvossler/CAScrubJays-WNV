@@ -44,7 +44,7 @@ for s in $(cat "${OUTDIR}/referencelists/SCAFFOLDS.txt"); do
     VCF_OUT="${OUTDIR}/datafiles/msmc/vcf/${IND}.${s}.vcf"
 
     # Using edited vcfparser script (required some syntax and parsing updates)
-    cat ${IND_VCF} | python3 ${PROGDIR}/msmc-tools/vcfAllSiteParser.custom.py ${s} ${MASK_OUT} > ${VCF_OUT}
+    bcftools view -r ${s} -Ou ${IND_VCF} | python3 ${PROGDIR}/msmc-tools/vcfAllSiteParser.custom.py ${s} ${MASK_OUT} > ${VCF_OUT}
 
     echo "Completed scaffold ${s}."
 
