@@ -4,6 +4,7 @@ if [ $# -lt 1 ]; then
     echo "Usage: $0 -p <parameter_file> -i <ind_id> -v <variant_sites_file>
 
 This script runs vcfAllSiteParser.py from msmc-tools to generate mask/vcf file pairs
+MUST be run in a python2 environment
 
 Required argument:
   -p  Path to the parameter file (e.g., params_preprocessing.sh in the GitHub repository).
@@ -43,7 +44,6 @@ for s in $(cat "${OUTDIR}/referencelists/SCAFFOLDS.txt"); do
     MASK_OUT="${OUTDIR}/datafiles/msmc/mask/ind/${IND}.${s}.bed.gz"
     VCF_OUT="${OUTDIR}/datafiles/msmc/vcf/${IND}.${s}.vcf"
 
-    # Using edited vcfparser script (required some syntax and parsing updates)
     bcftools view -r ${s} -s ${IND} ${VAR_FILE} | python2 ${PROGDIR}/msmc-tools/vcfAllSiteParser.py ${s} ${MASK_OUT} > ${VCF_OUT}
 
     echo "Completed scaffold ${s}."
