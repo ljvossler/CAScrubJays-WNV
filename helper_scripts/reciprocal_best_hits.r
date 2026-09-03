@@ -15,7 +15,7 @@ for (pkg in required_packages) {
 if (!requireNamespace("homologr", quietly = TRUE)) {
   BiocManager::install("drostlab/homologr")
 }
-library(homologr, character.only = TRUE)
+library('homologr', character.only = TRUE)
 
 cat("Parsing command-line arguments...\n")
 # Parse command-line arguments
