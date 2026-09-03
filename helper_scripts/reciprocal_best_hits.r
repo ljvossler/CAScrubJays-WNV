@@ -1,21 +1,18 @@
 #!/usr/bin/env Rscript
 
-# Load required packages, installing if necessary
-required_packages <- c("BiocManager")
-installed_packages <- rownames(installed.packages())
-
 cat("Checking required packages...\n")
-for (pkg in required_packages) {
-  if (!(pkg %in% installed_packages)) {
-    install.packages(pkg, repos = "http://cran.us.r-project.org")
-  }
-  library(pkg, character.only = TRUE)
-}
+# install Bioconductor
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install()
 
-if (!requireNamespace("homologr", quietly = TRUE)) {
-  BiocManager::install("drostlab/homologr")
-}
-library('homologr', character.only = TRUE)
+# install Biostrings -> see here for different Biostrings verions:
+# http://bioconductor.org/about/release-announcements/
+BiocManager::install(c("Biostrings"))
+
+# install.packages("devtools")
+# install the current version of rdiamond on your system
+devtools::install_github("drostlab/rdiamond", build_vignettes = TRUE, dependencies = TRUE)
 
 cat("Parsing command-line arguments...\n")
 # Parse command-line arguments
@@ -25,11 +22,11 @@ subject_file <- args[2]
 threads <- args[3]
 out_path <- args[3]
 
-rec_best_hits <- diamond_reciprocal_best_hits(
-  query   = system.file(query_file, package = 'homologr'),
-  subject = system.file(subject_file, package = 'homologr'),
-  cores = threads, output_path  = out_path)
-
+best_rec_hits <- diamond_protein_to_protein_best_reciprocal_hits(
+  query   = system.file(query_file, package = 'rdiamond'),
+  subject = system.file(subject_file, package = 'rdiamond'),
+  sensitivity_mode = "ultra-sensitive", cores = threads, output_path  = out_path,
+  use_arrow_duckdb_connection  = FALSE, out_format = "csv", format = "fasta")
 
 cat("Finished\n")
 
