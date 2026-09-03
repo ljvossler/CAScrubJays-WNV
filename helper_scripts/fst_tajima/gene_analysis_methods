@@ -1,0 +1,16 @@
+Building our Master Gene List
+========================================================
+Inputs: 
+	Combined Stats file with FST, TD difference, and Composite Score
+	Gene ID and Coordinate file
+
+1. Encode BP-positions for each stat in intervals and label the top windows
+2. Buffer gene intervals by 1kb to account for regulatory regions
+3. Bedtools intersect these files together on the interval start/stop columns. 
+4. Perform groub-by operations to get average stats per gene. Also encode in this file whether any special windows are present in the gene
+5. Incorporate David's WNV-VIP list
+
+This gives us a MASTER GENELIST File that can be used for both Analysis 1 (GO-based) and Analysis 2 (Stat ranking w/GSEA?)
+
+MASTER GENELIST
+chrom	start	stop	gene	fst	tajima	comp_score	top_0.1	top_1	vip
