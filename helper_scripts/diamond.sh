@@ -6,7 +6,7 @@
 #SBATCH --account=mcnew
 #SBATCH --partition=standard
 #SBATCH --nodes=1
-#SBATCH --ntasks=8
+#SBATCH --ntasks=3
 #SBATCH --time=24:00:00
 #SBATCH --output ../slurm_outs/%x.out
 
@@ -16,7 +16,7 @@ module load R/4.5.2
 
 QUERY_FASTA=/xdisk/mcnew/scrubjays_wnv/human_GRCh38_dataset/ncbi_dataset/data/GCF_000001405.40/GCF_000001405.40_GRCh38.p14_genomic.fna
 SUBJECT_FASTA=${REF}
-THREADS=8
+THREADS=3
 OUT_PATH=${OUTDIR}/datafiles/diamond
 
 
