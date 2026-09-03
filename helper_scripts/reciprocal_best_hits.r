@@ -22,13 +22,13 @@ cat("Parsing command-line arguments...\n")
 args <- commandArgs(trailingOnly = TRUE)
 query_file <- args[1]
 subject_file <- args[2]
-cores <- args[3]
+threads <- args[3]
 out_path <- args[3]
 
 rec_best_hits <- diamond_reciprocal_best_hits(
   query   = system.file(query_file, package = 'homologr'),
   subject = system.file(subject_file, package = 'homologr'),
-  cores   = 2, output_path  = out_path)
+  cores = threads, output_path  = out_path)
 
 
 cat("Finished\n")
