@@ -7,7 +7,7 @@
 #SBATCH --partition=standard
 #SBATCH --nodes=1
 #SBATCH --ntasks=3
-#SBATCH --time=24:00:00
+#SBATCH --time=10:00:00
 #SBATCH --output ../slurm_outs/%x.out
 
 
