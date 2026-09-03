@@ -10,7 +10,8 @@ BiocManager::install()
 # http://bioconductor.org/about/release-announcements/
 BiocManager::install(c("Biostrings"))
 
-# install.packages("devtools")
+if (!requireNamespace("devtools", quietly = TRUE))
+  install.packages("devtools")
 # install the current version of rdiamond on your system
 devtools::install_github("drostlab/rdiamond", build_vignettes = TRUE, dependencies = TRUE)
 
