@@ -5,7 +5,7 @@ source "/xdisk/mcnew/scrubjays_wnv/programs/CAScrubJays-WNV/params_base.sh"
 
 QUERY_FASTA=/xdisk/mcnew/scrubjays_wnv/human_GRCh38_dataset/ncbi_dataset/data/GCF_000001405.40/GCF_000001405.40_GRCh38.p14_genomic.fna
 SUBJECT_FASTA=${REF}
-THREADS=12
+THREADS=8
 OUT_PATH=${OUTDIR}/datafiles/diamond
 
 sbatch --account=mcnew
