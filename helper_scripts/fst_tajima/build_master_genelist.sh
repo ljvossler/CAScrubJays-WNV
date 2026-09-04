@@ -98,11 +98,11 @@ sort -k1,1 -k2,2n ${STAT_DIR}/${OUTNAME}.avg_gene_stats.bed > ${STAT_DIR}/${OUTN
 
 # Get Reciprocal Best Hits
 #=========================================
-# Run Diamond to get reciprocal best hits across jays and humans
+# Run rDiamond to get reciprocal best hits across jays and humans
 module load R/4.5.2
-QUERY_FASTA= # human
+QUERY_FASTA=/xdisk/mcnew/scrubjays_wnv/human_GRCh38_dataset/ncbi_dataset/data/GCF_000001405.40/GCF_000001405.40_GRCh38.p14_genomic.fna # human
 SUBJECT_FASTA=${REF} # jays
-THREADS=12
+THREADS=3
 OUT_PATH=${OUTDIR}/datafiles/diamond
 
 Rscript ${SCRIPTDIR}/helper_scripts/reciprocal_best_hits.r ${QUERY_FASTA} ${SUBJECT_FASTA} ${THREADS} ${OUT_PATH}
