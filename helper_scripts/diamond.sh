@@ -31,7 +31,7 @@ diamond makedb --in ${HUMAN_FAA} -d human
 
 
 # Forward Search
-diamond blastp -q ${HUMAN_FAA} -d scrubjays.dmnd -o forward_search.tsv --ultra-sensitive
+diamond blastp -q ${HUMAN_FAA} -d scrubjay.dmnd -o forward_search.tsv --ultra-sensitive
 # Reverse Search
 diamond blastp -q ${SCRUBJAY_FAA} -d human.dmnd -o reverse_search.tsv --ultra-sensitive
 
