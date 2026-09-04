@@ -31,9 +31,9 @@ diamond makedb --in ${HUMAN_FAA} -d human
 
 
 # Forward Search
-diamond blastp -q human -d scrubjays -o forward_search.tsv --very-sensitive
+diamond blastp -q ${HUMAN_FAA} -d scrubjays.dmnd -o forward_search.tsv --ultra-sensitive
 # Reverse Search
-diamond blastp -q scrubjays -d human -o reverse_search.tsv --very-sensitive
+diamond blastp -q ${SCRUBJAY_FAA} -d human.dmnd -o reverse_search.tsv --ultra-sensitive
 
 # Get Best Hits
 ${PROGDIR}/reciprologs/reciprologs forward_search.tsv reverse_search.tsv -p 8 -o scrubjays_human_rbh.csv 
