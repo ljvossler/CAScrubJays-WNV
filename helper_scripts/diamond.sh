@@ -36,6 +36,6 @@ cd ${OUT_PATH}
 #diamond blastp -q ${SCRUBJAY_FAA} -d human.dmnd -o reverse_search.tsv --ultra-sensitive
 
 # Get Best Hits
-${PROGDIR}/reciprologs/reciprologs ${HUMAN_FAA} ${SCRUBJAY_FAA} diamondp --ultra-sensitive
+${PROGDIR}/reciprologs/reciprologs ${HUMAN_FAA} ${SCRUBJAY_FAA} diamondp
 
 echo "DONE"
