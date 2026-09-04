@@ -17,7 +17,7 @@ module load diamond
 source ~/.bashrc
 micromamba activate diamond_env
 
-export PATH=$PATH:${PROGDIR}/palign/palign
+export PATH=$PATH:${PROGDIR}/palign
 
 HUMAN_FAA=/xdisk/mcnew/scrubjays_wnv/human_GRCh38_dataset/ncbi_dataset/data/GCF_000001405.40/GCF_000001405.40_GRCh38.p14_protein.faa
 SCRUBJAY_FAA=/xdisk/mcnew/scrubjays_wnv/a_coerulescens_ncbi_ref_genome/data/GCF_041296385.1/protein.faa
@@ -36,6 +36,6 @@ cd ${OUT_PATH}
 #diamond blastp -q ${SCRUBJAY_FAA} -d human.dmnd -o reverse_search.tsv --ultra-sensitive
 
 # Get Best Hits
-${PROGDIR}/reciprologs/reciprologs diamondp forward_search.tsv reverse_search.tsv -p ${THREADS} -o scrubjays_human_rbh.csv 
+${PROGDIR}/reciprologs/reciprologs ${HUMAN_FAA} ${SCRUBJAY_FAA} diamondp -p ${THREADS} --ultra-sensitive -o scrubjays_human_rbh.csv 
 
 echo "DONE"
