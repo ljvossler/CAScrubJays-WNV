@@ -19,14 +19,15 @@ micromamba activate diamond_env
 
 export PATH=$PATH:${PROGDIR}/palign/palign
 
-HUMAN_REF=/xdisk/mcnew/scrubjays_wnv/human_GRCh38_dataset/ncbi_dataset/data/GCF_000001405.40/GCF_000001405.40_GRCh38.p14_genomic.fna
+HUMAN_FAA=/xdisk/mcnew/scrubjays_wnv/human_GRCh38_dataset/ncbi_dataset/data/GCF_000001405.40/GCF_000001405.40_GRCh38.p14_protein.faa
+SCRUBJAY_FAA=/xdisk/mcnew/scrubjays_wnv/a_coerulescens_ncbi_ref_genome/data/GCF_041296385.1/protein.faa
 THREADS=8
 OUT_PATH=${OUTDIR}/datafiles/diamond
 
 cd ${OUT_PATH}
 
-diamond makedb --in ${REF} -d scrubjay
-diamond makedb --in ${QUERY_FASTA} -d human
+diamond makedb --in ${SCRUBJAY_FAA} -d scrubjay
+diamond makedb --in ${HUMAN_FAA} -d human
 
 
 # Forward Search
