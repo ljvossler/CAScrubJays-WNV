@@ -1,4 +1,4 @@
-# Converts Pyrho recombination map to Flexweep-format (as outlined in map example on github)
+# Converts Pyrho recombination map to Flexweep-format (as outlined in map example on flexweep-github)
 # 1. Labels chromosome location of interval
 # 2. Adds interpolated cM position of interval end
 # 3. Calculates cM recombination rate per Mb across interval using interpolated start and end cMs
@@ -43,7 +43,8 @@ pyrho_map['Chr'] = scaffold
 pyrho_map['cMperMb'] = cm_per_mb
 pyrho_map['cM'] = interp_cm_ends
 flexsweep_map = pyrho_map[['Chr', 'Begin', 'End' , 'cMperMb', 'cM']]
+flexsweep_map = flexsweep_map[flexsweep_map['cMperMb'] > 0]
 
 print('saving to ' + flexsweep_fpath)
-flexsweep_map.to_csv(flexsweep_fpath, sep='\t', index=False, header=False)
+flexsweep_map.to_csv(flexsweep_fpath, index=False, header=False)
 print('done')

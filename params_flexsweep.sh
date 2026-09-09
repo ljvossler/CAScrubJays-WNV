@@ -11,5 +11,5 @@ DEMES=${OUTDIR}/datafiles/demography/post_jays.yaml
 SIMULATIONS=250000
 
 # VCF feature vectors
-VCFDIR=${OUTDIR}/datafiles/split_vcf/phased
-REC_MAP=${OUTDIR}/datafiles/recombination_map/plink_cm/alljays_plink_cm_merged.map
+VCFDIR=${OUTDIR}/datafiles/rephased_vcf/chr_split
+RECMAP_PREFIX=${OUTDIR}/datafiles/recombination_map/flexsweep/postjays_est_MLZ68995A_merged.fs.map
