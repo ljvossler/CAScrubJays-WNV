@@ -96,20 +96,49 @@ EOF
 sort -k1,1 -k2,2n ${STAT_DIR}/${OUTNAME}.avg_gene_stats.bed > ${STAT_DIR}/${OUTNAME}.avg_gene_stats.sorted.bed
 
 
-# Get Reciprocal Best Hits
-#=========================================
-# Run rDiamond to get reciprocal best hits across jays and humans
-module load R/4.5.2
-QUERY_FASTA=/xdisk/mcnew/scrubjays_wnv/human_GRCh38_dataset/ncbi_dataset/data/GCF_000001405.40/GCF_000001405.40_GRCh38.p14_genomic.fna # human
-SUBJECT_FASTA=${REF} # jays
-THREADS=3
-OUT_PATH=${OUTDIR}/datafiles/diamond
-
-Rscript ${SCRIPTDIR}/helper_scripts/reciprocal_best_hits.r ${QUERY_FASTA} ${SUBJECT_FASTA} ${THREADS} ${OUT_PATH}
-
-WNV_VIPS=${OUTDIR}/referencelists/vip_genelists/temp_inter_wnv_may2020
-ENSMBL_TO_SYMBOL=${OUTDIR}/referencelists/ensmbl_to_symbol_genecodes.json # Obtained via....
-
-
 # Add VIP Data
 #=========================================
+DIAMOND_OUT=${OUTDIR}/datafiles/diamond/rec_best_hits.txt
+WNV_ENSEMBL=${OUTDIR}/referencelists/vip_genelists/temp_inter_wnv_may2020
+WNV_HUMAN_JAY_REFSEQS=${OUTDIR}/referencelists/vip_genelists/wnv_human_to_scrubjay_refseq_ids.txt
+WNV_GENEREFSEQS="${OUTDIR}/referencelists/vip_genelists/${OUTNAME}.wnv.generefseqs.txt"
+
+# First get Reciprocal Best Hits for human refgenome
+sbatch ${SCRIPTDIR}/helper_scipts/diamond.sh
+# Pause until diamond is done
+
+# Convert hit-ids to refseq accession ids and filter by WNV VIPs
+cd ${OUTDIR}/referencelists/vip_genelists
+Rscript ${SCRIPTDIR}/helper_scripts/map_refseqs.r ${WNV_ENSEMBL} ${DIAMOND_OUT}
+
+
+WNV_JAY_REFSEQS=$(awk 'NR > 1 { print $2 }' $WNV_HUMAN_JAY_REFSEQS)
+
+# Map the refseq protein ids to their associated genes
+for refseq in echo ${WNV_JAY_REFSEQS}; do     
+    symbol=$(grep -w "${refseq//\"}" ${GENEFILE} | awk '{split($0, arr, ";"); print arr[6] }' | awk '!seen[$0]++' | sed 's/^gene=//')
+    if [[ -n "$symbol" ]]; then
+    echo $symbol,"${refseq//\"}" >> $WNV_GENEREFSEQS
+    fi  
+done
+# Remove some parsing errors
+sed -i '/exception=unclassified translation discrepancy/d' ${WNV_GENEREFSEQS}
+
+# Add binary VIP column to master genelist
+python3 - "${STAT_DIR}/${OUTNAME}.avg_gene_stats.sorted.bed" "${WNV_GENEREFSEQS}" << 'EOF'
+import pandas as pd
+import os, sys
+
+# Load data
+stat_file = sys.argv[1]
+wnv_generefseqs = sys.argv[2]
+stat_df=pd.read_csv(stat_file, sep='\t')
+wnv_refseqs_df=pd.read_csv(wnv_generefseqs, header=None)
+wnv_refseqs_df.columns = ['gene_name', 'refseq_vip']
+
+# Add vip column
+stat_df['has_wnv_vip'] = stat_df['gene_name'].isin(wnv_refseqs_df['gene_name']).astype(int)
+
+# Output
+stat_df.to_csv("/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/referencelists/scrubjays_master_genelist.bed", sep='\t', index=None) # Keeping header
+EOF

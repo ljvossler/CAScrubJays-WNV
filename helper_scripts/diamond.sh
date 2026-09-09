@@ -26,15 +26,6 @@ OUT_PATH=${OUTDIR}/datafiles/diamond
 
 cd ${OUT_PATH}
 
-#diamond makedb --in ${SCRUBJAY_FAA} -d scrubjay
-#diamond makedb --in ${HUMAN_FAA} -d human
-
-
-# Forward Search
-#diamond blastp -q ${HUMAN_FAA} -d scrubjay.dmnd -o forward_search.tsv --ultra-sensitive
-# Reverse Search
-#diamond blastp -q ${SCRUBJAY_FAA} -d human.dmnd -o reverse_search.tsv --ultra-sensitive
-
 # Get Best Hits
 ${PROGDIR}/reciprologs/reciprologs ${HUMAN_FAA} ${SCRUBJAY_FAA} diamondp
 
