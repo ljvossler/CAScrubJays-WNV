@@ -3,7 +3,7 @@ source ${PROGDIR}/CAScrubJays-WNV/submit_scripts/.venv/bin/activate
 
 # General
 POPNAME=alljays
-THREADS=24
+THREADS=12
 
 # Simulations
 NUM_HAPS=160 # (2x sample size)
