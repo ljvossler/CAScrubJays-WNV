@@ -1,6 +1,6 @@
 # Get Gene List across ALL windows
 #=========================================
-source ../../params_base.sh
+source ../params_base.sh
 
 OUTNAME=alljays_pre_alljays_post
 WIN=50000
