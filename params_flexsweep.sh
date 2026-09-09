@@ -6,10 +6,10 @@ POPNAME=alljays
 THREADS=24
 
 # Simulations
-NUM_HAPS=160 # Number of haplotypes (2x sample size)
-DEMES=/path/to/demes/yaml/file
+NUM_HAPS=160 # (2x sample size)
+DEMES=${OUTDIR}/datafiles/demography/post_jays.yaml
 SIMULATIONS=250000
 
 # VCF feature vectors
-VCFDIR=/path/to/vcf/directory
-REC_MAP=/path/to/recombination/map/file
+VCFDIR=${OUTDIR}/datafiles/split_vcf/phased
+REC_MAP=${OUTDIR}/datafiles/recombination_map/plink_cm/alljays_plink_cm_merged.map
