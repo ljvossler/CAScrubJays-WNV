@@ -10,6 +10,6 @@ NUM_HAPS=160 # (2x sample size)
 DEMES=${OUTDIR}/datafiles/demography/post_jays.yaml
 SIMULATIONS=250000
 
-# VCF feature vectors
+# VCF feature vectorsflexsweep_reformatted.fs.map
 VCFDIR=${OUTDIR}/datafiles/rephased_vcf/chr_split
-RECMAP=${OUTDIR}/datafiles/recombination_map/flexsweep/flexsweep_reformatted.fs.map
+RECMAP=${OUTDIR}/datafiles/recombination_map/flexsweep/old/flexsweep_reformatted.map
