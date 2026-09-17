@@ -12,4 +12,4 @@ SIMULATIONS=250000
 
 # VCF feature vectors
 VCFDIR=${OUTDIR}/datafiles/rephased_vcf/chr_split
-RECMAP_PREFIX=${OUTDIR}/datafiles/recombination_map/flexsweep/postjays_est_MLZ68995A_merged.fs.map
+RECMAP=${OUTDIR}/datafiles/recombination_map/flexsweep/flexsweep_reformatted.fs.map

@@ -42,9 +42,9 @@ print('cleaning up')
 pyrho_map['Chr'] = scaffold
 pyrho_map['cMperMb'] = cm_per_mb
 pyrho_map['cM'] = interp_cm_ends
-flexsweep_map = pyrho_map[['Chr', 'Begin', 'End' , 'cMperMb', 'cM']]
+flexsweep_map = pyrho_map[['chr', 'start', 'end' , 'cm_mb', 'cm']]
 flexsweep_map = flexsweep_map[flexsweep_map['cMperMb'] > 0]
 
 print('saving to ' + flexsweep_fpath)
-flexsweep_map.to_csv(flexsweep_fpath, index=False, header=False)
+flexsweep_map.to_csv(flexsweep_fpath, index=False, sep='\t')
 print('done')
