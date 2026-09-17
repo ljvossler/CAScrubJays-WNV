@@ -11,5 +11,5 @@ DEMES=${OUTDIR}/datafiles/demography/post_jays.yaml
 SIMULATIONS=250000
 
 # VCF feature vectorsflexsweep_reformatted.fs.map
-VCFDIR=${OUTDIR}/datafiles/split_vcf/phased/vcfs
+VCFDIR=${OUTDIR}/datafiles/split_vcf/phased/vcfs/reheadered
 RECMAP=${OUTDIR}/datafiles/recombination_map/flexsweep/old/flexsweep_reformatted.map
