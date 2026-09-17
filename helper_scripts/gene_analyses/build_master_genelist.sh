@@ -142,3 +142,21 @@ stat_df['has_wnv_vip'] = stat_df['gene_name'].isin(wnv_refseqs_df['gene_name']).
 # Output
 stat_df.to_csv("/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/referencelists/scrubjays_master_genelist.bed", sep='\t', index=None) # Keeping header
 EOF
+
+
+# Fix top-window labeling
+python3 - << 'EOF'
+import pandas as pd
+import os, sys
+
+# Load data
+master_genelist = pd.read_csv("/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/referencelists/scrubjays_master_genelist.bed", sep='\t')
+top_01_df=pd.read_csv('/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/analyses/composite_stat/alljays_pre_alljays_post/alljays_pre_alljays_post.composite_score.additive.0.1perc.genenames.txt', sep='\t', header=None)
+top_1_df=pd.read_csv('/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/analyses/composite_stat/alljays_pre_alljays_post/alljays_pre_alljays_post.composite_score.additive.1perc.genenames.txt', sep='\t', header=None)
+
+master_genelist['top_0.1'] = master_genelist['gene_name'].isin(top_01_df[0]).astype(int)
+master_genelist['top_1'] = master_genelist['gene_name'].isin(top_1_df[0]).astype(int)
+
+master_genelist.to_csv("/xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/referencelists/scrubjays_master_genelist.revised.bed", index=None, sep='\t')
+
+EOF

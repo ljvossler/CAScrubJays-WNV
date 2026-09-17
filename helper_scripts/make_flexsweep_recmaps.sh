@@ -2,7 +2,7 @@
 
 source ../params_base.sh
 RECMAP_DIR=${OUTDIR}/datafiles/recombination_map
-PYRHO_RUN=postjays_est_MLZ68995A
+PYRHO_RUN=rephased_pyrho_run
 
 for scaffold in $(cat ${OUTDIR}/referencelists/SCAFFOLDS.txt);
 do

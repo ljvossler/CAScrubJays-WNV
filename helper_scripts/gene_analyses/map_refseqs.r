@@ -1,6 +1,6 @@
 library(clusterProfiler)
 library(org.Hs.eg.db) # Human annotations
-
+library(stringr)
 
 
 cat("Parsing command-line arguments...\n")

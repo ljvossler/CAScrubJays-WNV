@@ -23,27 +23,26 @@ fprefix = os.path.splitext(fname)[0]
 flexsweep_fpath = os.path.join(outdir, f'{fprefix}.fs.map')
 
 print('reading map data')
-pyrho_map = pd.read_csv(pyrho_file, sep='\t', header=None, names=['Begin', 'End', 'bp_rate'], dtype={"Begin": int, "End": int, "bp_rate": np.float64})
+pyrho_map = pd.read_csv(pyrho_file, sep='\t', header=None, names=['start', 'end', 'bp_rate'], dtype={"start": int, "end": int, "bp_rate": np.float64})
 ref_map = pd.read_csv(ref_file, sep='\t', header=None, names=['chrom_id', 'bp', 'cm'], dtype={"chrom_id": str, "bp": np.int64, "cm": np.float64})
 ref_chrom_map = ref_map[ref_map["chrom_id"] == scaffold].sort_values(by="bp")
 
 print('interpolating cMs')
-interp_cm_ends = np.interp(pyrho_map['End'].values, ref_chrom_map['bp'].values, ref_chrom_map['cm'].values, 
+interp_cm_ends = np.interp(pyrho_map['end'].values, ref_chrom_map['bp'].values, ref_chrom_map['cm'].values, 
                              left=ref_chrom_map['cm'].values[0], right=ref_chrom_map['cm'].values[-1])  
-interp_cm_starts = np.interp(pyrho_map['Begin'].values, ref_chrom_map['bp'].values, ref_chrom_map['cm'].values, 
+interp_cm_starts = np.interp(pyrho_map['start'].values, ref_chrom_map['bp'].values, ref_chrom_map['cm'].values, 
                              left=ref_chrom_map['cm'].values[0], right=ref_chrom_map['cm'].values[-1])  
 
 print('calculating intervals')
 cm_intervals = interp_cm_ends - interp_cm_starts
-bp_intervals = pyrho_map['End'] - pyrho_map['Begin']
+bp_intervals = pyrho_map['end'] - pyrho_map['start']
 cm_per_mb = cm_intervals / (bp_intervals / 1000000)
 
 print('cleaning up')
-pyrho_map['Chr'] = scaffold
-pyrho_map['cMperMb'] = cm_per_mb
-pyrho_map['cM'] = interp_cm_ends
+pyrho_map['chr'] = scaffold
+pyrho_map['cm_mb'] = cm_per_mb
+pyrho_map['cm'] = interp_cm_ends
 flexsweep_map = pyrho_map[['chr', 'start', 'end' , 'cm_mb', 'cm']]
-flexsweep_map = flexsweep_map[flexsweep_map['cMperMb'] > 0]
 
 print('saving to ' + flexsweep_fpath)
 flexsweep_map.to_csv(flexsweep_fpath, index=False, sep='\t')
