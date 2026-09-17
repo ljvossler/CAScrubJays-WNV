@@ -2,7 +2,7 @@
 
 OUTPREFIX=alljays
 NUM_K=5
-POPS=californica,obscura
+POPS="King,Pierce,Lewis,Multnomah,Deschutes,Klamath,Siskiyou,Shasta,Humboldt,Lassen,Tehama,Plumas,Colusa,Lake,Sonoma,Sacramento,Calaveras,ContraCosta,Alameda,SantaClara,SanBenito,Inyo,Monterey,SanLuisObispo,Kern,SanBernardino,SantaBarbara,Ventura,LosAngeles,Riverside,Orange,SanDiego,BajaCaliforniaSur"
 
 source ../params_preprocessing.sh
 
