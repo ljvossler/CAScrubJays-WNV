@@ -45,5 +45,5 @@ pyrho_map['cm'] = interp_cm_ends
 flexsweep_map = pyrho_map[['chr', 'start', 'end' , 'cm_mb', 'cm']]
 
 print('saving to ' + flexsweep_fpath)
-flexsweep_map.to_csv(flexsweep_fpath, index=False, sep='\t')
+flexsweep_map.to_csv(flexsweep_fpath, index=False, sep='\t', header=None)
 print('done')
