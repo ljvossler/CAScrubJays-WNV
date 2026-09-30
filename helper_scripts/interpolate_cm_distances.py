@@ -13,7 +13,7 @@ args = parser.parse_args()
 
 outdir, fname = os.path.split(args.plinkmap)
 fprefix = os.path.splitext(fname)[0]
-final_plink_map = os.path.join(outdir, f'{fprefix}_{args.scaffold}_cm.map')
+final_plink_map = os.path.join(outdir, f'{fprefix}_cm.map')
 
 print('reading map data')
 plink_map = pd.read_csv(args.plinkmap, sep='\t', header=None, names=['chrom_id', 'var_id', 'cm', 'bp'], dtype={"chrom_id": str, "var_id": str, "cm": np.float64, "bp": np.int64})
