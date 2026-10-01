@@ -15,16 +15,20 @@ color_post <- args[5]
 df_pre <- read.csv(out_path_pre, sep = '\t')
 df_postbin1 <- read.csv(out_path_post_bin1, sep = '\t')
 df_postbin2 <- read.csv(out_path_post_bin2, sep = '\t')
+df_postbin22 <- read.csv(out_path_post_bin22, sep = '\t')
+df_prebin1 <- read.csv(out_path_pre_bin1, sep = '\t')
 
 df_pre <- df_pre %>% mutate(time='pre') # Add time info
 df_postbin1 <- df_postbin1 %>% mutate(time='postbin1')
 df_postbin2 <- df_postbin2 %>% mutate(time='postbin2')
+df_postbin22 <- df_postbin22 %>% mutate(time='postbin22')
+df_prebin1 <- df_prebin1 %>% mutate(time='prebin1')
 
-df_full <- rbind(df_pre, df_postbin1, df_postbin2) # Combine data comparing Ne estimates between time-separated populations
+df_full <- rbind(df_pre, df_postbin1, df_postbin2, df_pre_bin1) # Combine data comparing Ne estimates between time-separated populations
 df_full <- df_full %>%
   filter(Generation <=num_gens) # Apply whatever data filters you want. GONE is only good up to 200 generations
 
-color_codes <- c(pre='black', postbin1='blue', postbin2='red')
+color_codes <- c(pre='black', postbin1='blue', postbin2='red', postbin22='darkgreen', prebin1='purple')
 
 df_full %>%
   ggplot(aes(x=Generation, y=Ne_diploids, color = time)) +

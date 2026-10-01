@@ -4,9 +4,9 @@ source ../params_base.sh
 
 TAJIMADIR=${OUTDIR}/analyses/tajima
 POP1=alljays_pre
-POP2=alljays_post
+POP2=alljays_post2015
 WIN=50000
-OUTPREFIX=alljays_tajimadiff
+OUTPREFIX=alljays_pre_alljayspost2015_tajimadiff
 
 echo "Calculating differences"
 (echo -e "chromo\tposition\tTajima"; awk 'BEGIN {OFS="\t"} NR==FNR && FNR>1 {data[$2,$3] = $9; next} FNR>1 && ($2,$3) in data {print $2, $3, $9 - data[$2,$3]}' ${TAJIMADIR}/${POP1}/${POP1}.Tajima.${WIN}.Ztransformed.csv ${TAJIMADIR}/${POP2}/${POP2}.Tajima.${WIN}.Ztransformed.csv) \
@@ -14,7 +14,7 @@ echo "Calculating differences"
 
 # Replace num_id with chrom_id
 echo "Replacing chromosome names based on conversion file..."
-while IFS=',' read -r first second; do
+while IFS="," read -r first second; do
     echo "Replacing $first with $second..."
     #sed "s/$first/$second/g" "${TAJIMADIR}/${OUTPREFIX}.txt" >> "${TAJIMADIR}/${OUTPREFIX}.chrom.txt" 
     python3 <<EOF

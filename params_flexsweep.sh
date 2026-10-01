@@ -1,5 +1,4 @@
 source ../params_base.sh
-source ${PROGDIR}/CAScrubJays-WNV/submit_scripts/.venv/bin/activate
 
 # General
 POPNAME=alljays
