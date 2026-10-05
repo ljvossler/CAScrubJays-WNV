@@ -61,7 +61,7 @@ for bam in $(cat ${BAMLIST}); do
 
   # Get sample saf
   angsd -i $bam -anc ${REF} \
-    -dosaf 1 -gl 1 -fold 1 \
+    -dosaf 1 -gl 1 \
     -minQ ${MINQ} -minmapq ${MINMAPQ} -C 50 -nthreads ${THREADS} \
     -out ${OUTDIR}/datafiles/sample_safs/$sample
 
