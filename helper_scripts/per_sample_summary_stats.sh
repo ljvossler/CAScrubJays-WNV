@@ -60,7 +60,7 @@ for bam in $(cat ${BAMLIST}); do
   echo "Computing summary heterozygosity stats for $sample"
 
   # Get sample saf
-  angsd -i $bam -anc ${REF} \
+  angsd -i $bam -anc ${REF} -ref ${REF} \
     -dosaf 1 -gl 1 \
     -minQ ${MINQ} -minmapq ${MINMAPQ} -C 50 -nthreads ${THREADS} \
     -out ${OUTDIR}/datafiles/sample_safs/$sample
