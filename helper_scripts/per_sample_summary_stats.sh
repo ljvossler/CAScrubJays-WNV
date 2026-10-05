@@ -18,12 +18,13 @@ if [ $# -lt 1 ]; then
     usage
 fi
 
+
 # Parse command-line arguments
-while getopts "p:b:" option; do
+while getopts p:b: option; do
     case "${option}" in
-        p) PARAMS=${OPTARG} ;;
-        b) BAMLIST=${OPTARG} ;; ;;
-        *) usage ;;
+        p) PARAMS=${OPTARG};;
+        b) BAMLIST=${OPTARG};;
+        *) echo "Invalid option: -${OPTARG}" >&2; exit 1;;
     esac
 done
 
