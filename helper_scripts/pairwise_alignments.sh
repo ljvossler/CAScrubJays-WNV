@@ -84,7 +84,7 @@ faSize -detailed "${QUERY_FA}" > "${QUERY_SIZES}"
 RAW_AXT="${OUTDIR}/datafiles/pairwise_alignments/${OUTNAME}.axt"
 echo "Running pairwise alignment..."
 lastz "${TARGET_2BIT}[multiple]" "${QUERY_2BIT}[multiple]" \
-  --step=19 --hspthresh=2200 --inner=2000 --glocal --gappedthresh=10000 --ydrop=3400 \
+  --step=19 --hspthresh=2200 --inner=2000 --gappedthresh=10000 --ydrop=3400 \
   --format=axt > ${RAW_AXT}
 
 # Chaining and Netting alignment
