@@ -64,7 +64,7 @@ TARGET_BASE=$(basename ${TARGET_FA} .fna)
 QUERY_BASE=$(basename ${QUERY_FA} .fna)
 
 TARGET_2BIT=${OUTDIR}/datafiles/pairwise_alignments/${TARGET_BASE}.2bit
-QUERY_2BIT=${OUTDIR}/datafiles/pairwise_alignments/${TARGET_BASE}.2bit
+QUERY_2BIT=${OUTDIR}/datafiles/pairwise_alignments/${QUERY_BASE}.2bit
 
 TARGET_SIZES=${OUTDIR}/datafiles/pairwise_alignments/${TARGET_BASE}.chromsizes
 QUERY_SIZES=${OUTDIR}/datafiles/pairwise_alignments/${QUERY_BASE}.chromsizes
