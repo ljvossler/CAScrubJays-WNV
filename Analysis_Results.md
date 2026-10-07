@@ -104,3 +104,14 @@ Top 0.1% enrichGO Analysis at p-value cutoff 0.05 `(6 Terms Found)`
 ```
 
 Top 0.1% GSEA at p-value cutoff 0.05 using MSIGDB genesets: `No enriched terms found`
+
+
+## Flexsweep 2:
+
+No progress. Have emailed Jesus about continued VCF errors. Will likely forego recombination map in analysis. Sometimes on VCF subsets, it will run fine. So I wonder if this is a Flexsweep issue, not a me issue.
+
+
+===========================================
+# Additional Summary Stats
+
+## Mean Heterozygosity per-individual

@@ -1,0 +1,16 @@
+focal_species: fl_scrubjay
+chromosome_lengths: /xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/datafiles/pairwise_alignments/GCF_041296385.1_UR_Acoe_1.0_genomic.chromsizes
+
+outgroups:
+  inner:
+    - name: hawaiian_crow
+      alignment: /xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/datafiles/pairwise_alignments/fljay_and_crow.net.axt
+    - name: western_jackdaw
+      alignment: /xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/datafiles/pairwise_alignments/fljay_and_jackdaw.net.axt
+  outer:
+    - name: chicken
+      alignment: /xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/datafiles/pairwise_alignments/fljay_and_chicken.net.axt
+
+work_dir: /xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/analyses/ancify
+output_dir: /xdisk/mcnew/scrubjays_wnv/ljvossler/scrubjays_wnv/analyses/ancify
+num_cpus: 12

@@ -54,6 +54,7 @@ else
 fi
 
 HET_FILE=${OUTDIR}/analyses/sample_avg_het.txt
+echo "" > ${HET_FILE}
 
 for bam in $(cat ${BAMLIST}); do
   sample=$(basename "$bam" .realigned.bam)
