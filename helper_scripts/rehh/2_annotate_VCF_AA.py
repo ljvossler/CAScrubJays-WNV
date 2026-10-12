@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+
+# This script taken from ancify documentation https://ancify.readthedocs.io/en/latest/tutorials.html#tutorial-5-polarizing-vcf-variants
+# Requires ancestral variant FASTA files outputted from ancify.
+# ancify requires NEX AXT pairwise alignments between focal species and outgroups. These can be generated after running 1_pairwise_alignments.r
+# example command: ancify run -c run_config.yaml
+
+
 """Polarize a VCF using ancify ancestral FASTA files.
 
 Usage:
