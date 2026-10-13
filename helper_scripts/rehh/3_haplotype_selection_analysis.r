@@ -18,10 +18,11 @@ vcf_fpaths2 <- readLines(vcf_lst2)
 
 # Scan vcfs for pop1
 for (fpath in vcf_fpaths1) {
+  cat(paste0("scanning alleles for ", pop1," in ", fpath, "\n"))
   # Load input files
   hh <- data2haplohh(hap_file = fpath,
                      polarize_vcf = polarize,
-                     vcf_reader = "data.table")
+                     vcf_reader = "vcfR")
   # Calculate and Integrate EHH
   scan <- scan_hh(hh)
   # Concatenate EHH scans for WGS data
@@ -34,6 +35,7 @@ for (fpath in vcf_fpaths1) {
 
 # Scan vcfs for pop2
 for (fpath in vcf_fpaths2) {
+  cat(paste0("scanning alleles for ", pop2," in ", fpath, "\n"))
   # Load input files
   hh <- data2haplohh(hap_file = fpath,
                      polarize_vcf = polarize,
@@ -52,10 +54,12 @@ write.table(wgscan_pop1, file = paste0(outdir, pop1, "_wscan.tsv"), sep = "\t")
 write.table(wgscan_pop2, file = paste0(outdir, pop2, "_wscan.tsv"), sep = "\t")
 
 # calculate genome-wide iHS values for each population
+cat(paste0("calculating iHS...\n"))
 wgs_ihs_pop1 <- ihh2ihs(wgscan_pop1)
 wgs_ihs_pop2 <- ihh2ihs(wgscan_pop2)
 
 # calculate rsb between two populations
+cat(paste0("calculating RHS...\n"))
 rsb_pop1_pop2 <- ines2rsb(scan_pop1 = wgscan_pop1,
                         scan_pop2 = wgscan_pop2,
                         popname1 = pop1,
@@ -64,6 +68,7 @@ write.table(rsb_pop1_pop2, file = paste0(outdir, pop1, "_", pop2, "_rsb.tsv"), s
 
 
 # calculate xp-ehh between two populations
+cat(paste0("calculating XP-EHH...\n"))
 xpehh_pop1_pop2 <- ies2xpehh(scan_pop1 =  wgscan_pop1,
                            scan_pop2 =  wgscan_pop2,
                            popname1 = pop1,
