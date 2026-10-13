@@ -17,4 +17,4 @@ hh <- data2haplohh(hap_file = vcf_fpath, polarize_vcf = polarize, vcf_reader = "
 # Calculate and Integrate EHH
 scan <- scan_hh(hh)
 
-write.table(scan, file = paste0(outdir, chrom_id, "_wscan.tsv"), sep = "\t")
+write.table(scan, file = paste0(outdir, "/", chrom_id, "_wscan.tsv"), sep = "\t", row.names=TRUE, col.names=TRUE)
