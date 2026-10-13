@@ -13,7 +13,7 @@ chrom_id <- args[4]
 
 # Scan vcf
 # Load input files for single chromosome
-hh <- data2haplohh(hap_file = fpath, polarize_vcf = polarize, vcf_reader = "vcfR")
+hh <- data2haplohh(hap_file = vcf_fpath, polarize_vcf = polarize, vcf_reader = "vcfR")
 # Calculate and Integrate EHH
 scan <- scan_hh(hh)
 
