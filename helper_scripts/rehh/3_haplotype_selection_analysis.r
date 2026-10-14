@@ -26,7 +26,7 @@ rsb_pop1_pop2 <- ines2rsb(scan_pop1 = wgscan_pop1,
                         scan_pop2 = wgscan_pop2,
                         popname1 = pop1,
                         popname2 = pop2)
-write.table(rsb_pop1_pop2, file = paste0(outdir, pop1, "_", pop2, "_rsb.tsv"), sep = "\t")
+write.table(rsb_pop1_pop2, file = paste0(outdir, "/", pop1, "_", pop2, "_rsb.tsv"), sep = "\t")
 
 
 # calculate xp-ehh between two populations
@@ -35,7 +35,7 @@ xpehh_pop1_pop2 <- ies2xpehh(scan_pop1 =  wgscan_pop1,
                            scan_pop2 =  wgscan_pop2,
                            popname1 = pop1,
                            popname2 = pop2)
-write.table(xpehh_pop1_pop2, file = paste0(outdir, pop1, "_", pop2, "_xpehh.tsv"), sep = "\t")
+write.table(xpehh_pop1_pop2, file = paste0(outdir, "/", pop1, "_", pop2, "_xpehh.tsv"), sep = "\t")
 
 # Plot statistics
 #manhattanplot(wgs_ihs)
