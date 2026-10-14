@@ -17,13 +17,13 @@ wgscan2_df <- read.table(file = wgscan2, sep = "\t")
 
 # calculate genome-wide iHS values for each population
 cat(paste0("calculating iHS...\n"))
-wgs_ihs_pop1 <- ihh2ihs(wgscan_pop1)
-wgs_ihs_pop2 <- ihh2ihs(wgscan_pop2)
+wgs_ihs_pop1 <- ihh2ihs(wgscan1_df)
+wgs_ihs_pop2 <- ihh2ihs(wgscan2_df)
 
 # calculate rsb between two populations
 cat(paste0("calculating RHS...\n"))
-rsb_pop1_pop2 <- ines2rsb(scan_pop1 = wgscan_pop1,
-                        scan_pop2 = wgscan_pop2,
+rsb_pop1_pop2 <- ines2rsb(scan_pop1 = wgscan2_df,
+                        scan_pop2 = wgscan2_df,
                         popname1 = pop1,
                         popname2 = pop2)
 write.table(rsb_pop1_pop2, file = paste0(outdir, "/", pop1, "_", pop2, "_rsb.tsv"), sep = "\t")
@@ -31,8 +31,8 @@ write.table(rsb_pop1_pop2, file = paste0(outdir, "/", pop1, "_", pop2, "_rsb.tsv
 
 # calculate xp-ehh between two populations
 cat(paste0("calculating XP-EHH...\n"))
-xpehh_pop1_pop2 <- ies2xpehh(scan_pop1 =  wgscan_pop1,
-                           scan_pop2 =  wgscan_pop2,
+xpehh_pop1_pop2 <- ies2xpehh(scan_pop1 =  wgscan2_df,
+                           scan_pop2 =  wgscan2_df,
                            popname1 = pop1,
                            popname2 = pop2)
 write.table(xpehh_pop1_pop2, file = paste0(outdir, "/", pop1, "_", pop2, "_xpehh.tsv"), sep = "\t")
