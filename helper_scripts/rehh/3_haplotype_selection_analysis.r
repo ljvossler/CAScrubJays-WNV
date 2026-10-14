@@ -6,52 +6,14 @@ library(vcfR)
 
 cat("Parsing command-line arguments...\n")
 args <- commandArgs(trailingOnly = TRUE)
-vcf_lst1 <- args[1]
-vcf_lst2 <- args[2]
-polarize <- args[3] # should almost always be set to true. If not, review docs for alternate pipeline
+wgscan1 <- args[1]
+wgscan2 <- args[2]
 outdir <- args[4]
 pop1 <- args[5]
 pop2 <- args[6]
 
-vcf_fpaths1 <- readLines(vcf_lst1)
-vcf_fpaths2 <- readLines(vcf_lst2)
-
-# Scan vcfs for pop1
-for (fpath in vcf_fpaths1) {
-  cat(paste0("scanning alleles for ", pop1," in ", fpath, "\n"))
-  # Load input files
-  hh <- data2haplohh(hap_file = fpath,
-                     polarize_vcf = polarize,
-                     vcf_reader = "vcfR")
-  # Calculate and Integrate EHH
-  scan <- scan_hh(hh)
-  # Concatenate EHH scans for WGS data
-  if (i == 1) {
-    wgscan_pop1 <- scan
-  } else {
-    wgscan_pop1 <- rbind(wgscan_pop1, scan)
-  }
-}
-
-# Scan vcfs for pop2
-for (fpath in vcf_fpaths2) {
-  cat(paste0("scanning alleles for ", pop2," in ", fpath, "\n"))
-  # Load input files
-  hh <- data2haplohh(hap_file = fpath,
-                     polarize_vcf = polarize,
-                     vcf_reader = "data.table")
-  # Calculate and Integrate EHH
-  scan <- scan_hh(hh)
-  # Concatenate EHH scans for WGS data
-  if (i == 1) {
-    wgscan_pop2 <- scan
-  } else {
-    wgscan_pop2 <- rbind(wgscan_pop2, scan)
-  }
-}
-
-write.table(wgscan_pop1, file = paste0(outdir, pop1, "_wscan.tsv"), sep = "\t")
-write.table(wgscan_pop2, file = paste0(outdir, pop2, "_wscan.tsv"), sep = "\t")
+wgscan1_df <- read.table(file = wgscan1, sep = "\t")
+wgscan2_df <- read.table(file = wgscan2, sep = "\t")
 
 # calculate genome-wide iHS values for each population
 cat(paste0("calculating iHS...\n"))
@@ -76,15 +38,15 @@ xpehh_pop1_pop2 <- ies2xpehh(scan_pop1 =  wgscan_pop1,
 write.table(xpehh_pop1_pop2, file = paste0(outdir, pop1, "_", pop2, "_xpehh.tsv"), sep = "\t")
 
 # Plot statistics
-manhattanplot(wgs_ihs)
+#manhattanplot(wgs_ihs)
 
 
-plot(rsb_pop1_pop2[, paste0("RSB_", pop1, "_", pop2)],
-     xpehh_pop1_pop2[, paste0("XPEHH_", pop1, "_", pop2)],
-     xlab = "Rsb",
-     ylab = "XP-EHH",
-     pch = ".",
-     xlim = c(-7.5, 7.5),
-     ylim = c(-7.5, 7.5))
+#plot(rsb_pop1_pop2[, paste0("RSB_", pop1, "_", pop2)],
+#     xpehh_pop1_pop2[, paste0("XPEHH_", pop1, "_", pop2)],
+#     xlab = "Rsb",
+#     ylab = "XP-EHH",
+#     pch = ".",
+#     xlim = c(-7.5, 7.5),
+#     ylim = c(-7.5, 7.5))
 # add dashed diagonal
-abline(a = 0, b = 1, lty = 2)
+#abline(a = 0, b = 1, lty = 2)
