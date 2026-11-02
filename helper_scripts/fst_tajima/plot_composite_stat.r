@@ -51,6 +51,9 @@ axisdf <- plot_data %>%
 
 # Plot
 cat("Generating plot...\n")
+
+cat(metric_cutoff)
+
 ggplot(plot_data, aes(x = BPcum, y = !!sym(metric))) +
   geom_point(aes(color = as.factor(chromo)), alpha = 0.8, size = 1) +
   scale_color_manual(values = rep(c(color1, color2), length.out = length(unique(plot_data$chromo)))) +
