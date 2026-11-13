@@ -27,6 +27,6 @@ OUT_PATH=${OUTDIR}/datafiles/diamond
 cd ${OUT_PATH}
 
 # Get Best Hits
-${PROGDIR}/reciprologs/reciprologs ${HUMAN_FAA} ${SCRUBJAY_FAA} diamondp
+${PROGDIR}/reciprologs/reciprologs -o ${OUT_PATH}/rec_best_hits.tsv ${HUMAN_FAA} ${SCRUBJAY_FAA} diamondp
 
 echo "DONE"
