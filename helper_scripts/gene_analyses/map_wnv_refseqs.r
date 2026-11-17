@@ -19,7 +19,9 @@ wnv_ens2symbols <- bitr(ensembl_ids, fromType="ENSEMBL", toType=c("SYMBOL"), Org
 colnames(wnv_ens2refids) <- c("human_ENSEMBL", "human_REFSEQ")
 colnames(wnv_ens2symbols) <- c("human_ENSEMBL", "human_SYMBOL")
 
+# Map WNV REFSEQS onto SYMBOLS
 wnv_refids2symbols <- bitr(wnv_ens2refids$human_REFSEQ, fromType="REFSEQ", toType=c("SYMBOL"), OrgDb="org.Hs.eg.db")
+colnames(wnv_refids2symbols) <- c("human_REFSEQ", "human_SYMBOL")
 
 wnv_refids_cleaned <- unique(wnv_ens2refids$human_REFSEQ)
 wnv_symbols_cleaned <- unique(wnv_ens2symbols$human_SYMBOL)
@@ -36,8 +38,7 @@ trimmed_loci <- lapply(str_split(rec_best_hits$"human_REFSEQ", "\\."), `[`, 1)
 rec_best_hits$human_REFSEQ <- trimmed_loci
 
 # Merge and save
-merged_df <- merge(wnv_ens2refids, rec_best_hits, by="human_REFSEQ")
-human_to_jay_refseq <- subset(merged_df, select = -human_ENSEMBL)
+merged_df <- merge(wnv_refids2symbols, rec_best_hits, by="human_REFSEQ")
 human_to_jay_refseq <- human_to_jay_refseq %>% distinct(human_REFSEQ, .keep_all = TRUE)
 
-write.table(human_to_jay_refseq, file="wnv_human_to_jay_refseq.map", sep="\t", row.names=FALSE)
+write.table(human_to_jay_refseq, file="wnv_human_to_jay_homolog.map", sep="\t", row.names=FALSE)
