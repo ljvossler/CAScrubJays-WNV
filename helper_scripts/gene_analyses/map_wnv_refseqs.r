@@ -39,6 +39,6 @@ rec_best_hits$human_REFSEQ <- trimmed_loci
 
 # Merge and save
 merged_df <- merge(wnv_refids2symbols, rec_best_hits, by="human_REFSEQ")
-human_to_jay_refseq <- human_to_jay_refseq %>% distinct(human_REFSEQ, .keep_all = TRUE)
+merged_df <- merged_df %>% distinct(human_REFSEQ, .keep_all = TRUE)
 
-write.table(human_to_jay_refseq, file="wnv_human_to_jay_homolog.map", sep="\t", row.names=FALSE)
+write.table(merged_df, file="wnv_human_to_jay_homolog.map", sep="\t", row.names=FALSE)
