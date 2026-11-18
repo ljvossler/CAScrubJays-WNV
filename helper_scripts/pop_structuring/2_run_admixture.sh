@@ -22,7 +22,7 @@ while getopts ":p:f:o:k:" option; do
         p) PARAMS=${OPTARG};;
         f) PED=${OPTARG} ;;
         o) OUTPREFIX=${OPTARG} ;;
-        k) NUM_K=${OPTARG} ;;
+        k) K=${OPTARG} ;;
         *) echo "Invalid option: -${OPTARG}" >&2; exit 1;;
     esac
 done
@@ -48,8 +48,8 @@ if [ -d "${OUTDIR}/analyses/admixture/${OUTPREFIX}" ];
 fi
 
 cd ${OUTDIR}/analyses/admixture/${OUTPREFIX}
-echo "Running admixture for K value: $k"
-admixture --cv ${PED} ${k} | tee admixlog_${OUTPREFIX}_${k}.out
-echo "Done running admixture for K $k"
+echo "Running admixture for K value: $K"
+admixture --cv ${PED} ${K} | tee admixlog_${OUTPREFIX}_${K}.out
+echo "Done running admixture for K $K"
 
 echo "Done"
